@@ -2122,237 +2122,6 @@ h1, h2, h3, h4, h5, h6 {
    Section: Advisano Case Studies & Proven Results Bento
    ========================================================================== */
 
-/* ==========================================================================
-   SOURX "IN NUMBERS" MASTER CARD COMPONENT (HIGH-END EXECUTIVE DESIGN)
-   ========================================================================== */
-
-.sourx-numbers-section {
-  position: relative;
-  background-color: #f8fafc;
-  background: radial-gradient(circle at 50% 0%, rgba(0, 145, 255, 0.05) 0%, transparent 65%), #f8fafc;
-  border-top: 1px solid rgba(0, 46, 92, 0.06);
-  border-bottom: 1px solid rgba(0, 46, 92, 0.06);
-  padding: clamp(75px, 8.5vw, 120px) 0;
-  overflow: hidden;
-}
-
-.sourx-numbers-card {
-  position: relative;
-  background: #ffffff;
-  border-radius: clamp(22px, 2.5vw, 30px);
-  border: 1px solid rgba(0, 46, 92, 0.08);
-  box-shadow: 0 4px 6px -1px rgba(0, 30, 60, 0.03), 0 24px 60px -12px rgba(0, 30, 60, 0.08), 0 0 1px rgba(0, 0, 0, 0.05);
-  padding: clamp(36px, 4.5vw, 56px);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
-}
-
-.sourx-numbers-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px -2px rgba(0, 30, 60, 0.04), 0 32px 75px -12px rgba(0, 30, 60, 0.12), 0 0 1px rgba(0, 0, 0, 0.06);
-}
-
-.sourx-numbers-header {
-  margin-bottom: clamp(36px, 4.5vw, 50px);
-}
-
-.sourx-numbers-tag-group {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(0, 145, 255, 0.06);
-  padding: 6px 14px;
-  border-radius: 9999px;
-  border: 1px solid rgba(0, 145, 255, 0.14);
-  margin-bottom: 16px;
-}
-
-.sourx-numbers-bar-icon {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 2.5px;
-  height: 12px;
-}
-
-.sourx-numbers-bar-icon span {
-  width: 2.5px;
-  background: #0091ff;
-  border-radius: 1px;
-}
-
-.sourx-numbers-bar-icon span:nth-child(1) { height: 5px; }
-.sourx-numbers-bar-icon span:nth-child(2) { height: 9px; }
-.sourx-numbers-bar-icon span:nth-child(3) { height: 12px; background: #b6e82c; }
-
-.sourx-numbers-tag {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #002e5c;
-}
-
-.sourx-numbers-title {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
-  line-height: 1.15;
-  letter-spacing: -1.2px;
-  margin: 0;
-}
-
-.sourx-title-dark {
-  font-weight: 700;
-  color: #001e3d;
-  display: inline;
-}
-
-.sourx-title-muted {
-  font-weight: 400;
-  color: #64748b;
-  display: inline;
-}
-
-.sourx-numbers-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: stretch;
-}
-
-.sourx-col {
-  padding: 0 clamp(24px, 3vw, 42px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.sourx-col:first-child {
-  padding-left: 0;
-}
-
-.sourx-col:not(:last-child) {
-  border-right: 1px solid #edf2f7;
-}
-
-.sourx-col:last-child {
-  padding-right: 0;
-}
-
-/* Top Visual Modules */
-.sourx-chart-box,
-.sourx-tenure-hero,
-.sourx-map-box {
-  height: 145px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 28px;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #ffffff;
-  border: 1px solid rgba(0, 46, 92, 0.05);
-}
-
-.sourx-curve-svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.sourx-tenure-hero {
-  position: relative;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 clamp(16px, 2vw, 24px);
-  background: linear-gradient(135deg, rgba(0, 145, 255, 0.03) 0%, rgba(248, 250, 252, 0.7) 100%);
-}
-
-.sourx-tenure-badge-group {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 12px;
-}
-
-.sourx-tenure-big {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: clamp(4.2rem, 5.8vw, 5.4rem);
-  font-weight: 800;
-  line-height: 0.9;
-  letter-spacing: -2.5px;
-  background: linear-gradient(135deg, #0091ff 0%, #0077cc 55%, #002e5c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.sourx-tenure-unit {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: clamp(1.4rem, 2vw, 1.85rem);
-  font-weight: 600;
-  color: #64748b;
-  letter-spacing: -0.5px;
-}
-
-.sourx-map-box {
-  position: relative;
-  width: 100%;
-  padding: 8px;
-  background: #ffffff;
-}
-
-.sourx-map-svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* Bottom Stats */
-.sourx-metric-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.sourx-metric-stat {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: clamp(1.9rem, 2.6vw, 2.45rem);
-  font-weight: 800;
-  color: #001e3d;
-  line-height: 1.1;
-  letter-spacing: -0.8px;
-}
-
-.sourx-metric-desc {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: #64748b;
-  margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .sourx-numbers-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .sourx-col {
-    padding: 0;
-    border-right: none !important;
-    border-bottom: 1px solid #edf2f7;
-    padding-bottom: 32px;
-  }
-
-  .sourx-col:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .sourx-chart-box,
-  .sourx-tenure-hero,
-  .sourx-map-box {
-    height: 125px;
-    margin-bottom: 20px;
-  }
-}
-
 .advisano-cases-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -3217,291 +2986,56 @@ h1, h2, h3, h4, h5, h6 {
 .advisano-contact-card-sidebar {
   background-color: #ffffff;
   border-radius: clamp(24px, 3vw, 32px);
-  padding: clamp(24px, 3vw, 32px);
+  padding: clamp(32px, 4vw, 44px);
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  box-shadow: 0 10px 35px rgba(0, 30, 60, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 46, 92, 0.08);
+  gap: 28px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
 }
 
 .advisano-contact-photo-box {
-  position: relative;
   width: 100%;
-  height: 230px;
-  border-radius: clamp(16px, 2vw, 20px);
+  height: 260px;
+  border-radius: clamp(16px, 2vw, 24px);
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .advisano-contact-photo-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
-  transition: transform 0.5s ease;
 }
 
-.advisano-contact-card-sidebar:hover .advisano-contact-photo-box img {
-  transform: scale(1.03);
-}
-
-.sourx-advisor-pill-overlay {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  background: rgba(1, 46, 92, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(182, 232, 44, 0.35);
-  border-radius: 9999px;
-  padding: 6px 14px;
-  color: #ffffff;
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
-
-.sourx-contact-blocks {
+.advisano-contact-details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
-.sourx-contact-block-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 16px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sourx-contact-block-card:hover {
-  background: #ffffff;
-  border-color: rgba(0, 46, 92, 0.2);
-  box-shadow: 0 6px 20px rgba(0, 30, 60, 0.05);
-  transform: translateY(-2px);
-}
-
-.sourx-block-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.sourx-block-icon-circle {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  background: rgba(0, 46, 92, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.25s ease;
-}
-
-.sourx-contact-block-card:hover .sourx-block-icon-circle {
-  background: #002e5c;
-}
-
-.sourx-contact-block-card:hover .sourx-block-icon-circle svg {
-  stroke: #b6e82c;
-}
-
-.sourx-block-title-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.sourx-block-micro-label {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #64748b;
-}
-
-.sourx-status-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  color: #047857;
-  background: rgba(16, 185, 129, 0.1);
-  padding: 2px 7px;
-  border-radius: 9999px;
-  border: 1px solid rgba(16, 185, 129, 0.2);
-}
-
-.sourx-pulse-green {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 6px #10b981;
-  animation: pulse-dot 2s infinite ease-in-out;
-}
-
-.sourx-badge-gray {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  color: #475569;
-  background: rgba(100, 116, 139, 0.1);
-  padding: 2px 7px;
-  border-radius: 9999px;
-}
-
-.sourx-phone-main {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #001e3d;
-  text-decoration: none;
-  letter-spacing: -0.4px;
-  transition: color 0.2s ease;
-}
-
-.sourx-phone-main:hover {
-  color: #0091ff;
-  text-decoration: none;
-}
-
-.sourx-block-subinfo {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 12px;
-  color: #64748b;
-}
-
-.sourx-emails-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.sourx-email-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 6px 10px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 46, 92, 0.06);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.sourx-email-row:hover {
-  background: rgba(0, 46, 92, 0.04);
-  border-color: rgba(0, 46, 92, 0.15);
-}
-
-.sourx-email-addr {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: #002e5c;
-}
-
-.sourx-email-pill {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  color: #002e5c;
-  background: rgba(0, 46, 92, 0.08);
-  padding: 1px 6px;
-  border-radius: 4px;
-}
-
-.sourx-email-pill.es {
-  color: #b45309;
-  background: rgba(245, 158, 11, 0.12);
-}
-
-.sourx-offices-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.sourx-office-item {
-  background: #ffffff;
-  border: 1px solid rgba(0, 46, 92, 0.06);
-  border-radius: 10px;
-  padding: 10px 12px;
+.advisano-contact-item {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.sourx-office-title {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 13px;
-  color: #001e3d;
+.advisano-contact-item-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666666;
 }
 
-.sourx-flag-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
+.advisano-contact-item-val {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+  line-height: 1.4;
 }
 
-.sourx-flag-dot.uk {
-  background: #002e5c;
-  box-shadow: 0 0 0 2px rgba(0, 46, 92, 0.2);
-}
-
-.sourx-flag-dot.es {
-  background: #ea580c;
-  box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.2);
-}
-
-.sourx-role-badge {
-  margin-left: auto;
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  color: #002e5c;
-  background: rgba(182, 232, 44, 0.2);
-  padding: 1px 7px;
-  border-radius: 4px;
-  border: 1px solid rgba(182, 232, 44, 0.4);
-}
-
-.sourx-role-badge.emea {
-  color: #0284c7;
-  background: rgba(2, 132, 199, 0.1);
-  border-color: rgba(2, 132, 199, 0.2);
-}
-
-.sourx-office-address {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 12px;
-  line-height: 1.45;
-  color: #64748b;
-  padding-left: 15px;
+a.advisano-contact-item-val:hover {
+  text-decoration: underline;
 }
 
 /* ==========================================================================
