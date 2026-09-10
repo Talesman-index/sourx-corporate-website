@@ -47,8 +47,8 @@
       <div class="advisano-nav-action">
         <!-- Language Switcher (FR / EN / ES) -->
         <div class="advisano-lang-switcher" role="group" aria-label="Language selection">
-          <button type="button" class="advisano-lang-btn" data-lang="fr" aria-pressed="false">FR</button>
-          <button type="button" class="advisano-lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="advisano-lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" class="advisano-lang-btn" data-lang="en" aria-pressed="false">EN</button>
           <button type="button" class="advisano-lang-btn" data-lang="es" aria-pressed="false">ES</button>
         </div>
 
@@ -95,7 +95,12 @@
         </div>
       </nav>
 
-      <div class="advisano-drawer-footer">
+            <div class="advisano-drawer-footer">
+        <div class="advisano-lang-switcher" style="margin-bottom: 14px; display: inline-flex;" role="group" aria-label="Choix de la langue">
+          <button type="button" class="advisano-lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" class="advisano-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="advisano-lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
         <a href="/contact/" class="advisano-drawer-cta-btn">
           <span data-i18n="nav.contact">Get in Touch with Our Team</span>
           <span>→</span>
@@ -117,9 +122,9 @@
         <div style="font-size: 0.85rem; margin-bottom: 1.5rem; color: var(--text-dark-secondary);">
           <a href="/" data-i18n="nav.home">Home</a> / <a href="/services/" data-i18n="nav.services">Services</a> / <span style="color: #002e5c; font-weight: 700;" data-i18n="nav.s_growth">Service</span>
         </div>
-        <span class="badge-tag lime" data-i18n="serv_growth.badge">PÔLE</span>
-        <h1 class="heading-hero" style="margin-top: 1rem; max-width: 920px;" data-i18n="serv_growth.title">Title</h1>
-        <p class="body-lead" style="max-width: 720px; margin-top: 1.25rem;" data-i18n="serv_growth.lead">Lead</p>
+        <span class="badge-tag lime" data-i18n="serv_growth.badge">PÔLE D'EXPERTISE 05</span>
+        <h1 class="heading-hero" style="margin-top: 1rem; max-width: 920px;" data-i18n="serv_growth.title">Croissance &amp; Performance Commerciale.</h1>
+        <p class="body-lead" style="max-width: 720px; margin-top: 1.25rem;" data-i18n="serv_growth.lead">Accélérer la conquête de parts de marché, structurer l'expansion internationale et optimiser les moteurs de revenus récurrents.</p>
 
         <div style="margin-top: 3rem; border-radius: var(--radius-xl); overflow: hidden; height: clamp(280px, 40vw, 440px); box-shadow: var(--shadow-card);">
           <img src="/images/services/service-growth.webp" alt="Croissance et stratégie commerciale SOURX" style="width: 100%; height: 100%; object-fit: cover;">
@@ -132,13 +137,13 @@
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(2rem, 5vw, 4rem); align-items: start;">
           <div>
-            <span class="badge-tag" data-i18n="serv_growth.meth_badge">MÉTHODOLOGIE</span>
-            <h2 class="heading-section" style="margin-top: 0.75rem;" data-i18n="serv_growth.meth_title">Methodology</h2>
-            <p class="body-regular" style="margin-top: 1rem;" data-i18n="serv_growth.meth_desc">Desc</p>
+            <span class="badge-tag" data-i18n="serv_growth.meth_badge">EXPANSION &amp; IMPACT</span>
+            <h2 class="heading-section" style="margin-top: 0.75rem;" data-i18n="serv_growth.meth_title">Des moteurs d'acquisition prévisibles et scalables.</h2>
+            <p class="body-regular" style="margin-top: 1rem;" data-i18n="serv_growth.meth_desc">La croissance durable ne découle pas du hasard : elle repose sur l'alignement strict entre la proposition de valeur, l'expérience client et l'efficacité des équipes de vente.</p>
             <div style="margin-top: 2rem; padding: 1.5rem; background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-              <div style="font-size: 2rem; font-weight: 800; color: #002e5c; line-height: 1;" data-i18n="serv_growth.stat_val">10+</div>
-              <div style="font-weight: 700; margin-top: 0.35rem;" data-i18n="serv_growth.stat_lbl">Stat Label</div>
-              <p class="body-regular" style="font-size: 0.875rem; margin-top: 0.25rem;" data-i18n="serv_growth.stat_desc">Stat Desc</p>
+              <div style="font-size: 2rem; font-weight: 800; color: #002e5c; line-height: 1;" data-i18n="serv_growth.stat_val">+40%</div>
+              <div style="font-weight: 700; margin-top: 0.35rem;" data-i18n="serv_growth.stat_lbl">Efficacité Commerciale</div>
+              <p class="body-regular" style="font-size: 0.875rem; margin-top: 0.25rem;" data-i18n="serv_growth.stat_desc">Gains moyens mesurés sur les cycles de conversion après refonte des processus RevOps.</p>
             </div>
           </div>
 
@@ -176,10 +181,10 @@
       <div class="container">
         <div style="background: var(--bg-dark); border-radius: var(--radius-xl); padding: clamp(2.5rem, 5vw, 4rem); color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
           <div style="max-width: 600px;">
-            <h2 style="color: #FFFFFF; font-size: clamp(1.6rem, 2.5vw, 2.3rem); margin-bottom: 0.75rem;" data-i18n="serv_growth.cta_title">CTA</h2>
-            <p style="color: var(--text-light-secondary); font-size: 1rem;" data-i18n="serv_growth.cta_desc">CTA Desc</p>
+            <h2 style="color: #FFFFFF; font-size: clamp(1.6rem, 2.5vw, 2.3rem); margin-bottom: 0.75rem;" data-i18n="serv_growth.cta_title">Multipliez vos opportunités d'affaires à l'international</h2>
+            <p style="color: var(--text-light-secondary); font-size: 1rem;" data-i18n="serv_growth.cta_desc">Bénéficiez de notre système de scoring prédictif et de notre réseau pour accélérer vos revenus.</p>
           </div>
-          <a href="/contact/" class="btn btn-lime" style="padding: 0.9rem 2rem; font-size: 1rem;" data-i18n="serv_growth.cta_btn"><span>Contact</span><span>→</span></a>
+          <a href="/contact/" class="btn btn-lime" style="padding: 0.9rem 2rem; font-size: 1rem;" data-i18n="serv_growth.cta_btn"><span>Échanger avec notre Équipe Croissance →</span></a>
         </div>
       </div>
     </section>

@@ -2131,14 +2131,18 @@ export const translations = {
 };
 
 /**
- * Get current language (defaults to 'en')
+ * Get current language (defaults to 'fr', or persisted choice, or browser language)
  */
 export function getCurrentLanguage() {
-  const userChosen = localStorage.getItem('sourx_user_selected_lang');
-  if (userChosen && (userChosen === 'fr' || userChosen === 'en' || userChosen === 'es')) {
-    return userChosen;
+  const saved = localStorage.getItem('sourx_user_selected_lang') || localStorage.getItem('sourx_lang');
+  if (saved && (saved === 'fr' || saved === 'en' || saved === 'es')) {
+    return saved;
   }
-  return 'en'; // Default is English
+  // Browser language auto-detection
+  const browserLang = (typeof navigator !== 'undefined' && (navigator.language || navigator.userLanguage) || '').toLowerCase();
+  if (browserLang.startsWith('es')) return 'es';
+  if (browserLang.startsWith('en')) return 'en';
+  return 'fr'; // Default is French for SOURX EMEA
 }
 
 /**
@@ -2148,23 +2152,24 @@ export function setLanguage(lang, isUserClick = false) {
   const dict = translations[lang];
   if (!dict) return;
 
-  // If the user explicitly clicked a language button, persist their choice
-  if (isUserClick) {
+  // Persist language choice in both keys for 100% cross-page consistency
+  try {
     localStorage.setItem('sourx_user_selected_lang', lang);
     localStorage.setItem('sourx_lang', lang);
-  } else {
-    localStorage.setItem('sourx_lang', lang);
+  } catch (e) {
+    // Gracefully handle private browsing storage quota/restrictions
   }
 
   // Update HTML lang attribute
-  document.documentElement.lang = lang;
+  if (document.documentElement) {
+    document.documentElement.lang = lang;
+  }
 
   // Dynamically update document.title if title tag has data-i18n
   const pageTitleEl = document.querySelector('title[data-i18n]');
   if (pageTitleEl && dict) {
     const key = pageTitleEl.getAttribute('data-i18n');
     if (dict[key]) {
-      // Decode any HTML entities like &amp; for browser tab title
       const decodedTitle = dict[key].replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
       document.title = decodedTitle;
     }
@@ -2205,19 +2210,36 @@ export function setLanguage(lang, isUserClick = false) {
  * Initialize language switchers & default language
  */
 export function initI18n() {
-  const initialLang = getCurrentLanguage();
-
-  // Bind click listeners to all language switcher buttons
-  document.querySelectorAll('.advisano-lang-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetLang = btn.getAttribute('data-lang');
-      if (targetLang) {
-        setLanguage(targetLang, true);
+  // Global event delegation on document so clicks always work anywhere
+  if (!window._sourx_i18n_delegated) {
+    window._sourx_i18n_delegated = true;
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest && e.target.closest('.advisano-lang-btn');
+      if (btn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const targetLang = btn.getAttribute('data-lang');
+        if (targetLang) {
+          setLanguage(targetLang, true);
+        }
       }
     });
-  });
+  }
 
-  // Apply initial language
+  // Apply initial or persisted language
+  const initialLang = getCurrentLanguage();
   setLanguage(initialLang, false);
 }
+
+// Expose on window for direct access across pages and scripts
+if (typeof window !== 'undefined') {
+  window.sourxSetLanguage = setLanguage;
+  window.sourxGetLanguage = getCurrentLanguage;
+  window.sourxInitI18n = initI18n;
+}
+
+// Auto-run immediately if DOM is already constructed
+if (typeof document !== 'undefined' && document.body) {
+  initI18n();
+}
+

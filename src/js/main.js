@@ -6,20 +6,26 @@
 import '../css/main.css';
 import { initI18n } from './i18n.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-  initI18n();
-  initStickyHeader();
-  initMobileMenu();
-  initFinovateHeroTabs();
-  initAdvisanoServicesTabs();
-  initHeroCanvas();
-  initExpertiseAccordion();
-  initScrollObserver();
-  initAnimatedCounters();
-  initPresenceMap();
-  initAboutScrollTextReveal();
-  initProcessCardsScrollAlignment();
-});
+function initApp() {
+  try { initI18n(); } catch (err) { console.warn('[SOURX] initI18n:', err); }
+  try { initStickyHeader(); } catch (err) { console.warn('[SOURX] initStickyHeader:', err); }
+  try { initMobileMenu(); } catch (err) { console.warn('[SOURX] initMobileMenu:', err); }
+  try { initFinovateHeroTabs(); } catch (err) { console.warn('[SOURX] initFinovateHeroTabs:', err); }
+  try { initAdvisanoServicesTabs(); } catch (err) { console.warn('[SOURX] initAdvisanoServicesTabs:', err); }
+  try { initHeroCanvas(); } catch (err) { console.warn('[SOURX] initHeroCanvas:', err); }
+  try { initExpertiseAccordion(); } catch (err) { console.warn('[SOURX] initExpertiseAccordion:', err); }
+  try { initScrollObserver(); } catch (err) { console.warn('[SOURX] initScrollObserver:', err); }
+  try { initAnimatedCounters(); } catch (err) { console.warn('[SOURX] initAnimatedCounters:', err); }
+  try { initPresenceMap(); } catch (err) { console.warn('[SOURX] initPresenceMap:', err); }
+  try { initAboutScrollTextReveal(); } catch (err) { console.warn('[SOURX] initAboutScrollTextReveal:', err); }
+  try { initProcessCardsScrollAlignment(); } catch (err) { console.warn('[SOURX] initProcessCardsScrollAlignment:', err); }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 /* ==========================================================================
    1. Sticky Header
