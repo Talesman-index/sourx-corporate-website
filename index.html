@@ -1201,34 +1201,118 @@
         </div>
 
         <!-- Right: Authentic SOURX Advisor Sidebar & International Offices -->
-        <div class="advisano-contact-card-sidebar">
+        <aside class="advisano-contact-card-sidebar">
+          
+          <!-- Senior Advisor Profile Cardlet -->
           <div class="advisano-contact-photo-box">
-            <img src="/images/consultant-portrait.jpg" alt="Associé SOURX">
+            <img src="/images/consultant-portrait.jpg" alt="Associé SOURX" loading="lazy">
+            <div class="sourx-advisor-pill-overlay">
+              <span class="pulse-dot-lime"></span>
+              <span data-i18n="contact.advisor_badge">Associé Conseil SOURX • Permanence C-Level</span>
+            </div>
           </div>
 
-          <div class="advisano-contact-details">
-            <div class="advisano-contact-item">
-              <span class="advisano-contact-item-label" data-i18n="contact.direct_phone">LIGNE DIRECTE</span>
-              <a href="tel:+442031377777" class="advisano-contact-item-val">+44 203 137 7777</a>
-            </div>
-            <div class="advisano-contact-item">
-              <span class="advisano-contact-item-label" data-i18n="contact.hours_label">HORAIRES D'OUVERTURE</span>
-              <span class="advisano-contact-item-val" style="color: #444444; font-size: 14px;" data-i18n="contact.hours_val">Lundi – Vendredi : 8h00 – 17h00 (Heure UK)</span>
-            </div>
-            <div class="advisano-contact-item">
-              <span class="advisano-contact-item-label" data-i18n="contact.confidential_email">CONTACT CONFIDENTIEL</span>
-              <a href="mailto:info@sourx.com" class="advisano-contact-item-val">info@sourx.com</a>
-              <a href="mailto:info@sourx.es" class="advisano-contact-item-val" style="margin-top: 4px; font-size: 14px; color: #555555;">info@sourx.es (Espagne)</a>
-            </div>
-            <div class="advisano-contact-item">
-              <span class="advisano-contact-item-label" data-i18n="contact.offices">BUREAUX INTERNATIONAUX</span>
-              <div class="advisano-contact-item-val" style="color: #444444; font-size: 14px; line-height: 1.6;">
-                <span data-i18n="contact.uk_office">• <strong>Bureau Londres (UK) :</strong> 71–75 Shelton Street, Covent Garden, London WC2H 9JQ</span><br>
-                <span data-i18n="contact.es_office">• <strong>Bureau Espagne :</strong> Castellón de la Plana, 12005 Espagne</span>
+          <!-- Structured Contact Blocks Grid -->
+          <div class="sourx-contact-blocks">
+            
+            <!-- Block 1: Ligne Directe & Horaires -->
+            <div class="sourx-contact-block-card">
+              <div class="sourx-block-header">
+                <div class="sourx-block-icon-circle">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#002e5c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="sourx-block-title-wrap">
+                  <span class="sourx-block-micro-label" data-i18n="contact.direct_phone">LIGNE DIRECTE</span>
+                  <span class="sourx-status-chip">
+                    <span class="sourx-pulse-green"></span>
+                    <span>Direct C-Level</span>
+                  </span>
+                </div>
+              </div>
+              <a href="tel:+442031377777" class="sourx-phone-main">+44 203 137 7777</a>
+              <div class="sourx-block-subinfo">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span data-i18n="contact.hours_val">Lundi - Vendredi : 8h00 - 17h00 (Heure UK)</span>
               </div>
             </div>
+
+            <!-- Block 2: Courriels Sécurisés -->
+            <div class="sourx-contact-block-card">
+              <div class="sourx-block-header">
+                <div class="sourx-block-icon-circle">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#002e5c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="sourx-block-title-wrap">
+                  <span class="sourx-block-micro-label" data-i18n="contact.confidential_email">CONTACT CONFIDENTIEL</span>
+                  <span class="sourx-badge-gray">24h SLA</span>
+                </div>
+              </div>
+              <div class="sourx-emails-stack">
+                <a href="mailto:info@sourx.com" class="sourx-email-row">
+                  <span class="sourx-email-addr">info@sourx.com</span>
+                  <span class="sourx-email-pill">Global</span>
+                </a>
+                <a href="mailto:info@sourx.es" class="sourx-email-row">
+                  <span class="sourx-email-addr">info@sourx.es</span>
+                  <span class="sourx-email-pill es">Espagne</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Block 3: Bureaux Internationaux -->
+            <div class="sourx-contact-block-card">
+              <div class="sourx-block-header">
+                <div class="sourx-block-icon-circle">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#002e5c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="sourx-block-title-wrap">
+                  <span class="sourx-block-micro-label" data-i18n="contact.offices">BUREAUX INTERNATIONAUX</span>
+                  <span class="sourx-badge-gray">2 Hubs EMEA</span>
+                </div>
+              </div>
+
+              <div class="sourx-offices-grid">
+                <!-- London Office -->
+                <div class="sourx-office-item">
+                  <div class="sourx-office-title">
+                    <span class="sourx-flag-dot uk"></span>
+                    <strong>Londres (UK)</strong>
+                    <span class="sourx-role-badge" data-i18n="contact.hq_badge">Siège</span>
+                  </div>
+                  <div class="sourx-office-address" data-i18n="contact.uk_office">
+                    71-75 Shelton Street, Covent Garden<br>
+                    London WC2H 9JQ, Royaume-Uni
+                  </div>
+                </div>
+
+                <!-- Spain Office -->
+                <div class="sourx-office-item">
+                  <div class="sourx-office-title">
+                    <span class="sourx-flag-dot es"></span>
+                    <strong>Espagne</strong>
+                    <span class="sourx-role-badge emea" data-i18n="contact.emea_badge">Hub EMEA</span>
+                  </div>
+                  <div class="sourx-office-address" data-i18n="contact.es_office">
+                    Castellón de la Plana<br>
+                    12005 Espagne
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </div>
+        </aside>
 
       </div>
 
