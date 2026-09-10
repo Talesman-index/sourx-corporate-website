@@ -112,6 +112,18 @@ export const translations = {
     "cases.m3_label": "Pôles intégrés : Stratégie, Tech, IA, Finance & Croissance",
     "cases.m4_label": "Engagement d'exécution directe aux côtés de vos équipes",
 
+    // SOURX In Numbers Master Card (Exact match to reference design)
+    "cases.numbers_tag": "EN CHIFFRES",
+    "cases.numbers_title": "<span class=\"sourx-title-dark\">Bâtir l'excellence</span> <span class=\"sourx-title-muted\">stratégique &amp; technologique</span>",
+    "cases.num1_stat": "+80%",
+    "cases.num1_desc": "Taux moyen d'accélération commerciale et d'optimisation opérationnelle délivré à nos partenaires.",
+    "cases.num2_big": "10+",
+    "cases.num2_unit": "ans",
+    "cases.num2_stat": "2016",
+    "cases.num2_desc": "Partenaire stratégique de confiance des comités de direction et scale-ups européennes.",
+    "cases.num3_stat": "3 hubs majeurs",
+    "cases.num3_desc": "Présence établie à Londres et Castellón, mandats déployés à travers l'Europe et la zone EMEA.",
+
     // Authentic SOURX Leads Management Spotlight
     "leads.tag": "SOURX LEADS MANAGEMENT",
     "leads.title": "Système Propriétaire de Gestion & Notation des Prospects",
@@ -814,6 +826,18 @@ export const translations = {
     "cases.m3_label": "Integrated pillars: Strategy, Tech, AI, Finance & Growth",
     "cases.m4_label": "Commitment to hands-on embedded partner execution",
 
+    // SOURX In Numbers Master Card (Exact match to reference design)
+    "cases.numbers_tag": "IN NUMBERS",
+    "cases.numbers_title": "<span class=\"sourx-title-dark\">Building better</span> <span class=\"sourx-title-muted\">strategic &amp; digital impact</span>",
+    "cases.num1_stat": "+80%",
+    "cases.num1_desc": "Average commercial acceleration and operational efficiency delivered across client engagements.",
+    "cases.num2_big": "10+",
+    "cases.num2_unit": "years",
+    "cases.num2_stat": "2016",
+    "cases.num2_desc": "Trusted strategic partner for leadership teams and high-growth European scale-ups.",
+    "cases.num3_stat": "3 core hubs",
+    "cases.num3_desc": "Active presence in London and Castellón, with project delivery spanning Europe and EMEA.",
+
     // Authentic SOURX Leads Management Spotlight
     "leads.tag": "SOURX LEADS MANAGEMENT",
     "leads.title": "Proprietary Leads Management & Scoring System",
@@ -1515,6 +1539,18 @@ export const translations = {
     "cases.m2_label": "Tasa media de captación conseguida en programas de crecimiento",
     "cases.m3_label": "Divisiones: Estrategia, Tecnología, IA, Finanzas y Crecimiento",
     "cases.m4_label": "Compromiso de ejecución directa mano a mano con sus equipos",
+
+    // SOURX In Numbers Master Card (Exact match to reference design)
+    "cases.numbers_tag": "EN CIFRAS",
+    "cases.numbers_title": "<span class=\"sourx-title-dark\">Construir la excelencia</span> <span class=\"sourx-title-muted\">estratégica y tecnológica</span>",
+    "cases.num1_stat": "+80%",
+    "cases.num1_desc": "Tasa media de aceleración comercial y optimización operativa lograda con nuestros clientes.",
+    "cases.num2_big": "10+",
+    "cases.num2_unit": "años",
+    "cases.num2_stat": "2016",
+    "cases.num2_desc": "Socio estratégico de confianza para comités directivos y empresas en expansión europea.",
+    "cases.num3_stat": "3 sedes clave",
+    "cases.num3_desc": "Presencia consolidada en Londres y Castellón, con proyectos ejecutados en Europa y zona EMEA.",
 
     // Authentic SOURX Leads Management Spotlight
     "leads.tag": "GESTIÓN DE LEADS SOURX",
