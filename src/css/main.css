@@ -2123,73 +2123,54 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 /* ==========================================================================
-   SOURX "IN NUMBERS" MASTER CARD COMPONENT (EXACT MATCH TO REFERENCE DESIGN)
+   SOURX "IN NUMBERS" MASTER CARD COMPONENT (HIGH-END EXECUTIVE DESIGN)
    ========================================================================== */
 
 .sourx-numbers-section {
   position: relative;
   background-color: #f8fafc;
-  padding: clamp(70px, 8vw, 120px) 0;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 145, 255, 0.05) 0%, transparent 65%), #f8fafc;
+  border-top: 1px solid rgba(0, 46, 92, 0.06);
+  border-bottom: 1px solid rgba(0, 46, 92, 0.06);
+  padding: clamp(75px, 8.5vw, 120px) 0;
   overflow: hidden;
-}
-
-.sourx-numbers-bg-art {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.sourx-numbers-wave-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.94;
-  filter: contrast(1.02);
-}
-
-.sourx-numbers-bg-gradient-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.25) 0%, rgba(248, 250, 252, 0.45) 100%);
-  pointer-events: none;
 }
 
 .sourx-numbers-card {
   position: relative;
   background: #ffffff;
-  border-radius: clamp(20px, 2.5vw, 28px);
+  border-radius: clamp(22px, 2.5vw, 30px);
   border: 1px solid rgba(0, 46, 92, 0.08);
-  box-shadow: 0 25px 70px -15px rgba(0, 30, 60, 0.09), 0 0 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 30, 60, 0.03), 0 24px 60px -12px rgba(0, 30, 60, 0.08), 0 0 1px rgba(0, 0, 0, 0.05);
   padding: clamp(36px, 4.5vw, 56px);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
 }
 
 .sourx-numbers-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 35px 85px -15px rgba(0, 30, 60, 0.13), 0 0 1px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -2px rgba(0, 30, 60, 0.04), 0 32px 75px -12px rgba(0, 30, 60, 0.12), 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .sourx-numbers-header {
-  margin-bottom: clamp(32px, 4vw, 48px);
+  margin-bottom: clamp(36px, 4.5vw, 50px);
 }
 
 .sourx-numbers-tag-group {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 12px;
+  background: rgba(0, 145, 255, 0.06);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 145, 255, 0.14);
+  margin-bottom: 16px;
 }
 
 .sourx-numbers-bar-icon {
   display: inline-flex;
   align-items: flex-end;
   gap: 2.5px;
-  height: 13px;
+  height: 12px;
 }
 
 .sourx-numbers-bar-icon span {
@@ -2198,9 +2179,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1px;
 }
 
-.sourx-numbers-bar-icon span:nth-child(1) { height: 6px; }
-.sourx-numbers-bar-icon span:nth-child(2) { height: 10px; }
-.sourx-numbers-bar-icon span:nth-child(3) { height: 13px; }
+.sourx-numbers-bar-icon span:nth-child(1) { height: 5px; }
+.sourx-numbers-bar-icon span:nth-child(2) { height: 9px; }
+.sourx-numbers-bar-icon span:nth-child(3) { height: 12px; background: #b6e82c; }
 
 .sourx-numbers-tag {
   font-family: 'Inter', -apple-system, sans-serif;
@@ -2213,7 +2194,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sourx-numbers-title {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: clamp(1.85rem, 3vw, 2.65rem);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
   line-height: 1.15;
   letter-spacing: -1.2px;
   margin: 0;
@@ -2238,7 +2219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sourx-col {
-  padding: 0 clamp(24px, 3vw, 40px);
+  padding: 0 clamp(24px, 3vw, 42px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2256,14 +2237,18 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 0;
 }
 
-/* Top Visuals */
+/* Top Visual Modules */
 .sourx-chart-box,
 .sourx-tenure-hero,
 .sourx-map-box {
-  height: 140px;
+  height: 145px;
   display: flex;
   align-items: center;
   margin-bottom: 28px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(0, 46, 92, 0.05);
 }
 
 .sourx-curve-svg {
@@ -2276,21 +2261,23 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   justify-content: flex-start;
   align-items: center;
+  padding: 0 clamp(16px, 2vw, 24px);
+  background: linear-gradient(135deg, rgba(0, 145, 255, 0.03) 0%, rgba(248, 250, 252, 0.7) 100%);
 }
 
 .sourx-tenure-badge-group {
   display: inline-flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 12px;
 }
 
 .sourx-tenure-big {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: clamp(3.8rem, 5.5vw, 5.2rem);
-  font-weight: 700;
+  font-size: clamp(4.2rem, 5.8vw, 5.4rem);
+  font-weight: 800;
   line-height: 0.9;
-  letter-spacing: -2px;
-  background: linear-gradient(135deg, #0091ff 0%, #00b4d8 60%, #002e5c 100%);
+  letter-spacing: -2.5px;
+  background: linear-gradient(135deg, #0091ff 0%, #0077cc 55%, #002e5c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2298,50 +2285,21 @@ h1, h2, h3, h4, h5, h6 {
 .sourx-tenure-unit {
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: clamp(1.4rem, 2vw, 1.85rem);
-  font-weight: 500;
-  color: #94a3b8;
+  font-weight: 600;
+  color: #64748b;
   letter-spacing: -0.5px;
 }
 
 .sourx-map-box {
   position: relative;
   width: 100%;
+  padding: 8px;
+  background: #ffffff;
 }
 
 .sourx-map-svg {
   width: 100%;
   height: 100%;
-}
-
-@keyframes pulseRadarRing {
-  0% {
-    r: 3.5px;
-    opacity: 1;
-  }
-  100% {
-    r: 14px;
-    opacity: 0;
-  }
-}
-
-.sourx-map-pulse-1 {
-  animation: pulseRadarRing 2.2s infinite cubic-bezier(0.25, 1, 0.5, 1);
-  transform-origin: 132px 25px;
-}
-
-.sourx-map-pulse-2 {
-  animation: pulseRadarRing 2.2s infinite cubic-bezier(0.25, 1, 0.5, 1) 0.8s;
-  transform-origin: 137px 50px;
-}
-
-@keyframes chartDotPulse {
-  0%, 100% { transform: scale(1); opacity: 0.35; }
-  50% { transform: scale(1.6); opacity: 0; }
-}
-
-.sourx-chart-dot-pulse {
-  animation: chartDotPulse 2.5s infinite ease-in-out;
-  transform-origin: 210px 24px;
 }
 
 /* Bottom Stats */
@@ -2353,8 +2311,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .sourx-metric-stat {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: clamp(1.85rem, 2.5vw, 2.35rem);
-  font-weight: 700;
+  font-size: clamp(1.9rem, 2.6vw, 2.45rem);
+  font-weight: 800;
   color: #001e3d;
   line-height: 1.1;
   letter-spacing: -0.8px;
@@ -2362,8 +2320,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .sourx-metric-desc {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.55;
   color: #64748b;
   margin: 0;
 }
@@ -2390,7 +2348,7 @@ h1, h2, h3, h4, h5, h6 {
   .sourx-chart-box,
   .sourx-tenure-hero,
   .sourx-map-box {
-    height: 120px;
+    height: 125px;
     margin-bottom: 20px;
   }
 }
