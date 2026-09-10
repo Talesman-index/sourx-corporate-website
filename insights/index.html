@@ -220,10 +220,10 @@
               Abonnez-vous à notre note stratégique trimestrielle réservée aux dirigeants et investisseurs.
             </p>
           </div>
-          <div class="newsletter-input-group">
-            <input type="email" placeholder="votre.email@entreprise.com" data-i18n-ph="ins.cta_ph" style="border: none; outline: none; background: transparent; color: #fff; width: 100%;">
-            <a href="/contact/" class="btn btn-lime" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;" data-i18n="ins.cta_btn">S'inscrire</a>
-          </div>
+          <form class="newsletter-input-group" id="insights-newsletter-form" onsubmit="event.preventDefault(); const btn = this.querySelector('button'); btn.textContent = '✓ Inscrit !'; this.querySelector('input').value = ''; setTimeout(() => { btn.textContent = 'S\'inscrire'; }, 4000);">
+            <input type="email" placeholder="votre.email@entreprise.com" data-i18n-ph="ins.cta_ph" required aria-label="Adresse email">
+            <button type="submit" class="btn btn-lime" data-i18n="ins.cta_btn">S'inscrire</button>
+          </form>
         </div>
       </div>
     </section>
