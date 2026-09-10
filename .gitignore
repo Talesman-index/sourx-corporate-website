@@ -32,3 +32,4 @@ pnpm-debug.log*
 # Large local media assets not in web bundle
 hero.mov
 *.mov
+media-originals/
