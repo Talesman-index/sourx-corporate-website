@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title_services">Services &amp; Expertises | SOURX Consulting</title>
+  <meta name="description" content="Découvrez l'ensemble des expertises de SOURX : Stratégie, Finance & Audit, Technologie & Digital, Innovation & IA, Croissance & Marketing.">
+  <link rel="stylesheet" href="/src/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23002e5c'/><circle cx='16' cy='16' r='8' fill='%23b6e800'/></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="advisano-navbar subpage-navbar">
+    <div class="advisano-nav-inner">
+      <!-- Brand Logo -->
+      <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+        <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+      </a>
+
+      <!-- Menu Navigation (Desktop) -->
+      <nav class="advisano-nav-menu" aria-label="Navigation principale">
+        <a href="/" class="advisano-nav-link" data-i18n="nav.home">Home</a>
+        
+        <a href="/about/" class="advisano-nav-link" data-i18n="nav.about">About</a>
+        <!-- Dropdown Services -->
+        <div class="advisano-dropdown">
+          <a href="/services/" class="advisano-nav-link dropdown-toggle active" data-i18n="nav.services">
+            Services <svg width="9" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"/></svg>
+          </a>
+          <div class="advisano-dropdown-menu">
+            <a href="/services/" data-i18n="nav.services_all">All Services</a>
+            <a href="/services/strategy/" data-i18n="nav.s_strategy">Strategy &amp; Management</a>
+            <a href="/services/technology/" data-i18n="nav.s_tech">Développement Web, Mobile &amp; Logiciels</a>
+            <a href="/services/innovation/" data-i18n="nav.s_ia">Innovation &amp; Automatisation</a>
+            <a href="/services/finance/" data-i18n="nav.s_finance">Finance &amp; Audit</a>
+            <a href="/services/growth/" data-i18n="nav.s_growth">Growth &amp; Leads</a>
+          </div>
+        </div>
+
+        <a href="/industries/" class="advisano-nav-link" data-i18n="nav.industries">Sectors</a>
+        <a href="/case-studies/" class="advisano-nav-link" data-i18n="nav.case_studies">Case Studies</a>
+        <a href="/insights/" class="advisano-nav-link" data-i18n="nav.innovation">Insights</a>
+      </nav>
+
+      <!-- Right Action Button & Language Switcher -->
+      <div class="advisano-nav-action">
+        <!-- Language Switcher (FR / EN / ES) -->
+        <div class="advisano-lang-switcher" role="group" aria-label="Language selection">
+          <button type="button" class="advisano-lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" class="advisano-lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="advisano-lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+
+        <a href="/contact/" class="advisano-contact-btn desktop-only">
+          <span data-i18n="nav.contact">Contact</span>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" class="advisano-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="advisano-mobile-menu">
+          <span class="hamburger-bar bar-top"></span>
+          <span class="hamburger-bar bar-mid"></span>
+          <span class="hamburger-bar bar-bot"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div class="advisano-mobile-drawer" id="advisano-mobile-menu" aria-hidden="true">
+    <div class="advisano-drawer-inner">
+      <div class="advisano-drawer-header">
+        <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+          <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+        </a>
+        <button type="button" class="advisano-drawer-close" aria-label="Fermer le menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <nav class="advisano-drawer-nav" aria-label="Navigation mobile">
+        <a href="/" class="advisano-drawer-link" data-i18n="nav.home">Home <span>→</span></a>
+        <a href="/about/" class="advisano-drawer-link" data-i18n="nav.about">About <span>→</span></a>
+        <a href="/services/" class="advisano-drawer-link active" data-i18n="nav.services">Services <span>→</span></a>
+        <a href="/industries/" class="advisano-drawer-link" data-i18n="nav.industries">Sectors <span>→</span></a>
+        <a href="/case-studies/" class="advisano-drawer-link" data-i18n="nav.case_studies">Case Studies <span>→</span></a>
+        <a href="/insights/" class="advisano-drawer-link" data-i18n="nav.innovation">Insights <span>→</span></a>
+
+        <div style="margin-top: 10px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #b6e82c; padding-left: 14px; margin-bottom: 4px;">Legal</span>
+          <a href="/privacy/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Privacy Policy <span>→</span></a>
+          <a href="/terms/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Legal &amp; Compliance <span>→</span></a>
+          <a href="/contact/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Contact <span>→</span></a>
+        </div>
+      </nav>
+
+      <div class="advisano-drawer-footer">
+        <a href="/contact/" class="advisano-drawer-cta-btn">
+          <span data-i18n="nav.contact">Get in Touch with Our Team</span>
+          <span>→</span>
+        </a>
+        <div class="advisano-drawer-meta">
+          <span class="advisano-drawer-hub">
+            <span class="pulse-dot-lime"></span> Londres &amp; Castellón
+          </span>
+          <span class="advisano-drawer-note">Multidisciplinary EMEA Advisory</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Services Hub Hero Header -->
+    <section class="services-hub-section">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div style="font-size: 13px; color: #64748b; margin-bottom: 22px; display: flex; align-items: center; gap: 8px;">
+          <a href="/" style="color: #012e5c; font-weight: 600; text-decoration: none;">Accueil</a>
+          <span>/</span>
+          <span style="color: #012e5c; font-weight: 700;">Services &amp; Pôles d'Expertise</span>
+        </div>
+
+        <div class="services-hub-header">
+          <div class="services-hub-badge" data-i18n="serv.hub_badge">
+            <span class="services-pulse-dot"></span>
+            PÔLES D'INTERVENTION EMEA • LONDRES &amp; CASTELLÓN
+          </div>
+          <h1 class="services-hub-title" data-i18n="serv.hub_title">
+            Des disciplines intégrées pour bâtir des organisations <span class="serif-italic">souveraines et pérennes.</span>
+          </h1>
+          <p class="services-hub-desc" data-i18n="serv.hub_desc">
+            À la convergence de la stratégie de direction, de l'audit financier et de l'ingénierie technologique de pointe, nos associés déploient des capacités d'intervention rapides, modulaires et mesurables.
+          </p>
+
+          <div class="services-hub-telemetry">
+            <div class="services-telemetry-item" data-i18n="serv.tel1">
+              <span class="t-dot"></span> 5 Pôles Multidisciplinaires
+            </div>
+            <span class="services-telemetry-divider">|</span>
+            <div class="services-telemetry-item" data-i18n="serv.tel2">
+              <span class="t-dot"></span> +80% Croissance Moyenne Acquisition
+            </div>
+            <span class="services-telemetry-divider">|</span>
+            <div class="services-telemetry-item" data-i18n="serv.tel3">
+              <span class="t-dot"></span> 150+ Missions Déployées
+            </div>
+            <span class="services-telemetry-divider">|</span>
+            <div class="services-telemetry-item" data-i18n="serv.tel4">
+              <span class="t-dot"></span> Londres &amp; Castellón
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Showcase Service Cards Stack -->
+        <div class="services-showcase-stack">
+
+          <!-- Pôle 01: Stratégie -->
+          <article class="service-showcase-card">
+            <div class="service-card-info">
+              <div class="service-pole-badge" data-i18n="serv.s1_badge">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: #012e5c;"></span>
+                PÔLE 01 • STRATÉGIE &amp; GOUVERNANCE
+              </div>
+              <h2 class="service-card-title" data-i18n="serv.s1_title">Conseil en Stratégie &amp; Management d'Entreprise</h2>
+              <p class="service-card-lead" data-i18n="serv.s1_lead">
+                Feuilles de route d'entreprise, plans d'affaires directeurs, structuration organisationnelle et optimisation des processus opérationnels pour bâtir un avantage concurrentiel durable.
+              </p>
+              <div class="service-chips-list">
+                <span class="service-chip-tag" data-i18n="serv.s1_c1">Plans d'Affaires Directeurs</span>
+                <span class="service-chip-tag" data-i18n="serv.s1_c2">Transformation M&amp;A</span>
+                <span class="service-chip-tag" data-i18n="serv.s1_c3">Études Prédictives</span>
+                <span class="service-chip-tag" data-i18n="serv.s1_c4">Alignement C-Suite</span>
+              </div>
+              <a href="/services/strategy/" class="service-cta-btn" data-i18n="serv.s1_btn">
+                <span>Découvrir le Pôle Stratégie</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+            <div class="service-card-media">
+              <img src="/images/services/service-strategy.webp" alt="Conseil en Stratégie et Management SOURX" class="service-card-img" loading="lazy">
+              <div class="service-media-overlay-badge">
+                <span>Conseil de Direction</span>
+                <span class="badge-val">Top Tier EMEA</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pôle 02: Finance (Reverse layout) -->
+          <article class="service-showcase-card reverse">
+            <div class="service-card-info">
+              <div class="service-pole-badge" data-i18n="serv.s2_badge">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: #012e5c;"></span>
+                PÔLE 02 • AUDIT, FINANCE &amp; ASSURANCE
+              </div>
+              <h2 class="service-card-title" data-i18n="serv.s2_title">Finance, Audit Légal &amp; Risk Advisory</h2>
+              <p class="service-card-lead" data-i18n="serv.s2_lead">
+                Audit et assurance légale, ingénierie financière, modélisation de flux de trésorerie, gestion rigoureuse des risques et conformité réglementaire pour sécuriser la croissance de votre capital.
+              </p>
+              <div class="service-chips-list">
+                <span class="service-chip-tag" data-i18n="serv.s2_c1">Audits Légaux &amp; Comptables</span>
+                <span class="service-chip-tag" data-i18n="serv.s2_c2">Due Diligence M&amp;A</span>
+                <span class="service-chip-tag" data-i18n="serv.s2_c3">Conformité RGPD &amp; UK</span>
+                <span class="service-chip-tag" data-i18n="serv.s2_c4">Gouvernance de Capital</span>
+              </div>
+              <a href="/services/finance/" class="service-cta-btn" data-i18n="serv.s2_btn">
+                <span>Découvrir le Pôle Finance</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+            <div class="service-card-media">
+              <img src="/images/services/service-finance.webp" alt="Finance, Audit et Conseil Financier SOURX" class="service-card-img" loading="lazy">
+              <div class="service-media-overlay-badge">
+                <span>Audit &amp; Sécurisation</span>
+                <span class="badge-val">100% Conforme</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pôle 03: Technologie -->
+          <article class="service-showcase-card">
+            <div class="service-card-info">
+              <div class="service-pole-badge" data-i18n="serv.s3_badge">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: #012e5c;"></span>
+                PÔLE 03 • INGÉNIERIE LOGICIELLE, WEB &amp; MOBILE
+              </div>
+              <h2 class="service-card-title" data-i18n="serv.s3_title">Technologie, Applications Web &amp; Mobile, Produits Numériques</h2>
+              <p class="service-card-lead" data-i18n="serv.s3_lead">
+                Développement d'applications web et mobiles (iOS/Android), de sites web d'entreprise, de logiciels métiers et de produits digitaux scalables pour résoudre vos problématiques, décupler la productivité et soutenir votre croissance.
+              </p>
+              <div class="service-chips-list">
+                <span class="service-chip-tag" data-i18n="serv.s3_c1">Apps Web &amp; Mobile (iOS/Android)</span>
+                <span class="service-chip-tag" data-i18n="serv.s3_c2">Logiciels Métiers &amp; Productivité</span>
+                <span class="service-chip-tag" data-i18n="serv.s3_c3">Produits Numériques &amp; SaaS</span>
+                <span class="service-chip-tag" data-i18n="serv.s3_c4">Architecture Cloud &amp; Scalabilité</span>
+              </div>
+              <a href="/services/technology/" class="service-cta-btn" data-i18n="serv.s3_btn">
+                <span>Découvrir le Pôle Développement &amp; Tech</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+            <div class="service-card-media">
+              <img src="/images/services/service-tech.webp" alt="Ingénierie Technologique et Cloud SOURX" class="service-card-img" loading="lazy">
+              <div class="service-media-overlay-badge">
+                <span>Apps &amp; Logiciels Métiers</span>
+                <span class="badge-val">Sur-Mesure</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pôle 04: Innovation (FEATURED LUXURY DARK CARD) -->
+          <article class="service-showcase-card featured-dark">
+            <div class="service-card-info">
+              <div class="service-pole-badge" data-i18n="serv.s4_badge">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: #b6e82c;"></span>
+                PÔLE 04 • EN VEDETTE • LAB INNOVATION &amp; AUTOMATISATION
+              </div>
+              <h2 class="service-card-title" data-i18n="serv.s4_title">Innovation &amp; Automatisation Opérationnelle</h2>
+              <p class="service-card-lead" data-i18n="serv.s4_lead">
+                Déploiement d'agents autonomes, automatisation intelligente des flux de travail (RPA) et ingénierie de processus pour optimiser les opérations et générer des gains de productivité immédiats.
+              </p>
+              <div class="service-chips-list">
+                <span class="service-chip-tag" data-i18n="serv.s4_c1">Agents Autonomes &amp; IA</span>
+                <span class="service-chip-tag" data-i18n="serv.s4_c2">Automatisation RPA</span>
+                <span class="service-chip-tag" data-i18n="serv.s4_c3">Optimisation Opérationnelle</span>
+                <span class="service-chip-tag" data-i18n="serv.s4_c4">Prototypage MVP en 30J</span>
+              </div>
+              <a href="/services/innovation/" class="service-cta-btn" data-i18n="serv.s4_btn">
+                <span>Explorer le Lab Innovation &amp; Automatisation</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+            <div class="service-card-media">
+              <img src="/images/services/service-innovation.webp" alt="Innovation et IA Opérationnelle SOURX" class="service-card-img" loading="lazy">
+              <div class="service-media-overlay-badge" style="background: rgba(1, 31, 64, 0.92); border-color: rgba(182, 232, 44, 0.35);">
+                <span>Laboratoire d'Automatisation</span>
+                <span class="badge-val" style="color: #b6e82c;">Live 24/7</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pôle 05: Croissance (Reverse layout) -->
+          <article class="service-showcase-card reverse">
+            <div class="service-card-info">
+              <div class="service-pole-badge" data-i18n="serv.s5_badge">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: #012e5c;"></span>
+                PÔLE 05 • CROISSANCE &amp; EXPANSION
+              </div>
+              <h2 class="service-card-title" data-i18n="serv.s5_title">Croissance, RevOps &amp; Acquisition Client B2B</h2>
+              <p class="service-card-lead" data-i18n="serv.s5_lead">
+                Moteurs d'acquisition orientés données, scoring prédictif de leads qualifiés, optimisation des revenus récurrents et structuration de l'expansion internationale à travers les marchés EMEA.
+              </p>
+              <div class="service-chips-list">
+                <span class="service-chip-tag" data-i18n="serv.s5_c1">Moteurs d'Acquisition B2B</span>
+                <span class="service-chip-tag" data-i18n="serv.s5_c2">Scoring Prédictif IA</span>
+                <span class="service-chip-tag" data-i18n="serv.s5_c3">RevOps &amp; Optimisation CRM</span>
+                <span class="service-chip-tag" data-i18n="serv.s5_c4">Expansion Internationale</span>
+              </div>
+              <a href="/services/growth/" class="service-cta-btn" data-i18n="serv.s5_btn">
+                <span>Découvrir le Pôle Croissance</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+            <div class="service-card-media">
+              <img src="/images/services/service-growth.webp" alt="Croissance et Génération de Leads SOURX" class="service-card-img" loading="lazy">
+              <div class="service-media-overlay-badge">
+                <span>Pipeline &amp; Acquisition</span>
+                <span class="badge-val">+80% Croissance</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Methodology Matrix Section -->
+        <div class="services-methodology-section">
+          <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <div class="services-hub-badge" style="margin-bottom: 12px;" data-i18n="serv.meth_tag">NOTRE PROTOCOLE D'INTERVENTION</div>
+            <h2 style="font-family: 'Inter', sans-serif; font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 700; color: #012e5c; letter-spacing: -0.025em; margin: 0 0 12px;" data-i18n="serv.meth_title">
+              Une exécution rythmée par l'exigence du résultat
+            </h2>
+            <p style="font-size: 14.5px; color: #64748b; line-height: 1.6; margin: 0;" data-i18n="serv.meth_desc">
+              Chaque intervention s'articule autour d'une méthodologie éprouvée garantissant rapidité d'exécution et impact mesurable.
+            </p>
+          </div>
+
+          <div class="services-methodology-grid">
+            <div class="services-methodology-card">
+              <span class="services-methodology-step" data-i18n="serv.m1_step">PHASE 01 • IMMERSION</span>
+              <h3 class="services-methodology-title" data-i18n="serv.m1_title">Diagnostic &amp; Cartographie 360°</h3>
+              <p class="services-methodology-desc" data-i18n="serv.m1_desc">
+                Analyse holistique de vos données financières, de votre architecture technologique et de votre positionnement concurrentiel pour identifier les leviers à fort effet de levier.
+              </p>
+            </div>
+
+            <div class="services-methodology-card">
+              <span class="services-methodology-step" data-i18n="serv.m2_step">PHASE 02 • INGÉNIERIE</span>
+              <h3 class="services-methodology-title" data-i18n="serv.m2_title">Architecture &amp; Prototypage Rapide</h3>
+              <p class="services-methodology-desc" data-i18n="serv.m2_desc">
+                Conception des feuilles de route, déploiement des prototypes fonctionnels sous 30 jours et alignement des équipes techniques et managériales.
+              </p>
+            </div>
+
+            <div class="services-methodology-card">
+              <span class="services-methodology-step" data-i18n="serv.m3_step">PHASE 03 • ÉCHELLE</span>
+              <h3 class="services-methodology-title" data-i18n="serv.m3_title">Déploiement &amp; Pérennisation</h3>
+              <p class="services-methodology-desc" data-i18n="serv.m3_desc">
+                Mise en production, transfert de compétences à vos équipes internes et suivi rigoureux des KPIs stratégiques et de la rentabilité.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Consultation Bento Callout -->
+        <div style="margin-top: clamp(40px, 6vw, 70px); background: linear-gradient(145deg, #012e5c, #001f40); border: 1px solid rgba(182, 232, 44, 0.28); border-radius: clamp(24px, 3vw, 32px); padding: clamp(40px, 6vw, 72px) clamp(24px, 5vw, 64px); text-align: center; box-shadow: 0 25px 60px rgba(1, 46, 92, 0.35); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(182, 232, 44, 0.12) 0%, transparent 70%); pointer-events: none;"></div>
+          
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(182, 232, 44, 0.14); border: 1px solid rgba(182, 232, 44, 0.35); color: #b6e82c; padding: 6px 16px; border-radius: 9999px; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="serv.cta_tag">
+            CONFIDENTIALITÉ &amp; ENGAGEMENT DES ASSOCIÉS
+          </div>
+
+
+          <h2 style="font-family: 'Inter', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; color: #ffffff; letter-spacing: -0.025em; line-height: 1.15; margin: 0 0 16px;" data-i18n="serv.cta_title">
+            Votre défi combine plusieurs disciplines ?
+          </h2>
+
+          <p style="font-family: 'Inter', sans-serif; font-size: clamp(1rem, 1.2vw, 1.15rem); color: rgba(255, 255, 255, 0.8); max-width: 680px; margin: 0 auto 32px; line-height: 1.6;" data-i18n="serv.cta_desc">
+            Nous constituons des équipes sur mesure combinant stratèges, auditeurs financiers et ingénieurs technologiques pour répondre précisément à vos impératifs.
+          </p>
+
+          <div style="display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <a href="/contact/" style="display: inline-flex; align-items: center; gap: 8px; background: #b6e82c; color: #012e5c; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; padding: 15px 32px; border-radius: 9999px; text-decoration: none; box-shadow: 0 6px 24px rgba(182, 232, 44, 0.4); transition: all 0.25s ease;" data-i18n="serv.cta_btn1">
+              <span>Prendre Contact avec un Associé</span>
+              <span>→</span>
+            </a>
+            <a href="/case-studies/" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.2); font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; padding: 15px 30px; border-radius: 9999px; text-decoration: none; transition: all 0.25s ease;" data-i18n="serv.cta_btn2">
+              <span>Consulter nos Réalisations</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="background-color: #012e5c; color: #ffffff; padding: 60px 24px 30px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <img src="/images/sourx-logo-white.svg" alt="SOURX EMEA" style="height: 26px; width: auto; margin-bottom: 8px;">
+        <div style="font-size: 13px; color: rgba(255,255,255,0.65);" data-i18n="footer.subpage_address">
+          71-75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Espagne • Tél : +44 203 137 7777 • info@sourx.com
+        </div>
+      </div>
+      <div style="display: flex; gap: 20px; font-size: 13.5px; flex-wrap: wrap;">
+        <a href="/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.home">Accueil</a>
+        <a href="/services/" style="color: #b6e82c; text-decoration: none; font-weight: 600;" data-i18n="footer.services">Services</a>
+        <a href="/industries/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.industries">Industries</a>
+        <a href="/case-studies/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.case_studies">Réalisations</a>
+        <a href="/insights/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.insights">Analyses &amp; Insights</a>
+        <a href="/privacy/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.privacy">Confidentialité</a>
+        <a href="/terms/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.terms">Mentions Légales</a>
+        <a href="/contact/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.contact">Contact</a>
+      </div>
+    </div>
+    <div style="max-width: 1400px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12.5px; color: rgba(255,255,255,0.5); text-align: center;" data-i18n="footer.subpage_copyright">
+      © 2026 SOURX EMEA. Tous droits réservés. Stratégie. Technologie. Innovation.
+    </div>
+  </footer>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

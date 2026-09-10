@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title_industries">Sectors &amp; Industries | SOURX Consulting</title>
+  <meta name="description" content="Deep sector expertise and strategic transformation across critical industries: Finance, Healthcare, Defence, Energy, Automotive, E-commerce and Logistics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23012e5c'/><circle cx='23' cy='9' r='5' fill='%23b6e82c'/><text x='4' y='22' font-family='sans-serif' font-weight='900' font-size='13' fill='%23ffffff'>SX</text></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="advisano-navbar subpage-navbar">
+    <div class="advisano-nav-inner">
+      <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+        <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+      </a>
+
+      <nav class="advisano-nav-menu" aria-label="Main navigation">
+        <a href="/" class="advisano-nav-link" data-i18n="nav.home">Home</a>
+        <a href="/about/" class="advisano-nav-link" data-i18n="nav.about">About</a>
+
+        <div class="advisano-dropdown">
+          <a href="/services/" class="advisano-nav-link dropdown-toggle" data-i18n="nav.services">
+            Services <svg width="9" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"/></svg>
+          </a>
+          <div class="advisano-dropdown-menu">
+            <a href="/services/" data-i18n="nav.services_all">All Services</a>
+            <a href="/services/strategy/" data-i18n="nav.s_strategy">Strategy &amp; Management</a>
+            <a href="/services/technology/" data-i18n="nav.s_tech">Développement Web, Mobile &amp; Logiciels</a>
+            <a href="/services/innovation/" data-i18n="nav.s_ia">Innovation &amp; Automatisation</a>
+            <a href="/services/finance/" data-i18n="nav.s_finance">Finance &amp; Audit</a>
+            <a href="/services/growth/" data-i18n="nav.s_growth">Growth &amp; Leads</a>
+          </div>
+        </div>
+
+        <a href="/industries/" class="advisano-nav-link active" data-i18n="nav.industries">Sectors</a>
+        <a href="/case-studies/" class="advisano-nav-link" data-i18n="nav.case_studies">Case Studies</a>
+        <a href="/insights/" class="advisano-nav-link" data-i18n="nav.innovation">Insights</a>
+      </nav>
+
+      <div class="advisano-nav-action">
+        <div class="advisano-lang-switcher" role="group" aria-label="Language selection">
+          <button type="button" class="advisano-lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" class="advisano-lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="advisano-lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <a href="/contact/" class="advisano-contact-btn desktop-only">
+          <span data-i18n="nav.contact">Contact</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button type="button" class="advisano-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="advisano-mobile-menu">
+          <span class="hamburger-bar bar-top"></span>
+          <span class="hamburger-bar bar-mid"></span>
+          <span class="hamburger-bar bar-bot"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="advisano-mobile-drawer" id="advisano-mobile-menu" aria-hidden="true">
+    <div class="advisano-drawer-inner">
+      <div class="advisano-drawer-header">
+        <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+          <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+        </a>
+        <button type="button" class="advisano-drawer-close" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <nav class="advisano-drawer-nav" aria-label="Mobile navigation">
+        <a href="/" class="advisano-drawer-link" data-i18n="nav.home">Home <span>→</span></a>
+        <a href="/about/" class="advisano-drawer-link" data-i18n="nav.about">About <span>→</span></a>
+        <a href="/services/" class="advisano-drawer-link" data-i18n="nav.services">Services <span>→</span></a>
+        <a href="/industries/" class="advisano-drawer-link active" data-i18n="nav.industries">Sectors <span>→</span></a>
+        <a href="/case-studies/" class="advisano-drawer-link" data-i18n="nav.case_studies">Case Studies <span>→</span></a>
+        <a href="/insights/" class="advisano-drawer-link" data-i18n="nav.innovation">Insights <span>→</span></a>
+        <div style="margin-top: 10px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #b6e82c; padding-left: 14px; margin-bottom: 4px;">Legal</span>
+          <a href="/privacy/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Privacy Policy <span>→</span></a>
+          <a href="/terms/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Legal &amp; Compliance <span>→</span></a>
+          <a href="/contact/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Contact <span>→</span></a>
+        </div>
+      </nav>
+
+      <div class="advisano-drawer-footer">
+        <a href="/contact/" class="advisano-drawer-cta-btn">
+          <span data-i18n="nav.contact">Get in Touch with Our Team</span>
+          <span>→</span>
+        </a>
+        <div class="advisano-drawer-meta">
+          <span class="advisano-drawer-hub">
+            <span class="pulse-dot-lime"></span> London &amp; Castellón
+          </span>
+          <span class="advisano-drawer-note">Multidisciplinary EMEA Advisory</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Industries Hub Hero -->
+    <section class="industries-hub-section">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div style="font-size: 13px; color: #64748b; margin-bottom: 22px; display: flex; align-items: center; gap: 8px;">
+          <a href="/" style="color: #012e5c; font-weight: 600; text-decoration: none;">Home</a>
+          <span>/</span>
+          <span style="color: #012e5c; font-weight: 700;">Sectors &amp; Industries</span>
+        </div>
+
+        <div class="industries-hub-badge" data-i18n="ind.tag">
+          SECTORS &amp; INDUSTRIES
+        </div>
+
+        <h1 class="industries-hub-title" data-i18n="ind.title">
+          Precision Advisory Engineered for Industry Leaders.
+        </h1>
+        <p class="industries-hub-desc" data-i18n="ind.lead">
+          From fleet electrification to algorithmic financial models, our multidisciplinary teams engineer high-velocity solutions tailored to specific sector dynamics.
+        </p>
+
+        <div class="industries-hub-telemetry">
+          <div class="industries-telemetry-item"><span class="t-dot"></span> <span data-i18n="ind.tel1">Automotive &amp; Mobility</span></div>
+          <span class="industries-telemetry-divider">|</span>
+          <div class="industries-telemetry-item"><span class="t-dot"></span> <span data-i18n="ind.tel2">Defence &amp; Security</span></div>
+          <span class="industries-telemetry-divider">|</span>
+          <div class="industries-telemetry-item"><span class="t-dot"></span> <span data-i18n="ind.tel3">Energy &amp; Chemistry</span></div>
+          <span class="industries-telemetry-divider">|</span>
+          <div class="industries-telemetry-item"><span class="t-dot"></span> <span data-i18n="ind.tel4">Healthcare &amp; Pharma</span></div>
+        </div>
+
+        <!-- Industries Illustration Card Grid -->
+        <div class="industries-card-grid">
+
+          <!-- Card 01: Automobile & Mobility -->
+          <article class="industry-card">
+            <div class="industry-card-media">
+              <img src="/images/industries/industry-mobility.jpg" alt="Automobile &amp; Mobility | SOURX" loading="lazy">
+              <div class="industry-card-media-overlay"></div>
+              <span class="industry-card-num">01</span>
+              <span class="industry-card-tag" data-i18n="ind.c1_badge">MOBILITY</span>
+            </div>
+            <div class="industry-card-body">
+              <h2 class="industry-card-title" data-i18n="ind.c1_title">Automotive &amp; Mobility</h2>
+              <p class="industry-card-desc" data-i18n="ind.c1_desc">Fleet electrification, global supply chain optimization, and dealership digitization driving modern mobility.</p>
+              <div class="industry-card-chips">
+                <span class="industry-chip" data-i18n="ind.c1_d1">EV Fleet Roadmap</span>
+                <span class="industry-chip" data-i18n="ind.c1_d2">Tier-1 Supply Chain</span>
+                <span class="industry-chip" data-i18n="ind.c1_d3">Fleet Telematics</span>
+              </div>
+              <div class="industry-card-footer">
+                <span class="industry-card-clients">OEMs, Tier-1 suppliers, shared mobility</span>
+                <a href="/contact/" class="industry-card-cta" data-i18n="ind.c1_cta">Explore Mobility Advisory →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 02: Defence, Security & Justice -->
+          <article class="industry-card">
+            <div class="industry-card-media">
+              <img src="/images/industries/industry-defense.jpg" alt="Defence, Security &amp; Justice | SOURX" loading="lazy">
+              <div class="industry-card-media-overlay"></div>
+              <span class="industry-card-num">02</span>
+              <span class="industry-card-tag" data-i18n="ind.c2_badge">DEFENCE</span>
+            </div>
+            <div class="industry-card-body">
+              <h2 class="industry-card-title" data-i18n="ind.c2_title">Defence, Security &amp; Justice</h2>
+              <p class="industry-card-desc" data-i18n="ind.c2_desc">Data sovereignty, accredited cyber resilience, and institutional digital modernization for mission-critical bodies.</p>
+              <div class="industry-card-chips">
+                <span class="industry-chip" data-i18n="ind.c2_d1">Sovereign Cloud</span>
+                <span class="industry-chip" data-i18n="ind.c2_d2">Cyber Resilience</span>
+                <span class="industry-chip" data-i18n="ind.c2_d3">Compliance Frameworks</span>
+              </div>
+              <div class="industry-card-footer">
+                <span class="industry-card-clients">Ministries, agencies, defence integrators</span>
+                <a href="/contact/" class="industry-card-cta" data-i18n="ind.c2_cta">Explore Defence Advisory →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 03: Energy & Chemistry -->
+          <article class="industry-card">
+            <div class="industry-card-media">
+              <img src="/images/industries/industry-energy.jpg" alt="Energy &amp; Chemistry | SOURX" loading="lazy">
+              <div class="industry-card-media-overlay"></div>
+              <span class="industry-card-num">03</span>
+              <span class="industry-card-tag" data-i18n="ind.c3_badge">ENERGY</span>
+            </div>
+            <div class="industry-card-body">
+              <h2 class="industry-card-title" data-i18n="ind.c3_title">Energy &amp; Chemistry</h2>
+              <p class="industry-card-desc" data-i18n="ind.c3_desc">Renewables transition, industrial decarbonization, and ESG statutory governance for energy producers.</p>
+              <div class="industry-card-chips">
+                <span class="industry-chip" data-i18n="ind.c3_d1">ESG Reporting</span>
+                <span class="industry-chip" data-i18n="ind.c3_d2">Smart Grid Stacks</span>
+                <span class="industry-chip" data-i18n="ind.c3_d3">CAPEX Modeling</span>
+              </div>
+              <div class="industry-card-footer">
+                <span class="industry-card-clients">Renewable producers, grid distributors</span>
+                <a href="/contact/" class="industry-card-cta" data-i18n="ind.c3_cta">Explore Energy Advisory →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 04: Health & Pharma -->
+          <article class="industry-card">
+            <div class="industry-card-media">
+              <img src="/images/industries/industry-health.jpg" alt="Health &amp; Pharma | SOURX" loading="lazy">
+              <div class="industry-card-media-overlay"></div>
+              <span class="industry-card-num">04</span>
+              <span class="industry-card-tag" data-i18n="ind.c4_badge">HEALTH</span>
+            </div>
+            <div class="industry-card-body">
+              <h2 class="industry-card-title" data-i18n="ind.c4_title">Healthcare &amp; Pharma</h2>
+              <p class="industry-card-desc" data-i18n="ind.c4_desc">Secure health data ecosystems, GxP/MDR statutory readiness, and applied AI integration across patient workflows.</p>
+              <div class="industry-card-chips">
+                <span class="industry-chip" data-i18n="ind.c4_d1">MDR Compliance</span>
+                <span class="industry-chip" data-i18n="ind.c4_d2">HDS Health Data</span>
+                <span class="industry-chip" data-i18n="ind.c4_d3">Diagnostic AI</span>
+              </div>
+              <div class="industry-card-footer">
+                <span class="industry-card-clients">Pharma labs, medtechs, private clinics</span>
+                <a href="/contact/" class="industry-card-cta" data-i18n="ind.c4_cta">Explore Healthcare Advisory →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 05: Banking & Financial Services -->
+          <article class="industry-card">
+            <div class="industry-card-media">
+              <img src="/images/industries/industry-banking.jpg" alt="Banking &amp; Financial Services | SOURX" loading="lazy">
+              <div class="industry-card-media-overlay"></div>
+              <span class="industry-card-num">05</span>
+              <span class="industry-card-tag" data-i18n="ind.c5_badge">FINANCE</span>
+            </div>
+            <div class="industry-card-body">
+              <h2 class="industry-card-title" data-i18n="ind.c5_title">Banking &amp; Financial Services</h2>
+              <p class="industry-card-desc" data-i18n="ind.c5_desc">Core banking modernization, DORA resilience compliance, and algorithmic internal risk monitoring.</p>
+              <div class="industry-card-chips">
+                <span class="industry-chip" data-i18n="ind.c5_d1">DORA Compliance</span>
+                <span class="industry-chip" data-i18n="ind.c5_d2">Core Banking</span>
+                <span class="industry-chip" data-i18n="ind.c5_d3">Algorithmic Risk</span>
+              </div>
+              <div class="industry-card-footer">
+                <span class="industry-card-clients">Private banks, fintechs, asset managers</span>
+                <a href="/contact/" class="industry-card-cta" data-i18n="ind.c5_cta">Explore Banking Advisory →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 06: E-Commerce & Logistics -->
+          <article class="industry-card">
+            <div class="industry-card-media">
+              <img src="/images/industries/industry-logistics.jpg" alt="E-Commerce &amp; Logistics | SOURX" loading="lazy">
+              <div class="industry-card-media-overlay"></div>
+              <span class="industry-card-num">06</span>
+              <span class="industry-card-tag" data-i18n="ind.c6_badge">LOGISTICS</span>
+            </div>
+            <div class="industry-card-body">
+              <h2 class="industry-card-title" data-i18n="ind.c6_title">E-Commerce &amp; Logistics</h2>
+              <p class="industry-card-desc" data-i18n="ind.c6_desc">Automated fulfillment warehouses, last-mile route routing, and high-conversion international retail platforms.</p>
+              <div class="industry-card-chips">
+                <span class="industry-chip" data-i18n="ind.c6_d1">Automated Fulfillment</span>
+                <span class="industry-chip" data-i18n="ind.c6_d2">Last-Mile Telematics</span>
+                <span class="industry-chip" data-i18n="ind.c6_d3">Conversion Lift +80%</span>
+              </div>
+              <div class="industry-card-footer">
+                <span class="industry-card-clients">EasyPrint Bags, Printsome, Three W Transport</span>
+                <a href="/contact/" class="industry-card-cta" data-i18n="ind.c6_cta">Explore Logistics Advisory →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 5rem;">
+      <div class="container">
+        <div style="background: linear-gradient(135deg, #012e5c 0%, #01234a 60%, #0a3d6b 100%); border-radius: clamp(20px, 2.5vw, 32px); padding: clamp(2.5rem, 5vw, 4rem); color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; position: relative; overflow: hidden;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(182, 232, 44, 0.07) 0%, transparent 60%); pointer-events: none;"></div>
+          <div style="max-width: 600px; position: relative; z-index: 1;">
+            <h2 style="color: #FFFFFF; font-size: clamp(1.6rem, 2.5vw, 2.3rem); margin-bottom: 0.75rem;" data-i18n="ind.cta_title">
+              Ready to Accelerate Your Sector Performance?
+            </h2>
+            <p style="color: rgba(255,255,255,0.72); font-size: 1rem;" data-i18n="ind.cta_desc">
+              Our practice leaders combine sector depth with engineering rigor to construct sustainable competitive differentiation.
+            </p>
+          </div>
+          <a href="/contact/" class="btn btn-lime" style="padding: 0.9rem 2rem; font-size: 1rem; position: relative; z-index: 1;">
+            <span data-i18n="ind.cta_btn">Book a Sector Discovery Session →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="background-color: #012e5c; color: #ffffff; padding: 60px 24px 30px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <img src="/images/sourx-logo-white.svg" alt="SOURX EMEA" style="height: 26px; width: auto; margin-bottom: 8px;">
+        <div style="font-size: 13px; color: rgba(255,255,255,0.65);" data-i18n="footer.subpage_address">
+          71–75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Spain • Tel: +44 203 137 7777 • info@sourx.com
+        </div>
+      </div>
+      <div style="display: flex; gap: 20px; font-size: 13.5px; flex-wrap: wrap;">
+        <a href="/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.home">Home</a>
+        <a href="/about/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.about">About</a>
+        <a href="/services/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.services">Services</a>
+        <a href="/industries/" style="color: #b6e82c; text-decoration: none; font-weight: 600;" data-i18n="nav.industries">Sectors</a>
+        <a href="/case-studies/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.case_studies">Case Studies</a>
+        <a href="/privacy/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="/terms/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.terms">Legal &amp; Compliance</a>
+        <a href="/contact/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.contact">Contact</a>
+      </div>
+    </div>
+    <div style="max-width: 1400px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12.5px; color: rgba(255,255,255,0.5); text-align: center;" data-i18n="footer.subpage_copyright">
+      © 2026 SOURX EMEA. All rights reserved. Strategy. Technology. Innovation.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

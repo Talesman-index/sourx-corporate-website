@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title_cases">Case Studies &amp; Client Results | SOURX</title>
+  <meta name="description" content="Découvrez les interventions concrètes de SOURX auprès d'entreprises de premier plan : EasyPrint Bags, Printsome, Three W Transport, Roberta Einer, Vikadel.">
+  <link rel="stylesheet" href="/src/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23002e5c'/><circle cx='16' cy='16' r='8' fill='%23b6e800'/></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="advisano-navbar subpage-navbar">
+    <div class="advisano-nav-inner">
+      <!-- Brand Logo -->
+      <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+        <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+      </a>
+
+      <!-- Menu Navigation (Desktop) -->
+      <nav class="advisano-nav-menu" aria-label="Navigation principale">
+        <a href="/" class="advisano-nav-link" data-i18n="nav.home">Home</a>
+        
+        <a href="/about/" class="advisano-nav-link" data-i18n="nav.about">About</a>
+        <!-- Dropdown Services -->
+        <div class="advisano-dropdown">
+          <a href="/services/" class="advisano-nav-link dropdown-toggle" data-i18n="nav.services">
+            Services <svg width="9" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"/></svg>
+          </a>
+          <div class="advisano-dropdown-menu">
+            <a href="/services/" data-i18n="nav.services_all">All Services</a>
+            <a href="/services/strategy/" data-i18n="nav.s_strategy">Strategy &amp; Management</a>
+            <a href="/services/technology/" data-i18n="nav.s_tech">Développement Web, Mobile &amp; Logiciels</a>
+            <a href="/services/innovation/" data-i18n="nav.s_ia">Innovation &amp; Automatisation</a>
+            <a href="/services/finance/" data-i18n="nav.s_finance">Finance &amp; Audit</a>
+            <a href="/services/growth/" data-i18n="nav.s_growth">Growth &amp; Leads</a>
+          </div>
+        </div>
+
+        <a href="/industries/" class="advisano-nav-link" data-i18n="nav.industries">Sectors</a>
+        <a href="/case-studies/" class="advisano-nav-link active" data-i18n="nav.case_studies">Case Studies</a>
+        <a href="/insights/" class="advisano-nav-link" data-i18n="nav.innovation">Insights</a>
+      </nav>
+
+      <!-- Right Action Button & Language Switcher -->
+      <div class="advisano-nav-action">
+        <!-- Language Switcher (FR / EN / ES) -->
+        <div class="advisano-lang-switcher" role="group" aria-label="Language selection">
+          <button type="button" class="advisano-lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" class="advisano-lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="advisano-lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+
+        <a href="/contact/" class="advisano-contact-btn desktop-only">
+          <span data-i18n="nav.contact">Contact</span>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" class="advisano-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="advisano-mobile-menu">
+          <span class="hamburger-bar bar-top"></span>
+          <span class="hamburger-bar bar-mid"></span>
+          <span class="hamburger-bar bar-bot"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div class="advisano-mobile-drawer" id="advisano-mobile-menu" aria-hidden="true">
+    <div class="advisano-drawer-inner">
+      <div class="advisano-drawer-header">
+        <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+          <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+        </a>
+        <button type="button" class="advisano-drawer-close" aria-label="Fermer le menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <nav class="advisano-drawer-nav" aria-label="Navigation mobile">
+        <a href="/" class="advisano-drawer-link" data-i18n="nav.home">Home <span>→</span></a>
+        <a href="/about/" class="advisano-drawer-link" data-i18n="nav.about">About <span>→</span></a>
+        <a href="/services/" class="advisano-drawer-link" data-i18n="nav.services">Services <span>→</span></a>
+        <a href="/industries/" class="advisano-drawer-link" data-i18n="nav.industries">Sectors <span>→</span></a>
+        <a href="/case-studies/" class="advisano-drawer-link active" data-i18n="nav.case_studies">Case Studies <span>→</span></a>
+        <a href="/insights/" class="advisano-drawer-link" data-i18n="nav.innovation">Insights <span>→</span></a>
+
+        <div style="margin-top: 10px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #b6e82c; padding-left: 14px; margin-bottom: 4px;">Legal</span>
+          <a href="/privacy/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Privacy Policy <span>→</span></a>
+          <a href="/terms/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Legal &amp; Compliance <span>→</span></a>
+          <a href="/contact/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Contact <span>→</span></a>
+        </div>
+      </nav>
+
+      <div class="advisano-drawer-footer">
+        <a href="/contact/" class="advisano-drawer-cta-btn">
+          <span data-i18n="nav.contact">Get in Touch with Our Team</span>
+          <span>→</span>
+        </a>
+        <div class="advisano-drawer-meta">
+          <span class="advisano-drawer-hub">
+            <span class="pulse-dot-lime"></span> Londres &amp; Castellón
+          </span>
+          <span class="advisano-drawer-note">Multidisciplinary EMEA Advisory</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="section" style="padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="container">
+        <span class="badge-tag" data-i18n="cs.tag">PROVEN FIELD RESULTS</span>
+        <h1 class="heading-hero" style="margin-top: 1rem; max-width: 850px;" data-i18n="cs.title">
+          Measurable impact for forward-thinking leaders.
+        </h1>
+        <p class="body-lead" style="max-width: 650px; margin-top: 1.25rem;" data-i18n="cs.lead">
+          How SOURX orchestrates enduring transformations by uniting strategic clarity, digital systems, and financial precision.
+        </p>
+
+        <div style="margin-top: 2.5rem; border-radius: var(--radius-xl); overflow: hidden; height: clamp(260px, 35vw, 400px); box-shadow: var(--shadow-card);">
+          <img src="/images/financial-analytics-tablet.png" alt="Analyses de performance et études de cas SOURX" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2.5rem; margin-top: 3.5rem;">
+          
+          <!-- Case 1: EasyPrint Bags -->
+          <article style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: clamp(2rem, 4vw, 3rem); box-shadow: var(--shadow-card);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <span class="badge-tag lime" data-i18n="cs.c1_badge">MANUFACTURING &amp; E-COMMERCE</span>
+                <h2 style="font-size: 1.6rem; margin-top: 0.5rem;" data-i18n="cs.c1_title">EasyPrint Bags: Operations Automation &amp; European Scaling</h2>
+              </div>
+              <span style="font-size: 1.5rem; font-weight: 800; color: #002e5c;" data-i18n="cs.c1_stat">4x Capacity Scaled</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0; padding: 1.5rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+              <div>
+                <h4 style="color: var(--text-dark); margin-bottom: 0.25rem; font-size: 0.95rem;" data-i18n="cs.c1_lbl_challenge">Client Challenge</h4>
+                <p class="body-regular" data-i18n="cs.c1_challenge">Rapid European sales expansion causing severe administrative bottlenecks and supplier coordination friction.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--text-dark); margin-bottom: 0.25rem; font-size: 0.95rem;" data-i18n="cs.c1_lbl_action">SOURX Intervention</h4>
+                <p class="body-regular" data-i18n="cs.c1_action">Deployed automated cloud ERP connecting live warehouse inventory with direct manufacturer order routing.</p>
+              </div>
+            </div>
+            <a href="/contact/" class="btn btn-outline" data-i18n="cs.c1_btn">Request Full Case Study →</a>
+          </article>
+
+          <!-- Case 2: Printsome -->
+          <article style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: clamp(2rem, 4vw, 3rem); box-shadow: var(--shadow-card);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <span class="badge-tag" data-i18n="cs.c2_badge">ON-DEMAND LOGISTICS</span>
+                <h2 style="font-size: 1.6rem; margin-top: 0.5rem;" data-i18n="cs.c2_title">Printsome: Algorithmic Pricing Engine &amp; Production Hubs</h2>
+              </div>
+              <span style="font-size: 1.5rem; font-weight: 800; color: #002e5c;" data-i18n="cs.c2_stat">+68% Faster Quoting</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0; padding: 1.5rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+              <div>
+                <h4 style="color: var(--text-dark); margin-bottom: 0.25rem; font-size: 0.95rem;" data-i18n="cs.c2_lbl_challenge">Client Challenge</h4>
+                <p class="body-regular" data-i18n="cs.c2_challenge">Prolonged custom quoting turnaround slowing conversion velocity across British and Spanish enterprise accounts.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--text-dark); margin-bottom: 0.25rem; font-size: 0.95rem;" data-i18n="cs.c2_lbl_action">SOURX Intervention</h4>
+                <p class="body-regular" data-i18n="cs.c2_action">Engineered automated vector validation pipelines and real-time algorithmic calculation for instant customer checkouts.</p>
+              </div>
+            </div>
+            <a href="/contact/" class="btn btn-outline" data-i18n="cs.c2_btn">Request Full Case Study →</a>
+          </article>
+
+          <!-- Case 3: Three W Transport -->
+          <article style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: clamp(2rem, 4vw, 3rem); box-shadow: var(--shadow-card);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <span class="badge-tag lime" data-i18n="cs.c3_badge">FLEET &amp; TRANSPORTATION</span>
+                <h2 style="font-size: 1.6rem; margin-top: 0.5rem;" data-i18n="cs.c3_title">Three W Transport: Telematics &amp; Margin Optimization</h2>
+              </div>
+              <span style="font-size: 1.5rem; font-weight: 800; color: #002e5c;" data-i18n="cs.c3_stat">+22% Net Operating Margin</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0; padding: 1.5rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+              <div>
+                <h4 style="color: var(--text-dark); margin-bottom: 0.25rem; font-size: 0.95rem;" data-i18n="cs.c3_lbl_challenge">Client Challenge</h4>
+                <p class="body-regular" data-i18n="cs.c3_challenge">Surging fuel overhead and fragmented reporting obstructing profitability analysis across individual vehicle routes.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--text-dark); margin-bottom: 0.25rem; font-size: 0.95rem;" data-i18n="cs.c3_lbl_action">SOURX Intervention</h4>
+                <p class="body-regular" data-i18n="cs.c3_action">Integrated IoT sensor telemetry and AI fuel modeling paired with an executive financial decision dashboard.</p>
+              </div>
+            </div>
+            <a href="/contact/" class="btn btn-outline" data-i18n="cs.c3_btn">Request Full Case Study →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 3rem;">
+      <div class="container">
+        <div class="forest-container" style="text-align: center;">
+          <h2 class="heading-section" style="color: #FFFFFF;" data-i18n="cs.cta_title">Facing a Similar Transformation Challenge?</h2>
+          <p class="body-lead" style="color: var(--text-light-secondary); max-width: 600px; margin: 1rem auto 2rem;" data-i18n="cs.cta_desc">Our senior partners evaluate your operating context under strict NDA and outline a concrete action roadmap within 7 days.</p>
+          <a href="/contact/" class="btn btn-lime">
+            <span data-i18n="cs.cta_btn">Speak with a Practice Partner →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="background-color: #012e5c; color: #ffffff; padding: 60px 24px 30px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <img src="/images/sourx-logo-white.svg" alt="SOURX EMEA" style="height: 26px; width: auto; margin-bottom: 8px;">
+        <div style="font-size: 13px; color: rgba(255,255,255,0.65);" data-i18n="footer.subpage_address">
+          71–75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Spain • Tel: +44 203 137 7777 • info@sourx.com
+        </div>
+      </div>
+      <div style="display: flex; gap: 20px; font-size: 13.5px; flex-wrap: wrap;">
+        <a href="/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.home">Home</a>
+        <a href="/services/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.services">Services</a>
+        <a href="/industries/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.industries">Sectors</a>
+        <a href="/case-studies/" style="color: #b6e82c; text-decoration: none; font-weight: 600;" data-i18n="nav.case_studies">Case Studies</a>
+        <a href="/privacy/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="/terms/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.terms">Legal &amp; Compliance</a>
+        <a href="/contact/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="nav.contact">Contact</a>
+      </div>
+    </div>
+    <div style="max-width: 1400px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12.5px; color: rgba(255,255,255,0.5); text-align: center;" data-i18n="footer.subpage_copyright">
+      © 2026 SOURX EMEA. All Rights Reserved. Strategy. Technology. Innovation.
+    </div>
+  </footer>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

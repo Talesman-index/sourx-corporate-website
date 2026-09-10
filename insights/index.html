@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title_insights">Analyses, Publications &amp; Insights | SOURX Consulting</title>
+  <meta name="description" content="Perspectives stratégiques, notes d'analyse macro-économique et réflexions technologiques rédigées par les associés SOURX.">
+  <link rel="stylesheet" href="/src/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23002e5c'/><circle cx='16' cy='16' r='8' fill='%23b6e800'/></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="advisano-navbar subpage-navbar">
+    <div class="advisano-nav-inner">
+      <!-- Brand Logo -->
+      <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+        <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+      </a>
+
+      <!-- Menu Navigation (Desktop) -->
+      <nav class="advisano-nav-menu" aria-label="Navigation principale">
+        <a href="/" class="advisano-nav-link" data-i18n="nav.home">Home</a>
+        
+        <a href="/about/" class="advisano-nav-link" data-i18n="nav.about">About</a>
+        <!-- Dropdown Services -->
+        <div class="advisano-dropdown">
+          <a href="/services/" class="advisano-nav-link dropdown-toggle" data-i18n="nav.services">
+            Services <svg width="9" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"/></svg>
+          </a>
+          <div class="advisano-dropdown-menu">
+            <a href="/services/" data-i18n="nav.services_all">All Services</a>
+            <a href="/services/strategy/" data-i18n="nav.s_strategy">Strategy &amp; Management</a>
+            <a href="/services/technology/" data-i18n="nav.s_tech">Développement Web, Mobile &amp; Logiciels</a>
+            <a href="/services/innovation/" data-i18n="nav.s_ia">Innovation &amp; Automatisation</a>
+            <a href="/services/finance/" data-i18n="nav.s_finance">Finance &amp; Audit</a>
+            <a href="/services/growth/" data-i18n="nav.s_growth">Growth &amp; Leads</a>
+          </div>
+        </div>
+
+        <a href="/industries/" class="advisano-nav-link" data-i18n="nav.industries">Sectors</a>
+        <a href="/case-studies/" class="advisano-nav-link" data-i18n="nav.case_studies">Case Studies</a>
+        <a href="/insights/" class="advisano-nav-link active" data-i18n="nav.innovation">Insights</a>
+      </nav>
+
+      <!-- Right Action Button & Language Switcher -->
+      <div class="advisano-nav-action">
+        <!-- Language Switcher (FR / EN / ES) -->
+        <div class="advisano-lang-switcher" role="group" aria-label="Language selection">
+          <button type="button" class="advisano-lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" class="advisano-lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="advisano-lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+
+        <a href="/contact/" class="advisano-contact-btn desktop-only">
+          <span data-i18n="nav.contact">Contact</span>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" class="advisano-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="advisano-mobile-menu">
+          <span class="hamburger-bar bar-top"></span>
+          <span class="hamburger-bar bar-mid"></span>
+          <span class="hamburger-bar bar-bot"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div class="advisano-mobile-drawer" id="advisano-mobile-menu" aria-hidden="true">
+    <div class="advisano-drawer-inner">
+      <div class="advisano-drawer-header">
+        <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+          <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+        </a>
+        <button type="button" class="advisano-drawer-close" aria-label="Fermer le menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <nav class="advisano-drawer-nav" aria-label="Navigation mobile">
+        <a href="/" class="advisano-drawer-link" data-i18n="nav.home">Home <span>→</span></a>
+        <a href="/about/" class="advisano-drawer-link" data-i18n="nav.about">About <span>→</span></a>
+        <a href="/services/" class="advisano-drawer-link" data-i18n="nav.services">Services <span>→</span></a>
+        <a href="/industries/" class="advisano-drawer-link" data-i18n="nav.industries">Sectors <span>→</span></a>
+        <a href="/case-studies/" class="advisano-drawer-link" data-i18n="nav.case_studies">Case Studies <span>→</span></a>
+        <a href="/insights/" class="advisano-drawer-link active" data-i18n="nav.innovation">Insights <span>→</span></a>
+
+        <div style="margin-top: 10px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #b6e82c; padding-left: 14px; margin-bottom: 4px;">Legal</span>
+          <a href="/privacy/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Privacy Policy <span>→</span></a>
+          <a href="/terms/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Legal &amp; Compliance <span>→</span></a>
+          <a href="/contact/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Contact <span>→</span></a>
+        </div>
+      </nav>
+
+      <div class="advisano-drawer-footer">
+        <a href="/contact/" class="advisano-drawer-cta-btn">
+          <span data-i18n="nav.contact">Get in Touch with Our Team</span>
+          <span>→</span>
+        </a>
+        <div class="advisano-drawer-meta">
+          <span class="advisano-drawer-hub">
+            <span class="pulse-dot-lime"></span> Londres &amp; Castellón
+          </span>
+          <span class="advisano-drawer-note">Multidisciplinary EMEA Advisory</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="section" style="padding-top: 3.5rem; padding-bottom: 2.5rem;">
+      <div class="container">
+        <span class="badge-tag" data-i18n="ins.tag">INTELLIGENCE STRATÉGIQUE</span>
+        <h1 class="heading-hero" style="margin-top: 1rem; max-width: 900px;" data-i18n="ins.title">
+          Perspectives sur la Stratégie, la Technologie &amp; l'Échelle.
+        </h1>
+        <p class="body-lead" style="max-width: 720px; margin-top: 1.25rem;" data-i18n="ins.lead">
+          Notes exécutives, décryptages sectoriels et analyses de rupture rédigés par les directeurs de mission et associés de SOURX.
+        </p>
+
+        <!-- Insights Editorial Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-top: 3.5rem;">
+          
+          <!-- Article 1: Financial / Banking -->
+          <a href="/services/finance/" class="insight-editorial-card">
+            <div class="insight-img-box">
+              <img src="/images/financial-analytics-tablet.png" alt="Analyse financière et stratégie bancaire">
+            </div>
+            <div class="insight-body">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #002e5c; text-transform: uppercase; margin-bottom: 0.5rem;" data-i18n="ins.a1_cat">STRATÉGIE BANCAIRE &amp; FINANCE</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.75rem; color: #002e5c;" data-i18n="ins.a1_title">
+                Le Guide du Passage à l'Échelle : Comment les institutions modernisent leurs opérations
+              </h3>
+              <p class="body-regular" style="margin-bottom: 1.5rem;" data-i18n="ins.a1_desc">
+                Analyse approfondie des leviers d'automatisation des flux et de la transformation des modèles de rentabilité dans un environnement de taux mouvant.
+              </p>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-muted);">
+                <span data-i18n="ins.a1_author">Par l'Équipe Advisory</span>
+                <span style="font-weight: 700; color: #002e5c;" data-i18n="ins.a1_time">8 min de lecture →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2: Innovation / Agile Workshop -->
+          <a href="/services/innovation/" class="insight-editorial-card">
+            <div class="insight-img-box">
+              <img src="/images/agile-workshop-strategy.jpg" alt="Atelier agile et transformation opérationnelle">
+            </div>
+            <div class="insight-body">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #002e5c; text-transform: uppercase; margin-bottom: 0.5rem;" data-i18n="ins.a2_cat">INNOVATION &amp; IA</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.75rem; color: #002e5c;" data-i18n="ins.a2_title">
+                Au-delà des PoC : Industrialiser les Agents Autonomes en Entreprise
+              </h3>
+              <p class="body-regular" style="margin-bottom: 1.5rem;" data-i18n="ins.a2_desc">
+                Pourquoi 85% des démonstrateurs d'IA échouent en production et comment construire une architecture de données fiable pour franchir le cap.
+              </p>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-muted);">
+                <span data-i18n="ins.a2_author">Par le Pôle Innovation</span>
+                <span style="font-weight: 700; color: #002e5c;" data-i18n="ins.a2_time">6 min de lecture →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3: Digital Strategy -->
+          <a href="/services/technology/" class="insight-editorial-card">
+            <div class="insight-img-box">
+              <img src="/images/digital-strategy-team.jpg" alt="Équipe de stratégie digitale">
+            </div>
+            <div class="insight-body">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #002e5c; text-transform: uppercase; margin-bottom: 0.5rem;" data-i18n="ins.a3_cat">ARCHITECTURE CLOUD</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.75rem; color: #002e5c;" data-i18n="ins.a3_title">
+                Souveraineté des Données &amp; Conformité DORA en Europe
+              </h3>
+              <p class="body-regular" style="margin-bottom: 1.5rem;" data-i18n="ins.a3_desc">
+                Ce que la réglementation européenne impose aux infrastructures critiques et comment anticiper les audits de résilience opérationnelle.
+              </p>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-muted);">
+                <span data-i18n="ins.a3_author">Par le Pôle Technologie</span>
+                <span style="font-weight: 700; color: #002e5c;" data-i18n="ins.a3_time">10 min de lecture →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 4: Executive Leadership -->
+          <a href="/services/strategy/" class="insight-editorial-card">
+            <div class="insight-img-box">
+              <img src="/images/executive-meeting.jpg" alt="Réunion de direction exécutive">
+            </div>
+            <div class="insight-body">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #002e5c; text-transform: uppercase; margin-bottom: 0.5rem;" data-i18n="ins.a4_cat">PRIVATE EQUITY</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.75rem; color: #002e5c;" data-i18n="ins.a4_title">
+                Marché du Capital 2026 : Bilan Prospectif et Nouvelles Frontières
+              </h3>
+              <p class="body-regular" style="margin-bottom: 1.5rem;" data-i18n="ins.a4_desc">
+                Décryptage des flux d'investissement transfrontaliers et des critères d'arbitrage technologique adoptés par les principaux fonds d'allocation.
+              </p>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-muted);">
+                <span data-i18n="ins.a4_author">Par la Direction SOURX</span>
+                <span style="font-weight: 700; color: #002e5c;" data-i18n="ins.a4_time">7 min de lecture →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 5rem;">
+      <div class="container">
+        <div style="background: var(--bg-dark); border-radius: var(--radius-xl); padding: clamp(2.5rem, 5vw, 4rem); color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+          <div style="max-width: 600px;">
+            <h2 style="color: #FFFFFF; font-size: clamp(1.6rem, 2.5vw, 2.3rem); margin-bottom: 0.75rem;" data-i18n="ins.cta_title">
+              Recevez nos prochaines analyses exclusives.
+            </h2>
+            <p style="color: var(--text-light-secondary); font-size: 1rem;" data-i18n="ins.cta_desc">
+              Abonnez-vous à notre note stratégique trimestrielle réservée aux dirigeants et investisseurs.
+            </p>
+          </div>
+          <div class="newsletter-input-group">
+            <input type="email" placeholder="votre.email@entreprise.com" data-i18n-ph="ins.cta_ph" style="border: none; outline: none; background: transparent; color: #fff; width: 100%;">
+            <a href="/contact/" class="btn btn-lime" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;" data-i18n="ins.cta_btn">S'inscrire</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Standardized SOURX Footer -->
+  <footer class="site-footer" style="background-color: #012e5c; color: #ffffff; padding: 60px 24px 30px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <img src="/images/sourx-logo-white.svg" alt="SOURX EMEA" style="height: 26px; width: auto; margin-bottom: 8px;">
+        <div style="font-size: 13px; color: rgba(255,255,255,0.65);" data-i18n="footer.subpage_address">
+          71-75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Espagne • Tél : +44 203 137 7777 • info@sourx.com
+        </div>
+      </div>
+      <div style="display: flex; gap: 20px; font-size: 13.5px; flex-wrap: wrap;">
+        <a href="/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.home">Accueil</a>
+        <a href="/services/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.services">Services</a>
+        <a href="/industries/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.industries">Industries</a>
+        <a href="/case-studies/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.case_studies">Réalisations</a>
+        <a href="/insights/" style="color: #b6e82c; text-decoration: none; font-weight: 600;" data-i18n="footer.insights">Analyses &amp; Insights</a>
+        <a href="/privacy/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.privacy">Confidentialité</a>
+        <a href="/terms/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.terms">Mentions Légales</a>
+        <a href="/contact/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.contact">Contact</a>
+      </div>
+    </div>
+    <div style="max-width: 1400px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12.5px; color: rgba(255,255,255,0.5); text-align: center;" data-i18n="footer.subpage_copyright">
+      © 2026 SOURX EMEA. Tous droits réservés. Stratégie. Technologie. Innovation.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

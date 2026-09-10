@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOURX | Strategy. Technology. Innovation.</title>
+  <meta name="description" content="International multidisciplinary advisory firm based in London and Spain. Helping organizations innovate, transform and lead with strategy, custom software, AI automation and financial audit.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23012e5c'/><circle cx='23' cy='9' r='5' fill='%23b6e82c'/><text x='4' y='22' font-family='sans-serif' font-weight='900' font-size='13' fill='%23ffffff'>SX</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECTION 1: SOURX FULL-BLEED EDITORIAL HERO
+       ========================================================================== -->
+  <section class="advisano-hero-section">
+    <!-- Video background with poster fallback -->
+    <div class="advisano-hero-media">
+      <video class="advisano-hero-video" autoplay loop muted playsinline preload="auto" poster="/images/hero-poster.webp">
+        <source src="/images/hero-bg.webm" type="video/webm">
+        <source src="/images/hero-bg.mp4" type="video/mp4">
+      </video>
+      <div class="advisano-hero-overlay"></div>
+    </div>
+
+    <!-- Top Navigation Header -->
+    <header class="advisano-navbar">
+      <div class="advisano-nav-inner">
+        <!-- Brand Logo -->
+        <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+          <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+        </a>
+
+        <!-- Menu Navigation (Desktop) -->
+        <nav class="advisano-nav-menu" aria-label="Navigation principale">
+          <a href="/" class="advisano-nav-link active" data-i18n="nav.home">Home</a>
+          <a href="/about/" class="advisano-nav-link" data-i18n="nav.about">About</a>
+
+          <!-- Dropdown Services -->
+          <div class="advisano-dropdown">
+            <a href="/services/" class="advisano-nav-link dropdown-toggle" data-i18n="nav.services">
+              Services <svg width="9" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"/></svg>
+            </a>
+            <div class="advisano-dropdown-menu">
+              <a href="/services/" data-i18n="nav.services_all">All Services</a>
+              <a href="/services/strategy/" data-i18n="nav.s_strategy">Strategy &amp; Management</a>
+              <a href="/services/technology/" data-i18n="nav.s_tech">Développement Web, Mobile &amp; Logiciels</a>
+              <a href="/services/innovation/" data-i18n="nav.s_ia">Innovation &amp; Automatisation</a>
+              <a href="/services/finance/" data-i18n="nav.s_finance">Finance &amp; Audit</a>
+              <a href="/services/growth/" data-i18n="nav.s_growth">Growth &amp; Leads</a>
+            </div>
+          </div>
+
+          <a href="/industries/" class="advisano-nav-link" data-i18n="nav.industries">Sectors</a>
+          <a href="/case-studies/" class="advisano-nav-link" data-i18n="nav.case_studies">Case Studies</a>
+          <a href="/insights/" class="advisano-nav-link" data-i18n="nav.innovation">Insights</a>
+        </nav>
+
+        <!-- Right Action Button & Language Switcher -->
+        <div class="advisano-nav-action">
+          <!-- Language Switcher (FR / EN / ES) -->
+          <div class="advisano-lang-switcher" role="group" aria-label="Language selection">
+            <button type="button" class="advisano-lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" class="advisano-lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="advisano-lang-btn" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+
+          <a href="/contact/" class="advisano-contact-btn desktop-only">
+            <span data-i18n="nav.contact">Contact</span>
+            <span class="btn-arrow">→</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button type="button" class="advisano-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="advisano-mobile-menu">
+            <span class="hamburger-bar bar-top"></span>
+            <span class="hamburger-bar bar-mid"></span>
+            <span class="hamburger-bar bar-bot"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div class="advisano-mobile-drawer" id="advisano-mobile-menu" aria-hidden="true">
+      <div class="advisano-drawer-inner">
+        <div class="advisano-drawer-header">
+          <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
+            <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
+          </a>
+          <button type="button" class="advisano-drawer-close" aria-label="Fermer le menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <nav class="advisano-drawer-nav" aria-label="Navigation mobile">
+          <a href="/" class="advisano-drawer-link" data-i18n="nav.home">Home <span>→</span></a>
+          <a href="/about/" class="advisano-drawer-link" data-i18n="nav.about">About <span>→</span></a>
+          <a href="/services/" class="advisano-drawer-link" data-i18n="nav.services">Services <span>→</span></a>
+          <a href="/industries/" class="advisano-drawer-link" data-i18n="nav.industries">Sectors <span>→</span></a>
+          <a href="/case-studies/" class="advisano-drawer-link" data-i18n="nav.case_studies">Case Studies <span>→</span></a>
+          <a href="/insights/" class="advisano-drawer-link" data-i18n="nav.innovation">Insights <span>→</span></a>
+
+          <div style="margin-top: 10px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #b6e82c; padding-left: 14px; margin-bottom: 4px;">Legal</span>
+            <a href="/privacy/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Privacy Policy <span>→</span></a>
+            <a href="/terms/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Legal &amp; Compliance <span>→</span></a>
+            <a href="/contact/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Contact <span>→</span></a>
+          </div>
+        </nav>
+
+        <div class="advisano-drawer-footer">
+          <a href="/contact/" class="advisano-drawer-cta-btn">
+            <span data-i18n="nav.contact">Prendre Contact avec le Cabinet</span>
+            <span>→</span>
+          </a>
+          <div class="advisano-drawer-meta">
+            <span class="advisano-drawer-hub">
+              <span class="pulse-dot-lime"></span> Londres &amp; Castellón
+            </span>
+            <span class="advisano-drawer-note">Cabinet multidisciplinaire EMEA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Hero Content -->
+    <div class="advisano-hero-content-wrap">
+      <div class="advisano-hero-container">
+        
+        <!-- Left Column -->
+        <div class="advisano-hero-left">
+          <!-- Marquee Ticker Pill -->
+          <div class="advisano-ticker-pill" aria-label="Métriques clés SOURX">
+            <div class="advisano-ticker-track">
+              <span class="advisano-ticker-item" data-i18n="hero.ticker">Transformer les organisations par la stratégie, la technologie &amp; l'innovation ✱ Pôles à Londres &amp; Castellón ✱ Plus de 80 % de taux de croissance d'acquisition ✱ 150+ missions réussies</span>
+              <span class="advisano-ticker-item" data-i18n="hero.ticker">Transformer les organisations par la stratégie, la technologie &amp; l'innovation ✱ Pôles à Londres &amp; Castellón ✱ Plus de 80 % de taux de croissance d'acquisition ✱ 150+ missions réussies</span>
+            </div>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="advisano-hero-title" data-i18n="hero.title">
+            Stratégie. Technologie.<br>
+            Conçues pour <span class="advisano-serif-highlight">l'Innovation Réelle.</span>
+          </h1>
+        </div>
+
+        <!-- Right Column -->
+        <div class="advisano-hero-right">
+          <p class="advisano-hero-desc" data-i18n="hero.desc">
+            Nous aidons les organisations à innover, se transformer et diriger. En bousculant les méthodes établies, nous bâtissons un avantage concurrentiel durable. Nous ne faisons pas que conseiller, nous travaillons à vos côtés.
+          </p>
+
+          <a href="#contact" class="advisano-btn-consultation">
+            <span data-i18n="hero.cta">Consultation Gratuite</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SOURX International Indicator -->
+    <div class="advisano-framer-badge" aria-label="Présence internationale SOURX">
+      <span style="width: 7px; height: 7px; border-radius: 50%; background: #b6e82c; display: inline-block;"></span>
+      <span data-i18n="hero.presence">Londres &amp; Castellón</span>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: REAL CLIENT LOGO CLOUD & ABOUT SOURX WITH 4 STAT CARDS
+       ========================================================================== -->
+  <section class="advisano-about-section" id="about">
+    <!-- Real Clients Marquee Bar -->
+    <div class="advisano-logos-bar">
+      <p class="advisano-trust-label" data-i18n="clients.label">Partenaire de confiance des entreprises et des marques internationales</p>
+      
+      <div class="advisano-logos-marquee">
+        <div class="advisano-logos-track">
+          <!-- Set 1 -->
+          <span class="advisano-client-brand">Printsome</span>
+          <span class="advisano-client-brand">EasyPrint Bags</span>
+          <span class="advisano-client-brand">Three W Transport</span>
+          <span class="advisano-client-brand">Roberta Einer Limited</span>
+          <span class="advisano-client-brand">The Print Yard</span>
+          <span class="advisano-client-brand">Vikadel Limited</span>
+          <span class="advisano-client-brand">Togethersense</span>
+          <span class="advisano-client-brand">DGT Trinity</span>
+          <!-- Set 2 (for seamless loop) -->
+          <span class="advisano-client-brand">Printsome</span>
+          <span class="advisano-client-brand">EasyPrint Bags</span>
+          <span class="advisano-client-brand">Three W Transport</span>
+          <span class="advisano-client-brand">Roberta Einer Limited</span>
+          <span class="advisano-client-brand">The Print Yard</span>
+          <span class="advisano-client-brand">Vikadel Limited</span>
+          <span class="advisano-client-brand">Togethersense</span>
+          <span class="advisano-client-brand">DGT Trinity</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Us & Stat Cards Main Content -->
+    <div class="advisano-about-container">
+      
+      <!-- Top Row: Tag + Editorial Narrative -->
+      <div class="advisano-about-narrative-row">
+        <div class="advisano-about-tag">
+          <span class="advisano-tag-square"></span>
+          <span data-i18n="about.tag">À PROPOS DE SOURX</span>
+        </div>
+
+        <p class="advisano-about-statement" data-i18n="about.statement">
+          SOURX EMEA est un cabinet de conseil et de transformation multidisciplinaire basé à Londres et en Espagne. Notre philosophie repose sur une conviction fondamentale : <strong>nous ne nous contentons pas de conseiller, nous travaillons à vos côtés</strong>. Les consultants traditionnels perturbent souvent les organisations de l'extérieur avec des théories abstraites. Nous nous intégrons au sein des équipes de direction et opérationnelles pour aligner stratégie d'entreprise, architecture digitale, finance et exécution IA, <span class="advisano-text-muted">en bousculant les méthodes établies pour bâtir un avantage concurrentiel durable.</span>
+        </p>
+      </div>
+
+      <!-- Bottom Row: 4 Metric Cards Grid -->
+      <div class="advisano-stats-grid">
+        <!-- Card 1: Dual Hubs -->
+        <div class="advisano-stat-card">
+          <h3 class="advisano-stat-title" data-i18n="about.stat1_title">Présence</h3>
+          <div class="advisano-stat-bottom">
+            <div class="advisano-stat-number">UK &amp; ES</div>
+            <p class="advisano-stat-desc" data-i18n="about.stat1_desc">Bureaux à Londres Covent Garden et en Espagne.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Growth Impact -->
+        <div class="advisano-stat-card">
+          <h3 class="advisano-stat-title" data-i18n="about.stat2_title">Acquisition</h3>
+          <div class="advisano-stat-bottom">
+            <div class="advisano-stat-number">80%</div>
+            <p class="advisano-stat-desc" data-i18n="about.stat2_desc">Taux de croissance et d'acquisition client moyen réalisé.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: 5 Core Units -->
+        <div class="advisano-stat-card">
+          <h3 class="advisano-stat-title" data-i18n="about.stat3_title">Pôles</h3>
+          <div class="advisano-stat-bottom">
+            <div class="advisano-stat-number">5 Pôles</div>
+            <p class="advisano-stat-desc" data-i18n="about.stat3_desc">Stratégie, Technologie, Innovation/IA, Finance &amp; Croissance.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Longevity & Track Record -->
+        <div class="advisano-stat-card">
+          <h3 class="advisano-stat-title" data-i18n="about.stat4_title">Historique</h3>
+          <div class="advisano-stat-bottom">
+            <div class="advisano-stat-number">150+</div>
+            <p class="advisano-stat-desc" data-i18n="about.stat4_desc">Missions de conseil et de transformation menées à bien.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: SOURX 5 CORE SERVICE PILLARS (INTERACTIVE BENTO)
+       ========================================================================== -->
+  <section class="advisano-services-section" id="services">
+    <div class="advisano-services-bento">
+      
+      <!-- Left Column: Interactive Service Image Display -->
+      <a href="/services/strategy/" id="advisano-services-image-link" class="advisano-service-image-box" aria-label="Découvrir ce pôle de service">
+        <div class="advisano-image-top-badge">
+          <span class="advisano-badge-pulse"></span>
+          <span id="advisano-active-pillar-label">PÔLE STRATÉGIQUE</span>
+        </div>
+
+        <img src="/images/services/service-strategy.webp" alt="Stratégie &amp; Management" class="advisano-service-img active" data-service="strategy">
+        <img src="/images/services/service-tech.webp" alt="Technologie, Applications Web &amp; Mobile" class="advisano-service-img" data-service="tech">
+        <img src="/images/services/service-innovation.webp" alt="Innovation &amp; Intelligence Artificielle" class="advisano-service-img" data-service="innovation">
+        <img src="/images/services/service-finance.webp" alt="Finance &amp; Audit" class="advisano-service-img" data-service="finance">
+        <img src="/images/services/service-growth.webp" alt="Croissance &amp; Acquisition" class="advisano-service-img" data-service="growth">
+
+        <!-- Glassmorphism Live KPI Card -->
+        <div class="advisano-image-glass-card">
+          <div class="advisano-glass-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b6e82c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <div class="advisano-glass-text">
+            <span class="advisano-glass-tag" id="advisano-glass-tag">ALIGNEMENT C-LEVEL &amp; TERRAIN</span>
+            <h4 class="advisano-glass-headline" id="advisano-glass-headline">Stratégie d'Entreprise</h4>
+          </div>
+          <div class="advisano-glass-kpi">
+            <span class="advisano-glass-metric" id="advisano-glass-metric">150+</span>
+            <span class="advisano-glass-sub" id="advisano-glass-sub">Missions</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Right Column: Services Header & Interactive List -->
+      <div class="advisano-services-content">
+        <!-- Tag -->
+        <div class="advisano-services-tag">
+          <span class="advisano-tag-square-yellow"></span>
+          <span data-i18n="services.tag">NOS PÔLES D'EXPERTISE</span>
+          <span class="advisano-services-counter" id="advisano-services-counter">01 / 05</span>
+        </div>
+
+        <!-- Headline -->
+        <h2 class="advisano-services-title" data-i18n="services.title">
+          Expertise Multidisciplinaire<br>
+          <span class="advisano-serif-title">De l'Idée à l'Exécution</span>
+        </h2>
+
+        <!-- Interactive Service Accordion/List -->
+        <div class="advisano-services-list" role="tablist">
+          
+          <!-- Item 1: Stratégie & Management -->
+          <a href="/services/strategy/" class="advisano-service-item active" data-target="strategy" data-index="01" role="tab" aria-selected="true">
+            <div class="advisano-service-indicator"></div>
+            <div class="advisano-service-item-main">
+              <div class="advisano-service-item-header">
+                <div class="advisano-service-title-group">
+                  <span class="advisano-service-num-badge">01</span>
+                  <h3 class="advisano-service-name" data-i18n="services.s1_title">01. Stratégie &amp; Management</h3>
+                </div>
+                <div class="advisano-service-arrow-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+              <p class="advisano-service-subtext" data-i18n="services.s1_desc">Stratégie d'entreprise, transformation des organisations, optimisation des processus &amp; veille concurrentielle.</p>
+              <div class="advisano-service-chips">
+                <span class="service-chip">Gouvernance C-Level</span>
+                <span class="service-chip">Turnaround</span>
+                <span class="service-chip">M&amp;A</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 2: Technologie, Applications Web & Mobile, Produits Numériques -->
+          <a href="/services/technology/" class="advisano-service-item" data-target="tech" data-index="02" role="tab" aria-selected="false">
+            <div class="advisano-service-indicator"></div>
+            <div class="advisano-service-item-main">
+              <div class="advisano-service-item-header">
+                <div class="advisano-service-title-group">
+                  <span class="advisano-service-num-badge">02</span>
+                  <h3 class="advisano-service-name" data-i18n="services.s2_title">02. Technologie, Applications Web &amp; Mobile, Produits Numériques</h3>
+                </div>
+                <div class="advisano-service-arrow-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+              <p class="advisano-service-subtext" data-i18n="services.s2_desc">Développement d'applications web &amp; mobile, logiciels métiers pour la productivité et plateformes numériques orientées croissance.</p>
+              <div class="advisano-service-chips">
+                <span class="service-chip">Apps Web &amp; Mobile</span>
+                <span class="service-chip">Logiciels &amp; Productivité</span>
+                <span class="service-chip">SaaS &amp; Cloud Scalable</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 3: Innovation & AI -->
+          <a href="/services/innovation/" class="advisano-service-item" data-target="innovation" data-index="03" role="tab" aria-selected="false">
+            <div class="advisano-service-indicator"></div>
+            <div class="advisano-service-item-main">
+              <div class="advisano-service-item-header">
+                <div class="advisano-service-title-group">
+                  <span class="advisano-service-num-badge">03</span>
+                  <h3 class="advisano-service-name" data-i18n="services.s3_title">03. Innovation &amp; Automatisation Opérationnelle</h3>
+                </div>
+                <div class="advisano-service-arrow-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+              <p class="advisano-service-subtext" data-i18n="services.s3_desc">Automatisation IA des flux métier, prototypage rapide / création de MVP, data analytics &amp; nouveaux produits.</p>
+              <div class="advisano-service-chips">
+                <span class="service-chip">Agents IA &amp; LLMs</span>
+                <span class="service-chip">MVP 30 Jours</span>
+                <span class="service-chip">Automatisation Métier</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 4: Finance, Audit & Conseil -->
+          <a href="/services/finance/" class="advisano-service-item" data-target="finance" data-index="04" role="tab" aria-selected="false">
+            <div class="advisano-service-indicator"></div>
+            <div class="advisano-service-item-main">
+              <div class="advisano-service-item-header">
+                <div class="advisano-service-title-group">
+                  <span class="advisano-service-num-badge">04</span>
+                  <h3 class="advisano-service-name" data-i18n="services.s4_title">04. Finance, Audit &amp; Conseil</h3>
+                </div>
+                <div class="advisano-service-arrow-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+              <p class="advisano-service-subtext" data-i18n="services.s4_desc">Restructuration d'entreprises (turnaround), redressement financier, contrôle interne, conformité &amp; audit légal.</p>
+              <div class="advisano-service-chips">
+                <span class="service-chip">Turnaround Financier</span>
+                <span class="service-chip">Audit Légal</span>
+                <span class="service-chip">Contrôle de Gestion</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 5: Croissance & Acquisition -->
+          <a href="/services/growth/" class="advisano-service-item" data-target="growth" data-index="05" role="tab" aria-selected="false">
+            <div class="advisano-service-indicator"></div>
+            <div class="advisano-service-item-main">
+              <div class="advisano-service-item-header">
+                <div class="advisano-service-title-group">
+                  <span class="advisano-service-num-badge">05</span>
+                  <h3 class="advisano-service-name" data-i18n="services.s5_title">05. Croissance &amp; Acquisition (Lead Management)</h3>
+                </div>
+                <div class="advisano-service-arrow-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+              <p class="advisano-service-subtext" data-i18n="services.s5_desc">Systèmes d'acquisition de prospects (80 % de réussite), diversification du portefeuille client &amp; marketing de performance.</p>
+              <div class="advisano-service-chips">
+                <span class="service-chip">Acquisition B2B (+80%)</span>
+                <span class="service-chip">Lead Generation</span>
+                <span class="service-chip">Performance Marketing</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: SOURX HOW WE WORK - Scroll-Driven Card Alignment
+       ========================================================================== -->
+
+  <!-- Scroll Spacer: tall container that provides the scroll distance for the pinned animation -->
+  <div id="process-scroll-spacer" style="position: relative;">
+    <!-- Sticky inner: stays fixed while user scrolls through the spacer -->
+    <div id="process-sticky-inner" style="position: sticky; top: 0; z-index: 2; overflow: hidden;">
+      <section class="advisano-process-section" id="process">
+        <div class="advisano-process-container">
+
+          <!-- Header -->
+          <div class="advisano-process-header">
+            <div class="advisano-process-tag">
+              <span class="advisano-tag-square-black"></span>
+              <span data-i18n="process.tag">OUR WORK PHILOSOPHY</span>
+            </div>
+            <h2 class="advisano-process-title" data-i18n="process.title">
+              We Don't Just Advise. <span class="advisano-serif-title">We Work Alongside You.</span>
+            </h2>
+          </div>
+
+          <!-- 3-Card Cascading / Staircase Grid -->
+          <div class="advisano-process-grid" id="process-grid">
+
+            <!-- Step 01: Diagnose & Understand -->
+            <div class="advisano-process-card card-step-1" id="proc-card-1">
+              <span class="advisano-step-number" data-i18n="process.step1_num">STEP 01</span>
+              <div class="advisano-step-body">
+                <h3 class="advisano-step-title" data-i18n="process.step1_title">Diagnose &amp; Understand</h3>
+                <p class="advisano-step-desc" data-i18n="process.step1_desc">We assess your operations, financial health, digital stack, and market bottlenecks to identify immediate friction points and high-value strategic priorities.</p>
+              </div>
+            </div>
+
+            <!-- Step 02: Architect & Innovate -->
+            <div class="advisano-process-card card-step-2" id="proc-card-2">
+              <span class="advisano-step-number" data-i18n="process.step2_num">STEP 02</span>
+              <div class="advisano-step-body">
+                <h3 class="advisano-step-title" data-i18n="process.step2_title">Architect &amp; Innovate</h3>
+                <p class="advisano-step-desc" data-i18n="process.step2_desc">We engineer a tailored transformation roadmap, bridging corporate strategy, software architecture, AI automation, and financial performance metrics.</p>
+              </div>
+            </div>
+
+            <!-- Step 03: Embed & Execute -->
+            <div class="advisano-process-card card-step-3" id="proc-card-3">
+              <span class="advisano-step-number" data-i18n="process.step3_num">STEP 03</span>
+              <div class="advisano-step-body">
+                <h3 class="advisano-step-title" data-i18n="process.step3_title">Embed &amp; Execute</h3>
+                <p class="advisano-step-desc" data-i18n="process.step3_desc">We work directly alongside your teams to build, deploy, monitor progress consistently, and turn strategic intent into measurable, enduring bottom-line results.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    // Only on desktop - mobile stacks vertically, no animation needed
+    if (window.matchMedia('(max-width: 992px)').matches) return;
+
+    const spacer = document.getElementById('process-scroll-spacer');
+    const inner  = document.getElementById('process-sticky-inner');
+    const card1  = document.getElementById('proc-card-1');
+    const card2  = document.getElementById('proc-card-2');
+    const card3  = document.getElementById('proc-card-3');
+    const grid   = document.getElementById('process-grid');
+    if (!spacer || !card1) return;
+
+    // How far we need to scroll to drive the full animation (= section height)
+    // We'll set the spacer to be section-height + scrollDistance tall
+    const SCROLL_DISTANCE = 420; // px of scroll needed to complete the animation
+
+    // Measure initial card stagger offsets from the CSS defaults
+    // (clamp values resolved at runtime)
+    function getComputedOffset(el) {
+      const style = getComputedStyle(el);
+      const matrix = new DOMMatrix(style.transform);
+      return matrix.m42; // translateY component
+    }
+
+    let c2Start = 0, c3Start = 0;
+    let initialized = false;
+
+    function init() {
+      if (initialized) return;
+      // Set spacer height = inner height + scroll distance
+      const innerH = inner.offsetHeight;
+      spacer.style.height = (innerH + SCROLL_DISTANCE) + 'px';
+
+      // Read the actual rendered translateY at start
+      c2Start = getComputedOffset(card2);
+      c3Start = getComputedOffset(card3);
+
+      // Pad the bottom of the section so cards don't clip during animation
+      const section = inner.querySelector('.advisano-process-section');
+      if (section) section.style.paddingBottom = (c3Start + 80) + 'px';
+
+      initialized = true;
+    }
+
+    let ticking = false;
+    let lastProgress = -1;
+
+    function update() {
+      ticking = false;
+      if (!initialized) init();
+
+      const spacerTop  = spacer.getBoundingClientRect().top + window.scrollY;
+      const spacerEnd  = spacerTop + spacer.offsetHeight - inner.offsetHeight;
+      const scrollY    = window.scrollY;
+
+      // Progress 0 = cards staggered (scroll just reached the section)
+      // Progress 1 = cards fully aligned (ready to release sticky)
+      const rawProgress = (scrollY - spacerTop) / SCROLL_DISTANCE;
+      const progress    = Math.max(0, Math.min(1, rawProgress));
+
+      if (Math.abs(progress - lastProgress) < 0.001) return;
+      lastProgress = progress;
+
+      // Ease: smooth cubic
+      const t = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      // Interpolate offsets → 0
+      const c2y = c2Start * (1 - t);
+      const c3y = c3Start * (1 - t);
+
+      card1.style.setProperty('--c1-y', '0px');
+      card2.style.setProperty('--c2-y', c2y + 'px');
+      card3.style.setProperty('--c3-y', c3y + 'px');
+
+      // Shrink the section bottom padding as we align
+      const section = inner.querySelector('.advisano-process-section');
+      if (section) section.style.paddingBottom = Math.max(60, c3Start * (1 - t) + 80) + 'px';
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', function () {
+      initialized = false;
+      init();
+      update();
+    });
+
+    // Init on load
+    setTimeout(function () { init(); update(); }, 100);
+  })();
+  </script>
+
+
+
+  <!-- ==========================================================================
+       SECTION 4: REAL SOURX CASE STUDIES & PROVEN RESULTS BENTO
+       ========================================================================== -->
+  <section class="advisano-section" id="case-studies">
+    <div class="advisano-container">
+      
+      <!-- Header -->
+      <div class="advisano-header-center">
+        <div class="advisano-tag">
+          <span class="advisano-tag-square-black"></span>
+          <span data-i18n="cases.tag">RÉSULTATS ÉPROUVÉS</span>
+        </div>
+        <h2 class="advisano-title" data-i18n="cases.title">
+          Impact Mesurable, <span class="advisano-serif-title">Résultats Concrets</span>
+        </h2>
+        <p class="advisano-subtitle" data-i18n="cases.subtitle">
+          Comment les équipes SOURX résolvent les défis complexes pour des organisations en pleine accélération.
+        </p>
+      </div>
+
+      <!-- 2 Bento Cards Grid -->
+      <div class="advisano-cases-grid">
+        
+        <!-- Card 1: Featured Case Study (Dark Bento) -->
+        <div class="advisano-case-card-dark">
+          <div>
+            <span class="advisano-case-badge" data-i18n="cases.c1_badge">LOGISTIQUE &amp; DIGITALISATION E-COMMERCE</span>
+            <div class="advisano-case-stat-big" style="margin-top: 2rem;" data-i18n="cases.c1_stat">1.6x</div>
+            <div class="advisano-case-stat-caption" data-i18n="cases.c1_caption">Gain de productivité opérationnelle et logistique délivré en 9 mois</div>
+            <h3 class="advisano-case-headline" data-i18n="cases.c1_headline">
+              Automatisation multi-canal des commandes et opérations à l'échelle européenne
+            </h3>
+          </div>
+          <div>
+            <a href="#contact" class="advisano-case-link">
+              <span data-i18n="cases.c1_link">Échanger sur un projet similaire</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: SOURX Leads Management Spotlight (Ultra-Modern High-Tech Scoring Cockpit) -->
+        <div class="sourx-leads-card">
+          <!-- Top Bar -->
+          <div class="sourx-leads-header">
+            <div class="sourx-leads-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#012e5c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <span data-i18n="leads.tag">SOURX LEADS MANAGEMENT</span>
+            </div>
+            <div class="sourx-leads-status">
+              <span class="sourx-pulse-dot"></span>
+              <span>Algorithme Propriétaire Actif</span>
+            </div>
+          </div>
+
+          <!-- Title & Context -->
+          <div>
+            <h3 class="sourx-leads-title" data-i18n="leads.title">
+              Système Propriétaire de Gestion &amp; Notation des Prospects
+            </h3>
+            <p class="sourx-leads-desc" data-i18n="leads.desc">
+              Notre algorithme propriétaire exclusif de lead scoring analyse les signaux d'intention, les indicateurs comportementaux et l'adéquation sectorielle pour qualifier et faire mûrir chaque contact jusqu'à sa conversion commerciale.
+            </p>
+          </div>
+
+          <!-- Interactive Cockpit: Radial Gauge + Scoring Telemetry -->
+          <div class="sourx-leads-body">
+            <!-- Modern Circular Progress Gauge -->
+            <div class="sourx-gauge-wrapper">
+              <div class="sourx-gauge-svg-box">
+                <svg width="120" height="120" viewBox="0 0 120 120" style="transform: rotate(-90deg); transform-origin: center;">
+                  <defs>
+                    <linearGradient id="sourxLeadsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#012e5c" />
+                      <stop offset="60%" stop-color="#0d5fb8" />
+                      <stop offset="100%" stop-color="#b6e82c" />
+                    </linearGradient>
+                    <filter id="sourxGlow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#b6e82c" flood-opacity="0.35"/>
+                    </filter>
+                  </defs>
+                  <!-- Background Track -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="#eef2f6" stroke-width="9"></circle>
+                  <!-- Active Segment (80% = 241.3px on 301.6px circle) -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="url(#sourxLeadsGrad)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="60.3" filter="url(#sourxGlow)"></circle>
+                </svg>
+                <div class="sourx-gauge-center-text">
+                  <span class="sourx-gauge-number">80%</span>
+                  <span class="sourx-gauge-sub">Qualifiés</span>
+                </div>
+              </div>
+              <div class="sourx-gauge-chips">
+                <div class="sourx-gauge-chip qualified">
+                  <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #b6e82c;"></span>
+                  <span>Prêts à convertir</span>
+                </div>
+                <div class="sourx-gauge-chip pipeline">
+                  <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #94a3b8;"></span>
+                  <span>Nurturing actif (20%)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Precision Scoring Telemetry -->
+            <div class="sourx-leads-kpis">
+              <!-- KPI 1 -->
+              <div class="sourx-kpi-row">
+                <div class="sourx-kpi-top">
+                  <span class="sourx-kpi-label" data-i18n="leads.stat1_label">Taux de complétion et de conversion</span>
+                  <span class="sourx-kpi-val highlight" data-i18n="leads.stat1_val">80%</span>
+                </div>
+                <div class="sourx-kpi-track">
+                  <div class="sourx-kpi-fill lime-navy" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <!-- KPI 2 -->
+              <div class="sourx-kpi-row">
+                <div class="sourx-kpi-top">
+                  <span class="sourx-kpi-label" data-i18n="leads.stat2_label">Péréquation des flux d'affaires</span>
+                  <span class="sourx-kpi-val" data-i18n="leads.stat2_val">Stabilité Commerciale</span>
+                </div>
+                <div class="sourx-kpi-track">
+                  <div class="sourx-kpi-fill navy-cyan" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <!-- KPI 3 -->
+              <div class="sourx-kpi-row">
+                <div class="sourx-kpi-top">
+                  <span class="sourx-kpi-label" data-i18n="leads.stat3_label">Filtrage prédictif par intention d'achat</span>
+                  <span class="sourx-kpi-val" data-i18n="leads.stat3_val">100% Qualifié</span>
+                </div>
+                <div class="sourx-kpi-track">
+                  <div class="sourx-kpi-fill emerald" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Micro-footer -->
+          <div class="sourx-leads-footer">
+            <span style="display: inline-flex; align-items: center; gap: 6px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#012e5c" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Algorithme certifié SOURX EMEA</span>
+            </span>
+            <span style="color: #012e5c; font-weight: 600;">Déploiement en 14 jours →</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 4 Metric Cards Strip -->
+      <div class="advisano-metrics-strip">
+        <div class="advisano-metric-card">
+          <div class="advisano-metric-number">150+</div>
+          <div class="advisano-metric-label" data-i18n="cases.m1_label">Missions menées à bien au Royaume-Uni, en Espagne et en Europe</div>
+        </div>
+        <div class="advisano-metric-card">
+          <div class="advisano-metric-number">80%</div>
+          <div class="advisano-metric-label" data-i18n="cases.m2_label">Taux moyen de croissance de l'acquisition client atteint</div>
+        </div>
+        <div class="advisano-metric-card">
+          <div class="advisano-metric-number">5</div>
+          <div class="advisano-metric-label" data-i18n="cases.m3_label">Pôles intégrés : Stratégie, Tech, IA, Finance &amp; Croissance</div>
+        </div>
+        <div class="advisano-metric-card">
+          <div class="advisano-metric-number">100%</div>
+          <div class="advisano-metric-label" data-i18n="cases.m4_label">Engagement d'exécution directe aux côtés de vos équipes</div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TESTIMONIALS - Infinite Marquee Section
+       ========================================================================== -->
+  <section class="sourx-testi-section" aria-label="Client testimonials">
+    <!-- Header -->
+    <div class="sourx-testi-header">
+      <div class="advisano-tag" style="justify-content: center;">
+        <span class="advisano-tag-square-black" style="background:#b6e82c;"></span>
+        <span style="color:#b6e82c; letter-spacing:0.1em;">CLIENT VOICES</span>
+      </div>
+      <h2 class="sourx-testi-title">
+        Trusted by leaders <span class="advisano-serif-title">across Europe.</span>
+      </h2>
+      <p class="sourx-testi-sub">Real outcomes, real organisations, in their own words.</p>
+    </div>
+
+    <!-- Marquee track A: left → right -->
+    <div class="sourx-marquee-wrapper" aria-hidden="true">
+      <div class="sourx-marquee-track track-fwd">
+        <!-- Original set -->
+        <div class="sourx-testi-card">
+          <div class="sourx-testi-stars">★★★★★</div>
+          <p class="sourx-testi-quote">"Our freight distribution restructuring with SOURX EMEA delivered unprecedented speed and cost reductions across our network."</p>
+          <div class="sourx-testi-author-row">
+            <div class="sourx-testi-avatar">OG</div>
+            <div>
+              <div class="sourx-testi-name">Onbemo Group Limited</div>
+              <div class="sourx-testi-role">Executive Leadership, Freight &amp; Logistics</div>
+            </div>
+          </div>
+        </div>
+        <div class="sourx-testi-card">
+          <div class="sourx-testi-stars">★★★★★</div>
+          <p class="sourx-testi-quote">"SOURX provided our firm with clear financial audit and restructuring guidance, enabling solid strategic compliance and rapid recapitalisation."</p>
+          <div class="sourx-testi-author-row">
+            <div class="sourx-testi-avatar">TP</div>
+            <div>
+              <div class="sourx-testi-name">The Print House Limited</div>
+              <div class="sourx-testi-role">Managing Director, Financial Planning</div>
+            </div>
+          </div>
+        </div>
+        <div class="sourx-testi-card">
+          <div class="sourx-testi-stars">★★★★★</div>
+          <p class="sourx-testi-quote">"Partnering with SOURX for our lead management and commercial operations resulted in 80% growth in qualified pipeline within months."</p>
+          <div class="sourx-testi-author-row">
+            <div class="sourx-testi-avatar">VL</div>
+            <div>
+              <div class="sourx-testi-name">Villavital Limited</div>
+              <div class="sourx-testi-role">Founder &amp; Commercial Director</div>
+            </div>
+          </div>
+        </div>
+        <div class="sourx-testi-card">
+          <div class="sourx-testi-stars">★★★★★</div>
+          <p class="sourx-testi-quote">"SOURX's AI automation roadmap reduced our operational overhead by 35% in the first quarter. Their embedded team approach made all the difference."</p>
+          <div class="sourx-testi-author-row">
+            <div class="sourx-testi-avatar">EP</div>
+            <div>
+              <div class="sourx-testi-name">EasyPrint Bags</div>
+              <div class="sourx-testi-role">Operations Director, E-Commerce &amp; POD</div>
+            </div>
+          </div>
+        </div>
+        <div class="sourx-testi-card">
+          <div class="sourx-testi-stars">★★★★★</div>
+          <p class="sourx-testi-quote">"The strategic clarity SOURX brought to our cross-border expansion was exceptional. Within 6 months we had a fully operational European footprint."</p>
+          <div class="sourx-testi-author-row">
+            <div class="sourx-testi-avatar">PS</div>
+            <div>
+              <div class="sourx-testi-name">Printsome</div>
+              <div class="sourx-testi-role">CEO, Custom Apparel &amp; Fulfilment</div>
+            </div>
+          </div>
+        </div>
+        <div class="sourx-testi-card">
+          <div class="sourx-testi-stars">★★★★★</div>
+          <p class="sourx-testi-quote">"Three W Transport's routing efficiency improved dramatically after SOURX redesigned our fleet management and supplier contracts."</p>
+          <div class="sourx-testi-author-row">
+            <div class="sourx-testi-avatar">TW</div>
+            <div>
+              <div class="sourx-testi-name">Three W Transport</div>
+              <div class="sourx-testi-role">General Director, Surface Logistics</div>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="sourx-testi-card"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"Our freight distribution restructuring with SOURX EMEA delivered unprecedented speed and cost reductions across our network."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">OG</div><div><div class="sourx-testi-name">Onbemo Group Limited</div><div class="sourx-testi-role">Executive Leadership, Freight &amp; Logistics</div></div></div></div>
+        <div class="sourx-testi-card"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"SOURX provided our firm with clear financial audit and restructuring guidance, enabling solid strategic compliance and rapid recapitalisation."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">TP</div><div><div class="sourx-testi-name">The Print House Limited</div><div class="sourx-testi-role">Managing Director, Financial Planning</div></div></div></div>
+        <div class="sourx-testi-card"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"Partnering with SOURX for our lead management and commercial operations resulted in 80% growth in qualified pipeline within months."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">VL</div><div><div class="sourx-testi-name">Villavital Limited</div><div class="sourx-testi-role">Founder &amp; Commercial Director</div></div></div></div>
+        <div class="sourx-testi-card"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"SOURX's AI automation roadmap reduced our operational overhead by 35% in the first quarter. Their embedded team approach made all the difference."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">EP</div><div><div class="sourx-testi-name">EasyPrint Bags</div><div class="sourx-testi-role">Operations Director, E-Commerce &amp; POD</div></div></div></div>
+        <div class="sourx-testi-card"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"The strategic clarity SOURX brought to our cross-border expansion was exceptional. Within 6 months we had a fully operational European footprint."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">PS</div><div><div class="sourx-testi-name">Printsome</div><div class="sourx-testi-role">CEO, Custom Apparel &amp; Fulfilment</div></div></div></div>
+        <div class="sourx-testi-card"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"Three W Transport's routing efficiency improved dramatically after SOURX redesigned our fleet management and supplier contracts."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">TW</div><div><div class="sourx-testi-name">Three W Transport</div><div class="sourx-testi-role">General Director, Surface Logistics</div></div></div></div>
+      </div>
+    </div>
+
+    <!-- Marquee track B: right → left -->
+    <div class="sourx-marquee-wrapper" aria-hidden="true" style="margin-top: 20px;">
+      <div class="sourx-marquee-track track-rev">
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"The embedded finance team from SOURX identified £200K in hidden cost savings within the first audit cycle."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">CL</div><div><div class="sourx-testi-name">Clearbridge Advisory</div><div class="sourx-testi-role">CFO, Professional Services</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"SOURX accelerated our digital transformation 3x faster than our previous consulting partner, with a fraction of the overhead."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">NX</div><div><div class="sourx-testi-name">Nexa Retail Group</div><div class="sourx-testi-role">CTO, Digital Retail</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"What sets SOURX apart is their willingness to stay in the trenches alongside your team. Results-oriented, honest, and technically brilliant."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">BV</div><div><div class="sourx-testi-name">Belvedere Capital</div><div class="sourx-testi-role">Partner, Private Equity</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"Our acquisition funnel went from 12% to 34% conversion rate after SOURX redesigned our lead scoring and CRM architecture."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">MF</div><div><div class="sourx-testi-name">Meridian Fintech</div><div class="sourx-testi-role">Head of Growth, B2B SaaS</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"They don't just deliver strategy decks. SOURX builds the systems, trains the teams, and sticks around until the results are real."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">SR</div><div><div class="sourx-testi-name">Sarum Renewables</div><div class="sourx-testi-role">CEO, Clean Energy</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"SOURX unlocked our DORA compliance roadmap in record time, giving us regulatory confidence and board-level peace of mind."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">AB</div><div><div class="sourx-testi-name">Albion Bank Group</div><div class="sourx-testi-role">CISO, Banking &amp; Risk</div></div></div></div>
+        <!-- Duplicate for loop -->
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"The embedded finance team from SOURX identified £200K in hidden cost savings within the first audit cycle."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">CL</div><div><div class="sourx-testi-name">Clearbridge Advisory</div><div class="sourx-testi-role">CFO, Professional Services</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"SOURX accelerated our digital transformation 3x faster than our previous consulting partner, with a fraction of the overhead."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">NX</div><div><div class="sourx-testi-name">Nexa Retail Group</div><div class="sourx-testi-role">CTO, Digital Retail</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"What sets SOURX apart is their willingness to stay in the trenches alongside your team. Results-oriented, honest, and technically brilliant."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">BV</div><div><div class="sourx-testi-name">Belvedere Capital</div><div class="sourx-testi-role">Partner, Private Equity</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"Our acquisition funnel went from 12% to 34% conversion rate after SOURX redesigned our lead scoring and CRM architecture."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">MF</div><div><div class="sourx-testi-name">Meridian Fintech</div><div class="sourx-testi-role">Head of Growth, B2B SaaS</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"They don't just deliver strategy decks. SOURX builds the systems, trains the teams, and sticks around until the results are real."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">SR</div><div><div class="sourx-testi-name">Sarum Renewables</div><div class="sourx-testi-role">CEO, Clean Energy</div></div></div></div>
+        <div class="sourx-testi-card sourx-testi-card--alt"><div class="sourx-testi-stars">★★★★★</div><p class="sourx-testi-quote">"SOURX unlocked our DORA compliance roadmap in record time, giving us regulatory confidence and board-level peace of mind."</p><div class="sourx-testi-author-row"><div class="sourx-testi-avatar">AB</div><div><div class="sourx-testi-name">Albion Bank Group</div><div class="sourx-testi-role">CISO, Banking &amp; Risk</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 5: SOURX SECTORS & FIELDS OF INTERVENTION
+       ========================================================================== -->
+  <section class="advisano-section" id="industries" style="padding-top: 2rem;">
+    <div class="advisano-container">
+      
+      <!-- Header -->
+      <div class="advisano-header-left">
+        <div class="advisano-tag">
+          <span class="advisano-tag-square-black"></span>
+          <span data-i18n="sectors.tag">SECTEURS D'INTERVENTION</span>
+        </div>
+        <h2 class="advisano-title" data-i18n="sectors.title">
+          Maîtrise Multisectorielle, <span class="advisano-serif-title">Solutions Ciblées</span>
+        </h2>
+      </div>
+
+      <div class="advisano-sectors-bento">
+        
+        <!-- Left: Animated Radar Bento Card -->
+        <div class="advisano-sectors-radar-card">
+          <canvas id="sourx-radar-canvas" width="360" height="360" style="width:100%;height:100%;display:block;" aria-label="Interactive sector expertise radar"></canvas>
+          <p class="advisano-radar-caption" data-i18n="sectors.radar_caption">
+            Operational evaluation matrix: strategy, technology, compliance &amp; scale-up
+          </p>
+        </div>
+        <script>
+        (function(){
+          const canvas = document.getElementById('sourx-radar-canvas');
+          if (!canvas) return;
+          const ctx = canvas.getContext('2d');
+          const W = 360, H = 360, cx = W/2, cy = H/2, R = 140;
+          const N = 6; // axes
+
+          // Three different "expertise profile" datasets (values 0-1 per axis)
+          const datasets = [
+            [0.92, 0.78, 0.88, 0.72, 0.95, 0.80], // Strategy-led
+            [0.70, 0.95, 0.85, 0.90, 0.75, 0.88], // Tech-led
+            [0.85, 0.82, 0.76, 0.94, 0.88, 0.72], // Finance-led
+          ];
+
+          let currentSet = 0;
+          let nextSet = 1;
+          let morphT = 0;       // 0→1 transition progress
+          let morphing = false;
+          let drawProgress = 0; // 0→1 initial draw-in
+          let frameId;
+          let rotAngle = 0;
+          let pulseT = 0;
+          let started = false;
+
+          function easeInOut(t){ return t<0.5 ? 2*t*t : -1+(4-2*t)*t; }
+          function easeOut(t){ return 1-(1-t)*(1-t); }
+
+          function getPoint(axis, val, angleOffset){
+            const angle = (Math.PI*2/N)*axis - Math.PI/2 + angleOffset;
+            return {
+              x: cx + Math.cos(angle)*R*val,
+              y: cy + Math.sin(angle)*R*val
+            };
+          }
+
+          function interpolate(a, b, t){
+            return a.map((v,i)=> v + (b[i]-v)*easeInOut(t));
+          }
+
+          function draw(ts){
+            ctx.clearRect(0,0,W,H);
+
+            const progress = Math.min(drawProgress, 1);
+            const easedProg = easeOut(progress);
+            const ro = rotAngle;
+            pulseT = (pulseT + 0.04) % (Math.PI*2);
+
+            // ── Grid rings (3 concentric hexagons) ──
+            [0.33, 0.66, 1.0].forEach((scale, ri) => {
+              ctx.beginPath();
+              for(let i=0;i<N;i++){
+                const angle = (Math.PI*2/N)*i - Math.PI/2 + ro;
+                const px = cx + Math.cos(angle)*R*scale*easedProg;
+                const py = cy + Math.sin(angle)*R*scale*easedProg;
+                i===0 ? ctx.moveTo(px,py) : ctx.lineTo(px,py);
+              }
+              ctx.closePath();
+              ctx.strokeStyle = 'rgba(255,255,255,0.13)';
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            });
+
+            // ── Axis lines ──
+            for(let i=0;i<N;i++){
+              const angle = (Math.PI*2/N)*i - Math.PI/2 + ro;
+              ctx.beginPath();
+              ctx.moveTo(cx, cy);
+              ctx.lineTo(cx+Math.cos(angle)*R*easedProg, cy+Math.sin(angle)*R*easedProg);
+              ctx.strokeStyle = 'rgba(255,255,255,0.13)';
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+
+            // ── Current data polygon ──
+            const vals = morphing
+              ? interpolate(datasets[currentSet], datasets[nextSet], morphT)
+              : datasets[currentSet];
+
+            const pts = vals.map((v,i) => getPoint(i, v*easedProg, ro));
+
+            // Filled area
+            ctx.beginPath();
+            pts.forEach((p,i) => i===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y));
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(182,232,44,0.18)';
+            ctx.fill();
+
+            // Stroke outline
+            ctx.beginPath();
+            pts.forEach((p,i) => i===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y));
+            ctx.closePath();
+            ctx.strokeStyle = '#b6e82c';
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+
+            // ── Animated data points with pulse rings ──
+            pts.forEach(p => {
+              const pulse = 0.5 + 0.5*Math.sin(pulseT);
+              // Outer glow ring
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, 5 + 5*pulse, 0, Math.PI*2);
+              ctx.strokeStyle = `rgba(182,232,44,${0.35*(1-pulse)})`;
+              ctx.lineWidth = 1.5;
+              ctx.stroke();
+              // Core dot
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, 5, 0, Math.PI*2);
+              ctx.fillStyle = '#b6e82c';
+              ctx.fill();
+              ctx.strokeStyle = '#012e5c';
+              ctx.lineWidth = 1.5;
+              ctx.stroke();
+            });
+
+            // Advance draw-in
+            if(drawProgress < 1) drawProgress += 0.018;
+
+            // Slow rotation
+            rotAngle += 0.0015;
+
+            // Morphing logic - trigger every ~3s after draw-in completes
+            if(drawProgress >= 1){
+              if(!morphing){
+                // start morph after pause
+                morphing = true;
+                morphT = 0;
+              }
+              if(morphing){
+                morphT += 0.008;
+                if(morphT >= 1){
+                  morphT = 1;
+                  currentSet = nextSet;
+                  nextSet = (nextSet + 1) % datasets.length;
+                  morphing = false;
+                  morphT = 0;
+                }
+              }
+            }
+
+            frameId = requestAnimationFrame(draw);
+          }
+
+          // Start only when visible
+          const obs = new IntersectionObserver(entries => {
+            if(entries[0].isIntersecting && !started){
+              started = true;
+              frameId = requestAnimationFrame(draw);
+            }
+          }, {threshold: 0.2});
+          obs.observe(canvas);
+        })();
+        </script>
+
+
+        <!-- Right: The 6 Authentic SOURX Industries (Directly from Original Site) -->
+        <div class="advisano-sectors-list">
+          <a href="/industries/" class="advisano-sector-row" style="text-decoration: none; color: inherit; display: flex;">
+            <span class="advisano-sector-name" data-i18n="sectors.s1">E-Commerce (POD) &amp; Impression à la Demande</span>
+            <span class="advisano-sector-arrow">→</span>
+          </a>
+          <a href="/industries/" class="advisano-sector-row" style="text-decoration: none; color: inherit; display: flex;">
+            <span class="advisano-sector-name" data-i18n="sectors.s2">Services Informatiques &amp; Cloud (IT Services)</span>
+            <span class="advisano-sector-arrow">→</span>
+          </a>
+          <a href="/industries/" class="advisano-sector-row" style="text-decoration: none; color: inherit; display: flex;">
+            <span class="advisano-sector-name" data-i18n="sectors.s3">Transport Terrestre &amp; Logistique (Surface Transport &amp; Logistics)</span>
+            <span class="advisano-sector-arrow">→</span>
+          </a>
+          <a href="/industries/" class="advisano-sector-row" style="text-decoration: none; color: inherit; display: flex;">
+            <span class="advisano-sector-name" data-i18n="sectors.s4">Biens de Consommation &amp; Marques (Consumer Products)</span>
+            <span class="advisano-sector-arrow">→</span>
+          </a>
+          <a href="/industries/" class="advisano-sector-row" style="text-decoration: none; color: inherit; display: flex;">
+            <span class="advisano-sector-name" data-i18n="sectors.s5">Conseil en Services Financiers &amp; Audit (Financial Services Consulting)</span>
+            <span class="advisano-sector-arrow">→</span>
+          </a>
+          <a href="/industries/" class="advisano-sector-row" style="text-decoration: none; color: inherit; display: flex;">
+            <span class="advisano-sector-name" data-i18n="sectors.s6">Conseil Stratégique &amp; Transformation (Strategic Consulting)</span>
+            <span class="advisano-sector-arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: SOURX INNOVATION LAB & STRATEGIC INSIGHTS
+       ========================================================================== -->
+  <section class="advisano-section" id="insights">
+    <div class="advisano-container">
+      
+      <!-- Header -->
+      <div class="advisano-header-center">
+        <div class="advisano-tag">
+          <span class="advisano-tag-square-black"></span>
+          <span data-i18n="lab.tag">SOURX INNOVATION LAB</span>
+        </div>
+        <h2 class="advisano-title" data-i18n="lab.title">
+          De l'Idée à l'Implémentation : <span class="advisano-serif-title">La Nouvelle Frontière</span>
+        </h2>
+        <p class="advisano-subtitle" data-i18n="lab.subtitle">
+          Comment SOURX conçoit de nouveaux produits digitaux et déploie des solutions concrètes d'IA.
+        </p>
+      </div>
+
+      <!-- 3 Innovation Cards Grid -->
+      <div class="advisano-insights-grid">
+        
+        <!-- Article 1: AI & Automation -->
+        <a href="/services/innovation/" class="advisano-insight-card">
+          <div class="advisano-insight-img-box">
+            <img src="/images/services/service-innovation.webp" alt="IA &amp; Automatisation" class="advisano-insight-img">
+          </div>
+          <div class="advisano-insight-content">
+            <span class="advisano-insight-category" data-i18n="lab.a1_cat">IA &amp; AUTOMATISATION</span>
+            <h3 class="advisano-insight-title" data-i18n="lab.a1_title">
+              IA Opérationnelle : Automatiser les flux complexes dans les ETI
+            </h3>
+            <p class="advisano-insight-desc" data-i18n="lab.a1_desc">
+              Comment dépasser les phases de tests pour intégrer des pipelines d'automatisation réduisant les délais de 40 %.
+            </p>
+            <div class="advisano-insight-footer">
+              <span data-i18n="lab.a1_link">Découvrir l'initiative</span>
+              <span>→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 2: Rapid Prototyping / MVP -->
+        <a href="/services/technology/" class="advisano-insight-card">
+          <div class="advisano-insight-img-box">
+            <img src="/images/services/service-tech.webp" alt="Prototypage Rapide &amp; MVP" class="advisano-insight-img">
+          </div>
+          <div class="advisano-insight-content">
+            <span class="advisano-insight-category" data-i18n="lab.a2_cat">PROTOTYPAGE RAPIDE / MVP</span>
+            <h3 class="advisano-insight-title" data-i18n="lab.a2_title">
+              Du Concept à la Validation Marché : Ingénierie d'un MVP en 30 jours
+            </h3>
+            <p class="advisano-insight-desc" data-i18n="lab.a2_desc">
+              Concevoir des architectures applicatives solides pour valider une nouvelle offre sans dette technique.
+            </p>
+            <div class="advisano-insight-footer">
+              <span data-i18n="lab.a2_link">Découvrir l'initiative</span>
+              <span>→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 3: Financial Restructuring & Turnaround -->
+        <a href="/services/finance/" class="advisano-insight-card">
+          <div class="advisano-insight-img-box">
+            <img src="/images/services/service-finance.webp" alt="Restructuration &amp; Stratégie" class="advisano-insight-img">
+          </div>
+          <div class="advisano-insight-content">
+            <span class="advisano-insight-category" data-i18n="lab.a3_cat">RESTRUCTURATION &amp; STRATÉGIE</span>
+            <h3 class="advisano-insight-title" data-i18n="lab.a3_title">
+              Rigueur Financière &amp; Restructuration : Naviguer les virages critiques
+            </h3>
+            <p class="advisano-insight-desc" data-i18n="lab.a3_desc">
+              Méthodologies concrètes pour assainir le fonds de roulement et restaurer la confiance des parties prenantes.
+            </p>
+            <div class="advisano-insight-footer">
+              <span data-i18n="lab.a3_link">Découvrir l'initiative</span>
+              <span>→</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: SOURX AUTHENTIC CONTACT BENTO (UK & SPAIN OFFICES)
+       ========================================================================== -->
+  <section class="advisano-section" id="contact" style="padding-top: 1rem; padding-bottom: 3rem;">
+    <div class="advisano-container">
+      
+      <!-- Header -->
+      <div class="advisano-header-left">
+        <div class="advisano-tag">
+          <span class="advisano-tag-square-black"></span>
+          <span data-i18n="contact.tag">ENGAGER LA CONVERSATION</span>
+        </div>
+        <h2 class="advisano-title" data-i18n="contact.title">
+          Échangeons sur Votre <span class="advisano-serif-title">Défi Stratégique</span>
+        </h2>
+      </div>
+
+      <div class="advisano-contact-grid">
+        
+        <!-- Left: Minimalist Form Card -->
+        <div class="advisano-contact-form-card">
+          <form onsubmit="event.preventDefault(); document.getElementById('advisano-contact-confirm').style.display = 'block'; this.reset();">
+            
+            <div class="advisano-form-group">
+              <label class="advisano-form-label" for="contact-name" data-i18n="contact.name_label">Nom complet *</label>
+              <input type="text" id="contact-name" class="advisano-form-input" placeholder="ex. Alexandre Martin" data-i18n-ph="contact.name_ph" required>
+            </div>
+
+            <div class="advisano-form-group">
+              <label class="advisano-form-label" for="contact-email" data-i18n="contact.email_label">Email professionnel *</label>
+              <input type="email" id="contact-email" class="advisano-form-input" placeholder="ex. a.martin@entreprise.com" data-i18n-ph="contact.email_ph" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="advisano-form-group">
+                <label class="advisano-form-label" for="contact-phone" data-i18n="contact.phone_label">Numéro de téléphone</label>
+                <input type="tel" id="contact-phone" class="advisano-form-input" placeholder="+33 ... / +44 ..." data-i18n-ph="contact.phone_ph">
+              </div>
+              <div class="advisano-form-group">
+                <label class="advisano-form-label" for="contact-company" data-i18n="contact.company_label">Nom de l'entreprise *</label>
+                <input type="text" id="contact-company" class="advisano-form-input" placeholder="ex. Acme Groupe" data-i18n-ph="contact.company_ph" required>
+              </div>
+            </div>
+
+            <div class="advisano-form-group">
+              <label class="advisano-form-label" for="contact-message" data-i18n="contact.message_label">Contexte stratégique / Objectifs *</label>
+              <textarea id="contact-message" class="advisano-form-textarea" rows="4" placeholder="Décrivez brièvement votre défi en stratégie, technologie ou innovation..." data-i18n-ph="contact.message_ph" required></textarea>
+            </div>
+
+            <button type="submit" class="advisano-btn-black">
+              <span data-i18n="contact.submit">Envoyer ma demande de consultation</span>
+              <span>→</span>
+            </button>
+
+            <div id="advisano-contact-confirm" style="display: none; margin-top: 16px; padding: 14px; border-radius: 12px; background: rgba(252, 255, 97, 0.25); color: #000000; font-weight: 600; text-align: center;" data-i18n="contact.confirm">
+              ✓ Demande bien reçue. Un associé senior SOURX vous recontactera sous 24 heures ouvrées.
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Authentic SOURX Advisor Sidebar & International Offices -->
+        <div class="advisano-contact-card-sidebar">
+          <div class="advisano-contact-photo-box">
+            <img src="/images/consultant-portrait.jpg" alt="Associé SOURX">
+          </div>
+
+          <div class="advisano-contact-details">
+            <div class="advisano-contact-item">
+              <span class="advisano-contact-item-label" data-i18n="contact.direct_phone">LIGNE DIRECTE</span>
+              <a href="tel:+442031377777" class="advisano-contact-item-val">+44 203 137 7777</a>
+            </div>
+            <div class="advisano-contact-item">
+              <span class="advisano-contact-item-label" data-i18n="contact.hours_label">HORAIRES D'OUVERTURE</span>
+              <span class="advisano-contact-item-val" style="color: #444444; font-size: 14px;" data-i18n="contact.hours_val">Lundi – Vendredi : 8h00 – 17h00 (Heure UK)</span>
+            </div>
+            <div class="advisano-contact-item">
+              <span class="advisano-contact-item-label" data-i18n="contact.confidential_email">CONTACT CONFIDENTIEL</span>
+              <a href="mailto:info@sourx.com" class="advisano-contact-item-val">info@sourx.com</a>
+              <a href="mailto:info@sourx.es" class="advisano-contact-item-val" style="margin-top: 4px; font-size: 14px; color: #555555;">info@sourx.es (Espagne)</a>
+            </div>
+            <div class="advisano-contact-item">
+              <span class="advisano-contact-item-label" data-i18n="contact.offices">BUREAUX INTERNATIONAUX</span>
+              <div class="advisano-contact-item-val" style="color: #444444; font-size: 14px; line-height: 1.6;">
+                <span data-i18n="contact.uk_office">• <strong>Bureau Londres (UK) :</strong> 71–75 Shelton Street, Covent Garden, London WC2H 9JQ</span><br>
+                <span data-i18n="contact.es_office">• <strong>Bureau Espagne :</strong> Castellón de la Plana, 12005 Espagne</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: SOURX HIGH-IMPACT "TAKE ACTION" CTA BENTO
+       ========================================================================== -->
+  <section class="advisano-cta-section">
+    <div class="advisano-cta-bento">
+      <div class="advisano-tag dark">
+        <span class="advisano-tag-square-yellow"></span>
+        <span data-i18n="cta.tag">PASSER À L'ACTION</span>
+      </div>
+      <h2 class="advisano-cta-title" data-i18n="cta.title">
+        Prêt à Transformer vos Idées en <span class="advisano-serif-title">Croissance Mesurable ?</span>
+      </h2>
+      <p class="advisano-cta-subtext" data-i18n="cta.desc">
+        Réservez une session stratégique confidentielle avec les associés de SOURX pour évaluer vos projets de transformation ou d'innovation.
+      </p>
+      <a href="#contact" class="advisano-btn-yellow">
+        <span data-i18n="cta.btn">Réserver une Consultation</span>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9: SOURX AUTHENTIC FOOTER
+       ========================================================================== -->
+  <footer class="advisano-footer">
+    <div class="advisano-footer-container">
+      
+      <!-- Top Grid: 4 Navigation Columns -->
+      <div class="advisano-footer-columns">
+        
+        <!-- Column 1: CORE PILLARS -->
+        <div class="advisano-footer-col">
+          <h4 class="advisano-footer-col-title" data-i18n="footer.col1_title">PÔLES D'EXPERTISE</h4>
+          <ul class="advisano-footer-links">
+            <li><a href="/services/strategy/"><span data-i18n="services.s1_title">01. Stratégie &amp; Management</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/services/technology/"><span data-i18n="services.s2_title">02. Technologie &amp; Digital</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/services/innovation/"><span data-i18n="services.s3_title">03. Innovation &amp; IA</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/services/finance/"><span data-i18n="services.s4_title">04. Finance, Audit &amp; Conseil</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/services/growth/"><span data-i18n="services.s5_title">05. Croissance &amp; Acquisition</span><span class="advisano-link-arrow">→</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: ABOUT SOURX -->
+        <div class="advisano-footer-col">
+          <h4 class="advisano-footer-col-title" data-i18n="footer.col2_title">SOURX EMEA</h4>
+          <ul class="advisano-footer-links">
+            <li><a href="/about/"><span data-i18n="footer.about_firm">Notre Cabinet (À propos)</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/services/"><span data-i18n="footer.work_philosophy">Catalogue des Services</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/case-studies/"><span data-i18n="footer.proven_results">Résultats &amp; Études de Cas</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/industries/"><span data-i18n="footer.target_sectors">Secteurs d'Intervention</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/insights/"><span data-i18n="footer.innovation_lab">Analyses &amp; Innovation Lab</span><span class="advisano-link-arrow">→</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CORE VALUES -->
+        <div class="advisano-footer-col">
+          <h4 class="advisano-footer-col-title" data-i18n="footer.col3_title">VALEURS FONDAMENTALES</h4>
+          <ul class="advisano-footer-links">
+            <li><a href="/about/#values"><span data-i18n="footer.val_integrity">Intégrité &amp; Confiance</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/about/#values"><span data-i18n="footer.val_excellence">Excellence &amp; Responsabilité</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/about/#values"><span data-i18n="footer.val_vision">Vision à Long Terme</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/about/#values"><span data-i18n="footer.val_innovation">Innovation Appliquée</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/about/#values"><span data-i18n="footer.val_compliance">Qualité &amp; Conformité</span><span class="advisano-link-arrow">→</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: GLOBAL HUBS -->
+        <div class="advisano-footer-col">
+          <h4 class="advisano-footer-col-title" data-i18n="footer.col4_title">IMPLANTATIONS</h4>
+          <ul class="advisano-footer-links">
+            <li><a href="/contact/"><span data-i18n="footer.hub_london">Siège Londres (Royaume-Uni)</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/contact/"><span data-i18n="footer.hub_spain">Pôle Castellón (Espagne)</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="/contact/"><span data-i18n="footer.hub_emea">Prendre Contact</span><span class="advisano-link-arrow">→</span></a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span class="advisano-link-arrow">→</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bright Lime/Yellow SOURX Contact Bento Banner -->
+      <div class="advisano-footer-yellow-card">
+        <!-- Logo -->
+        <div class="advisano-footer-card-brand">
+          <img src="/images/sourx-logo-black.svg" alt="SOURX EMEA" class="advisano-footer-card-logo">
+        </div>
+
+        <!-- Column: CONTACT -->
+        <div class="advisano-footer-card-col">
+          <span class="advisano-footer-card-label" data-i18n="footer.contact_card_label">CONTACT</span>
+          <a href="tel:+442031377777" class="advisano-footer-card-val bold">+44 203 137 7777</a>
+          <a href="mailto:info@sourx.com" class="advisano-footer-card-val">info@sourx.com</a>
+        </div>
+
+        <!-- Column: UK ADDRESS -->
+        <div class="advisano-footer-card-col">
+          <span class="advisano-footer-card-label" data-i18n="footer.uk_label">SIÈGE ROYAUME-UNI</span>
+          <div class="advisano-footer-card-val">71–75 Shelton Street<br>Covent Garden, London WC2H 9JQ</div>
+        </div>
+
+        <!-- Column: SPAIN OFFICE -->
+        <div class="advisano-footer-card-col">
+          <span class="advisano-footer-card-label" data-i18n="footer.spain_label">BUREAU ESPAGNE</span>
+          <div class="advisano-footer-card-val">Castellón de la Plana, 12005<br>Email: info@sourx.es</div>
+        </div>
+      </div>
+
+      <!-- Bottom Legal / Copyright Bar -->
+      <div class="advisano-footer-bottom">
+        <div class="advisano-footer-copyright" data-i18n="footer.copyright">
+          © 2026 SOURX EMEA. Tous droits réservés. Stratégie. Technologie. Innovation.
+        </div>
+        <div class="advisano-footer-legal-links">
+          <a href="/privacy/" data-i18n="footer.privacy">Politique de Confidentialité</a>
+          <a href="/terms/" data-i18n="footer.terms">Mentions Légales &amp; Conformité</a>
+          <!-- Bottom secondary language switcher -->
+          <div class="advisano-lang-switcher" role="group" aria-label="Language">
+            <button type="button" class="advisano-lang-btn" data-lang="fr">FR</button>
+            <button type="button" class="advisano-lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="advisano-lang-btn" data-lang="es">ES</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
