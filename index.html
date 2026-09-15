@@ -8,7 +8,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/css/main.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23012e5c'/><circle cx='23' cy='9' r='5' fill='%23b6e82c'/><text x='4' y='22' font-family='sans-serif' font-weight='900' font-size='13' fill='%23ffffff'>SX</text></svg>">
 </head>
@@ -635,7 +635,7 @@
           </div>
         </div>
 
-        <!-- Card 2: SOURX Leads Management Spotlight (Ultra-Modern High-Tech Scoring Cockpit) -->
+        <!-- Card 2: SOURX Leads Management Spotlight (High-End Fintech 3-Stage Pipeline Funnel) -->
         <div class="sourx-leads-card">
           <!-- Top Bar -->
           <div class="sourx-leads-header">
@@ -647,12 +647,12 @@
             </div>
             <div class="sourx-leads-status">
               <span class="sourx-pulse-dot"></span>
-              <span>Algorithme Propriétaire Actif</span>
+              <span data-i18n="leads.status_active">Algorithme Propriétaire Actif</span>
             </div>
           </div>
 
           <!-- Title & Context -->
-          <div>
+          <div class="sourx-leads-intro">
             <h3 class="sourx-leads-title" data-i18n="leads.title">
               Système Propriétaire de Gestion &amp; Notation des Prospects
             </h3>
@@ -661,90 +661,91 @@
             </p>
           </div>
 
-          <!-- Interactive Cockpit: Radial Gauge + Scoring Telemetry -->
-          <div class="sourx-leads-body">
-            <!-- Modern Circular Progress Gauge -->
-            <div class="sourx-gauge-wrapper">
-              <div class="sourx-gauge-svg-box">
-                <svg width="120" height="120" viewBox="0 0 120 120" style="transform: rotate(-90deg); transform-origin: center;">
-                  <defs>
-                    <linearGradient id="sourxLeadsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#012e5c" />
-                      <stop offset="60%" stop-color="#0d5fb8" />
-                      <stop offset="100%" stop-color="#b6e82c" />
-                    </linearGradient>
-                    <filter id="sourxGlow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#b6e82c" flood-opacity="0.35"/>
-                    </filter>
-                  </defs>
-                  <!-- Background Track -->
-                  <circle cx="60" cy="60" r="48" fill="none" stroke="#eef2f6" stroke-width="9"></circle>
-                  <!-- Active Segment (80% = 241.3px on 301.6px circle) -->
-                  <circle cx="60" cy="60" r="48" fill="none" stroke="url(#sourxLeadsGrad)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="60.3" filter="url(#sourxGlow)"></circle>
-                </svg>
-                <div class="sourx-gauge-center-text">
-                  <span class="sourx-gauge-number">80%</span>
-                  <span class="sourx-gauge-sub">Qualifiés</span>
+          <!-- High-End 3-Stage Funnel Pipeline -->
+          <div class="sourx-funnel-pipeline">
+            
+            <!-- Step 1: Ingestion & Intent Signals -->
+            <div class="sourx-funnel-step" data-step="1">
+              <div class="sourx-step-indicator">
+                <div class="sourx-step-circle">
+                  <span>01</span>
+                </div>
+                <div class="sourx-step-line">
+                  <div class="sourx-step-pulse-runner"></div>
                 </div>
               </div>
-              <div class="sourx-gauge-chips">
-                <div class="sourx-gauge-chip qualified">
-                  <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #b6e82c;"></span>
-                  <span>Prêts à convertir</span>
+              <div class="sourx-step-card">
+                <div class="sourx-step-meta">
+                  <span class="sourx-step-phase" data-i18n="leads.step1_phase">PHASE 01 • INGESTION &amp; SIGNAUX</span>
+                  <span class="sourx-step-tag tag-intent" data-i18n="leads.stat3_val">100% Qualifié</span>
                 </div>
-                <div class="sourx-gauge-chip pipeline">
-                  <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #94a3b8;"></span>
-                  <span>Nurturing actif (20%)</span>
+                <h4 class="sourx-step-heading" data-i18n="leads.stat3_label">Filtrage prédictif par intention d'achat</h4>
+                <div class="sourx-step-bar-bg">
+                  <div class="sourx-step-bar-fill fill-blue" style="width: 100%;"></div>
                 </div>
               </div>
             </div>
 
-            <!-- Precision Scoring Telemetry -->
-            <div class="sourx-leads-kpis">
-              <!-- KPI 1 -->
-              <div class="sourx-kpi-row">
-                <div class="sourx-kpi-top">
-                  <span class="sourx-kpi-label" data-i18n="leads.stat1_label">Taux de complétion et de conversion</span>
-                  <span class="sourx-kpi-val highlight" data-i18n="leads.stat1_val">80%</span>
+            <!-- Step 2: Predictive AI Scoring & Fit -->
+            <div class="sourx-funnel-step" data-step="2">
+              <div class="sourx-step-indicator">
+                <div class="sourx-step-circle">
+                  <span>02</span>
                 </div>
-                <div class="sourx-kpi-track">
-                  <div class="sourx-kpi-fill lime-navy" style="width: 80%;"></div>
+                <div class="sourx-step-line">
+                  <div class="sourx-step-pulse-runner delay-1"></div>
                 </div>
               </div>
-
-              <!-- KPI 2 -->
-              <div class="sourx-kpi-row">
-                <div class="sourx-kpi-top">
-                  <span class="sourx-kpi-label" data-i18n="leads.stat2_label">Péréquation des flux d'affaires</span>
-                  <span class="sourx-kpi-val" data-i18n="leads.stat2_val">Stabilité Commerciale</span>
+              <div class="sourx-step-card">
+                <div class="sourx-step-meta">
+                  <span class="sourx-step-phase" data-i18n="leads.step2_phase">PHASE 02 • SCORING IA PRÉDICTIF</span>
+                  <span class="sourx-step-tag tag-stability" data-i18n="leads.stat2_val">Stabilité Commerciale</span>
                 </div>
-                <div class="sourx-kpi-track">
-                  <div class="sourx-kpi-fill navy-cyan" style="width: 92%;"></div>
-                </div>
-              </div>
-
-              <!-- KPI 3 -->
-              <div class="sourx-kpi-row">
-                <div class="sourx-kpi-top">
-                  <span class="sourx-kpi-label" data-i18n="leads.stat3_label">Filtrage prédictif par intention d'achat</span>
-                  <span class="sourx-kpi-val" data-i18n="leads.stat3_val">100% Qualifié</span>
-                </div>
-                <div class="sourx-kpi-track">
-                  <div class="sourx-kpi-fill emerald" style="width: 100%;"></div>
+                <h4 class="sourx-step-heading" data-i18n="leads.stat2_label">Péréquation des flux d'affaires</h4>
+                <div class="sourx-step-bar-bg">
+                  <div class="sourx-step-bar-fill fill-cyan" style="width: 92%;"></div>
                 </div>
               </div>
             </div>
+
+            <!-- Step 3: Closing & Sales Conversion (Hero Step) -->
+            <div class="sourx-funnel-step hero-stage" data-step="3">
+              <div class="sourx-step-indicator">
+                <div class="sourx-step-circle circle-hero">
+                  <span>03</span>
+                </div>
+              </div>
+              <div class="sourx-step-card card-hero">
+                <div class="sourx-step-meta">
+                  <span class="sourx-step-phase phase-hero" data-i18n="leads.step3_phase">PHASE 03 • ACCÉLÉRATION COMMERCIALE</span>
+                  <div class="sourx-hero-stat-badge">
+                    <span class="sourx-hero-stat-number" data-i18n="leads.stat1_val">80%</span>
+                  </div>
+                </div>
+                <h4 class="sourx-step-heading hero-heading" data-i18n="leads.stat1_label">Taux de complétion et de conversion</h4>
+                <div class="sourx-step-bar-bg hero-bar-bg">
+                  <div class="sourx-step-bar-fill fill-lime" style="width: 80%;"></div>
+                </div>
+                <div class="sourx-hero-tags">
+                  <span class="sourx-pill-neon" data-i18n="leads.chip_closing">✓ Prêts pour closing</span>
+                  <span class="sourx-pill-subtle" data-i18n="leads.chip_maturity">Maturité immédiate</span>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <!-- Bottom Micro-footer -->
           <div class="sourx-leads-footer">
-            <span style="display: inline-flex; align-items: center; gap: 6px;">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#012e5c" stroke-width="2">
+            <span class="sourx-footer-cert">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#012e5c" stroke-width="2">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
-              <span>Algorithme certifié SOURX EMEA</span>
+              <span data-i18n="leads.cert_label">Algorithme certifié SOURX EMEA</span>
             </span>
-            <span style="color: #012e5c; font-weight: 600;">Déploiement en 14 jours →</span>
+            <a href="#contact" class="sourx-footer-action" data-i18n="leads.deploy_cta">
+              Déploiement en 14 jours →
+            </a>
           </div>
         </div>
 
@@ -1262,11 +1263,11 @@
           <div class="advisano-contact-details">
             <div class="advisano-contact-item">
               <span class="advisano-contact-item-label" data-i18n="contact.direct_phone">LIGNE DIRECTE</span>
-              <a href="tel:+442031377777" class="advisano-contact-item-val">+44 203 137 7777</a>
+              <a href="tel:+442081239177" class="advisano-contact-item-val">+44 2081239177</a>
             </div>
             <div class="advisano-contact-item">
               <span class="advisano-contact-item-label" data-i18n="contact.hours_label">HORAIRES D'OUVERTURE</span>
-              <span class="advisano-contact-item-val" style="color: #444444; font-size: 14px;" data-i18n="contact.hours_val">Lundi – Vendredi : 8h00 – 17h00 (Heure UK)</span>
+              <span class="advisano-contact-item-val" style="color: #444444; font-size: 14px;" data-i18n="contact.hours_val">Lundi – Vendredi : 8h00 – 18h00 (Heure UK)</span>
             </div>
             <div class="advisano-contact-item">
               <span class="advisano-contact-item-label" data-i18n="contact.confidential_email">CONTACT CONFIDENTIEL</span>
@@ -1378,7 +1379,7 @@
         <!-- Column: CONTACT -->
         <div class="advisano-footer-card-col">
           <span class="advisano-footer-card-label" data-i18n="footer.contact_card_label">CONTACT</span>
-          <a href="tel:+442031377777" class="advisano-footer-card-val bold">+44 203 137 7777</a>
+          <a href="tel:+442081239177" class="advisano-footer-card-val bold">+44 2081239177</a>
           <a href="mailto:info@sourx.com" class="advisano-footer-card-val">info@sourx.com</a>
         </div>
 
@@ -1391,7 +1392,7 @@
         <!-- Column: SPAIN OFFICE -->
         <div class="advisano-footer-card-col">
           <span class="advisano-footer-card-label" data-i18n="footer.spain_label">BUREAU ESPAGNE</span>
-          <div class="advisano-footer-card-val">Castellón de la Plana, 12005<br>Email: info@sourx.es</div>
+          <div class="advisano-footer-card-val">Castellón de la Plana, 12005<br>Tél : +44 771 831 8040<br>Email: info@sourx.es</div>
         </div>
       </div>
 

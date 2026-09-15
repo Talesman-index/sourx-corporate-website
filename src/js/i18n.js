@@ -8,8 +8,8 @@ export const translations = {
   fr: {
     // Topbar (Authentic Old Site Header)
     "topbar.address": "71-75 Shelton Street, Covent Garden, Londres WC2H 9JQ",
-    "topbar.hours": "Lun - Ven : 8h00 - 17h00",
-    "topbar.phone": "+44 203 137 7777",
+    "topbar.hours": "Lun - Ven : 8h00 - 18h00",
+    "topbar.phone": "+44 2081239177",
     "topbar.email": "info@sourx.com",
     "topbar.quote_btn": "Demander un Devis",
 
@@ -122,6 +122,14 @@ export const translations = {
     "leads.stat2_label": "Péréquation des flux d'affaires",
     "leads.stat3_val": "100% Qualifié",
     "leads.stat3_label": "Filtrage prédictif par intention d'achat",
+    "leads.status_active": "Algorithme Propriétaire Actif",
+    "leads.step1_phase": "PHASE 01 • INGESTION &amp; SIGNAUX",
+    "leads.step2_phase": "PHASE 02 • SCORING IA PRÉDICTIF",
+    "leads.step3_phase": "PHASE 03 • ACCÉLÉRATION COMMERCIALE",
+    "leads.chip_closing": "✓ Prêts pour closing",
+    "leads.chip_maturity": "Maturité immédiate",
+    "leads.cert_label": "Algorithme certifié SOURX EMEA",
+    "leads.deploy_cta": "Déploiement en 14 jours →",
 
     // Sectors (The 6 Authentic Industries from Old Site)
     "sectors.tag": "SECTEURS D'INTERVENTION",
@@ -172,7 +180,7 @@ export const translations = {
     "contact.uk_office": "• <strong>Bureau Londres (UK) :</strong> 71–75 Shelton Street, Covent Garden, London WC2H 9JQ",
     "contact.es_office": "• <strong>Bureau Espagne :</strong> Castellón de la Plana, 12005 Espagne",
     "contact.hours_label": "HORAIRES D'OUVERTURE",
-    "contact.hours_val": "Lundi – Vendredi : 8h00 – 17h00 (Heure UK)",
+    "contact.hours_val": "Lundi – Vendredi : 8h00 – 18h00 (Heure UK)",
 
     // CTA
     "cta.tag": "PASSER À L'ACTION",
@@ -238,12 +246,12 @@ export const translations = {
     "contact.message_ph": "Décrivez succinctement votre enjeu opérationnel ou stratégique...",
     "contact.submit": "Planifier une Consultation Gratuite",
     "contact.confirm": "✓ Merci pour votre message. Un associé SOURX vous contactera dans les prochaines 24 heures.",
-    "contact.pill_phone": "📞 Ligne directe : <a href=\"tel:+442031377777\" style=\"color: inherit; text-decoration: none;\"><strong>+44 203 137 7777</strong></a>",
-    "contact.pill_hours": "🕒 Horaires : Lun - Ven : 8h00 - 17h00 (UK Time)",
+    "contact.pill_phone": "📞 Ligne directe : <a href=\"tel:+442081239177\" style=\"color: inherit; text-decoration: none;\"><strong>+44 2081239177</strong></a>",
+    "contact.pill_hours": "🕒 Horaires : Lun - Ven : 8h00 - 18h00 (UK Time)",
     "contact.pill_email": "Email : <strong>info@sourx.com</strong>. Nos associés vous répondent sous 24h ouvrées.",
     "contact.offices_title": "Bureaux Internationaux SOURX :",
     "contact.uk_office_detail": "<strong>Londres (Siège International) :</strong><br>71-75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom",
-    "contact.es_office_detail": "<strong>Espagne (Hub Advisory &amp; Tech EMEA) :</strong><br>Castellón de la Plana, 12005 Espagne",
+    "contact.es_office_detail": "<strong>Espagne (Hub Advisory &amp; Tech EMEA) :</strong><br>Castellón de la Plana, 12005 Espagne<br>Tél / Fax : +44 771 831 8040 • info@sourx.es",
     "about.page_tag": "NOTRE IDENTITÉ",
     "about.page_title": "Bâtir les organisations souveraines de demain.",
     "about.page_lead": "SOURX est né d'un constat clair : la frontière traditionnelle entre la stratégie d'entreprise et l'ingénierie technologique n'a plus lieu d'être. Nous fusionnons vision de haut niveau et excellence d'exécution.",
@@ -447,7 +455,7 @@ export const translations = {
     "serv.cta_title": "Besoin d'une intervention combinée sur plusieurs pôles ?",
     "serv.cta_desc": "La plupart des transformations modernes requièrent une réponse conjointe (stratégie + tech + conformité financière). Nos associés construisent une équipe sur mesure sous 48 heures.",
     "serv.cta_btn": "Planifier une Consultation Préliminaire →",
-    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Espagne • Tél : +44 203 137 7777 • info@sourx.com",
+    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Espagne • Tél : +44 2081239177 • info@sourx.com",
     "footer.subpage_copyright": "© 2026 SOURX EMEA. Tous droits réservés. Stratégie. Technologie. Innovation.",
     "meta.title_strategy": "Conseil en Stratégie &amp; Management | SOURX Consulting",
 
@@ -776,8 +784,8 @@ export const translations = {
   en: {
     // Topbar (Authentic Old Site Header)
     "topbar.address": "71-75 Shelton Street, Covent Garden, London WC2H 9JQ",
-    "topbar.hours": "Mon - Fri: 8:00am - 5:00pm",
-    "topbar.phone": "+44 203 137 7777",
+    "topbar.hours": "Mon - Fri: 8:00am - 6:00pm",
+    "topbar.phone": "+44 2081239177",
     "topbar.email": "info@sourx.com",
     "topbar.quote_btn": "Get a Quote",
 
@@ -890,6 +898,14 @@ export const translations = {
     "leads.stat2_label": "Predictable revenue pipeline",
     "leads.stat3_val": "100% Qualified",
     "leads.stat3_label": "Algorithmic intent evaluation",
+    "leads.status_active": "Active Proprietary Algorithm",
+    "leads.step1_phase": "PHASE 01 • INGESTION &amp; SIGNALS",
+    "leads.step2_phase": "PHASE 02 • PREDICTIVE AI SCORING",
+    "leads.step3_phase": "PHASE 03 • SALES ACCELERATION",
+    "leads.chip_closing": "✓ Ready for closing",
+    "leads.chip_maturity": "Instant sales maturity",
+    "leads.cert_label": "Certified SOURX EMEA Algorithm",
+    "leads.deploy_cta": "14-Day Rapid Deployment →",
 
     // Sectors (The 6 Authentic Industries from Old Site)
     "sectors.tag": "INDUSTRIES WE SERVE",
@@ -940,7 +956,7 @@ export const translations = {
     "contact.uk_office": "• <strong>UK Office:</strong> 71–75 Shelton Street, Covent Garden, London WC2H 9JQ",
     "contact.es_office": "• <strong>Spain Office:</strong> Castellón de la Plana, 12005 Spain",
     "contact.hours_label": "OFFICE HOURS",
-    "contact.hours_val": "Monday – Friday: 8:00am – 5:00pm (UK Time)",
+    "contact.hours_val": "Monday – Friday: 8:00am – 6:00pm (UK Time)",
 
     // CTA
     "cta.tag": "TAKE ACTION",
@@ -1006,12 +1022,12 @@ export const translations = {
     "contact.message_ph": "Briefly describe your operational or strategic objective...",
     "contact.submit": "Schedule a Strategic Consultation",
     "contact.confirm": "✓ Thank you for reaching out. A SOURX partner will connect with you within 24 business hours.",
-    "contact.pill_phone": "📞 Direct Line: <a href=\"tel:+442031377777\" style=\"color: inherit; text-decoration: none;\"><strong>+44 203 137 7777</strong></a>",
-    "contact.pill_hours": "🕒 Hours: Mon - Fri: 8:00am - 5:00pm (UK Time)",
+    "contact.pill_phone": "📞 Direct Line: <a href=\"tel:+442081239177\" style=\"color: inherit; text-decoration: none;\"><strong>+44 2081239177</strong></a>",
+    "contact.pill_hours": "🕒 Hours: Mon - Fri: 8:00am - 6:00pm (UK Time)",
     "contact.pill_email": "Email: <strong>info@sourx.com</strong>. Our partners respond within 24 business hours.",
     "contact.offices_title": "SOURX Global Hubs:",
     "contact.uk_office_detail": "<strong>London (UK Headquarters):</strong><br>71-75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom",
-    "contact.es_office_detail": "<strong>Spain (EMEA Advisory &amp; Tech Hub):</strong><br>Castellón de la Plana, 12005 Spain",
+    "contact.es_office_detail": "<strong>Spain (EMEA Advisory &amp; Tech Hub):</strong><br>Castellón de la Plana, 12005 Spain<br>Office / Fax: +44 771 831 8040 • info@sourx.es",
     "about.page_tag": "OUR IDENTITY",
     "about.page_title": "Building tomorrow's sovereign organizations.",
     "about.page_lead": "SOURX was founded on a distinct conviction: the traditional division between boardroom strategy and technical engineering is obsolete. We unite senior strategic foresight with deep engineering execution.",
@@ -1215,7 +1231,7 @@ export const translations = {
     "serv.cta_title": "Need a Cross-Disciplinary Engagement?",
     "serv.cta_desc": "Modern transformations demand synchronized responses (strategy + tech + financial audit). Our partners assemble bespoke project teams within 48 hours.",
     "serv.cta_btn": "Book an Initial Consultation →",
-    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Spain • Tel: +44 203 137 7777 • info@sourx.com",
+    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Spain • Tel: +44 2081239177 • info@sourx.com",
     "footer.subpage_copyright": "© 2026 SOURX EMEA. All Rights Reserved. Strategy. Technology. Innovation.",
     "meta.title_strategy": "Strategy &amp; Management Advisory | SOURX Consulting",
 
@@ -1544,8 +1560,8 @@ export const translations = {
   es: {
     // Topbar (Authentic Old Site Header)
     "topbar.address": "71-75 Shelton Street, Covent Garden, Londres WC2H 9JQ",
-    "topbar.hours": "Lun - Vie: 8:00 - 17:00",
-    "topbar.phone": "+44 203 137 7777",
+    "topbar.hours": "Lun - Vie: 8:00 - 18:00",
+    "topbar.phone": "+44 2081239177",
     "topbar.email": "info@sourx.com",
     "topbar.quote_btn": "Pedir Presupuesto",
 
@@ -1658,6 +1674,14 @@ export const translations = {
     "leads.stat2_label": "Previsibilidad de ingresos",
     "leads.stat3_val": "100% Cualificado",
     "leads.stat3_label": "Evaluación algorítmica de intención",
+    "leads.status_active": "Algoritmo Propietario Activo",
+    "leads.step1_phase": "FASE 01 • INGESTIÓN Y SEÑALES",
+    "leads.step2_phase": "FASE 02 • SCORING IA PREDICTIVO",
+    "leads.step3_phase": "FASE 03 • ACELERACIÓN COMERCIAL",
+    "leads.chip_closing": "✓ Listos para cierre",
+    "leads.chip_maturity": "Madurez comercial inmediata",
+    "leads.cert_label": "Algoritmo certificado SOURX EMEA",
+    "leads.deploy_cta": "Despliegue en 14 días →",
 
     // Sectors (The 6 Authentic Industries from Old Site)
     "sectors.tag": "SECTORES DE ACTIVIDAD",
@@ -1708,7 +1732,7 @@ export const translations = {
     "contact.uk_office": "• <strong>Oficina Londres (UK):</strong> 71–75 Shelton Street, Covent Garden, London WC2H 9JQ",
     "contact.es_office": "• <strong>Oficina España:</strong> Castellón de la Plana, 12005 España",
     "contact.hours_label": "HORARIO DE ATENCIÓN",
-    "contact.hours_val": "Lunes – Viernes: 8:00 – 17:00 (Hora UK)",
+    "contact.hours_val": "Lunes – Viernes: 8:00 – 18:00 (Hora UK)",
 
     // CTA
     "cta.tag": "PASAR A LA ACCIÓN",
@@ -1774,12 +1798,12 @@ export const translations = {
     "contact.message_ph": "Describa brevemente su reto operativo o estratégico...",
     "contact.submit": "Programar Consulta Gratuita",
     "contact.confirm": "✓ Gracias por su mensaje. Un socio senior de SOURX se pondrá en contacto en 24 horas laborables.",
-    "contact.pill_phone": "📞 Línea directa: <a href=\"tel:+442031377777\" style=\"color: inherit; text-decoration: none;\"><strong>+44 203 137 7777</strong></a>",
-    "contact.pill_hours": "🕒 Horario: Lun - Vie: 8:00 - 17:00 (Hora UK)",
+    "contact.pill_phone": "📞 Línea directa: <a href=\"tel:+442081239177\" style=\"color: inherit; text-decoration: none;\"><strong>+44 2081239177</strong></a>",
+    "contact.pill_hours": "🕒 Horario: Lun - Vie: 8:00 - 18:00 (Hora UK)",
     "contact.pill_email": "Email: <strong>info@sourx.com</strong>. Respondemos en 24 horas laborales.",
     "contact.offices_title": "Sedes Internacionales SOURX:",
     "contact.uk_office_detail": "<strong>Londres (Sede Internacional):</strong><br>71-75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom",
-    "contact.es_office_detail": "<strong>España (Hub EMEA Advisory &amp; Tech):</strong><br>Castellón de la Plana, 12005 España",
+    "contact.es_office_detail": "<strong>España (Hub EMEA Advisory &amp; Tech):</strong><br>Castellón de la Plana, 12005 España<br>Tel / Fax: +44 771 831 8040 • info@sourx.es",
     "about.page_tag": "NUESTRA IDENTIDAD",
     "about.page_title": "Construir las organizaciones soberanas del mañana.",
     "about.page_lead": "SOURX nació de una convicción nítida: la frontera tradicional entre la estrategia corporativa y la ingeniería técnica ya no tiene cabida. Fusionamos visión directiva de alto nivel y rigor técnico.",
@@ -1983,7 +2007,7 @@ export const translations = {
     "serv.cta_title": "¿Necesita una intervención multidisciplinar combinada?",
     "serv.cta_desc": "La mayoría de retos actuales requieren una actuación conjunta (estrategia directiva + tecnología + control financiero). Configuramos equipos especializados en 48 horas.",
     "serv.cta_btn": "Solicitar Consulta Previa →",
-    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ y Castellón, España • Tel: +44 203 137 7777 • info@sourx.com",
+    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ y Castellón, España • Tel: +44 2081239177 • info@sourx.com",
     "footer.subpage_copyright": "© 2026 SOURX EMEA. Todos los derechos reservados. Estrategia. Tecnología. Innovación.",
     "meta.title_strategy": "Consultoría de Estrategia y Gestión | SOURX Consulting",
 
