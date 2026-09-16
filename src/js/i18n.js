@@ -181,6 +181,13 @@ export const translations = {
     "contact.es_office": "• <strong>Bureau Espagne :</strong> Castellón de la Plana, 12005 Espagne",
     "contact.hours_label": "HORAIRES D'OUVERTURE",
     "contact.hours_val": "Lundi – Vendredi : 8h00 – 18h00 (Heure UK)",
+    "contact.advisor_title": "Conseil Associé Senior",
+    "contact.advisor_status": "Ligne ouverte • Réponse sous 24h",
+    "contact.call_badge": "Prioritaire",
+    "contact.hq_tag": "Siège Global",
+    "contact.es_tag": "Espagne & EMEA",
+    "contact.uk_office_name": "Siège Londres (UK)",
+    "contact.es_office_name": "Hub Espagne (EMEA)",
 
     // CTA
     "cta.tag": "PASSER À L'ACTION",
@@ -455,7 +462,7 @@ export const translations = {
     "serv.cta_title": "Besoin d'une intervention combinée sur plusieurs pôles ?",
     "serv.cta_desc": "La plupart des transformations modernes requièrent une réponse conjointe (stratégie + tech + conformité financière). Nos associés construisent une équipe sur mesure sous 48 heures.",
     "serv.cta_btn": "Planifier une Consultation Préliminaire →",
-    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Espagne • Tél : +44 2081239177 • info@sourx.com",
+    "footer.subpage_address": `<div class="subpage-coord-row"><span class="subpage-coord-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Siège UK :</strong> 71–75 Shelton St, Covent Garden, London WC2H 9JQ</span></span><span class="subpage-coord-dot">•</span><span class="subpage-coord-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Pôle Espagne :</strong> Castellón de la Plana, 12005</span></span></div><div class="subpage-coord-row"><a href="tel:+442081239177" class="subpage-coord-item subpage-coord-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+44 2081239177</span></a><span class="subpage-coord-dot">•</span><a href="mailto:info@sourx.com" class="subpage-coord-item subpage-coord-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>info@sourx.com</span></a></div>`,
     "footer.subpage_copyright": "© 2026 SOURX EMEA. Tous droits réservés. Stratégie. Technologie. Innovation.",
     "meta.title_strategy": "Conseil en Stratégie &amp; Management | SOURX Consulting",
 
@@ -957,6 +964,13 @@ export const translations = {
     "contact.es_office": "• <strong>Spain Office:</strong> Castellón de la Plana, 12005 Spain",
     "contact.hours_label": "OFFICE HOURS",
     "contact.hours_val": "Monday – Friday: 8:00am – 6:00pm (UK Time)",
+    "contact.advisor_title": "Senior Advisory Partner",
+    "contact.advisor_status": "Direct Line • 24h partner response",
+    "contact.call_badge": "Direct",
+    "contact.hq_tag": "Global HQ",
+    "contact.es_tag": "Spain & EMEA",
+    "contact.uk_office_name": "London HQ (UK)",
+    "contact.es_office_name": "Spain Hub (EMEA)",
 
     // CTA
     "cta.tag": "TAKE ACTION",
@@ -1231,7 +1245,7 @@ export const translations = {
     "serv.cta_title": "Need a Cross-Disciplinary Engagement?",
     "serv.cta_desc": "Modern transformations demand synchronized responses (strategy + tech + financial audit). Our partners assemble bespoke project teams within 48 hours.",
     "serv.cta_btn": "Book an Initial Consultation →",
-    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Spain • Tel: +44 2081239177 • info@sourx.com",
+    "footer.subpage_address": `<div class="subpage-coord-row"><span class="subpage-coord-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>UK HQ:</strong> 71–75 Shelton St, Covent Garden, London WC2H 9JQ</span></span><span class="subpage-coord-dot">•</span><span class="subpage-coord-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Spain Hub:</strong> Castellón de la Plana, 12005</span></span></div><div class="subpage-coord-row"><a href="tel:+442081239177" class="subpage-coord-item subpage-coord-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+44 2081239177</span></a><span class="subpage-coord-dot">•</span><a href="mailto:info@sourx.com" class="subpage-coord-item subpage-coord-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>info@sourx.com</span></a></div>`,
     "footer.subpage_copyright": "© 2026 SOURX EMEA. All Rights Reserved. Strategy. Technology. Innovation.",
     "meta.title_strategy": "Strategy &amp; Management Advisory | SOURX Consulting",
 
@@ -1733,6 +1747,13 @@ export const translations = {
     "contact.es_office": "• <strong>Oficina España:</strong> Castellón de la Plana, 12005 España",
     "contact.hours_label": "HORARIO DE ATENCIÓN",
     "contact.hours_val": "Lunes – Viernes: 8:00 – 18:00 (Hora UK)",
+    "contact.advisor_title": "Socio Consultor Senior",
+    "contact.advisor_status": "Línea directa • Respuesta en 24h",
+    "contact.call_badge": "Prioritario",
+    "contact.hq_tag": "Sede Global",
+    "contact.es_tag": "España & EMEA",
+    "contact.uk_office_name": "Sede Londres (UK)",
+    "contact.es_office_name": "Hub España (EMEA)",
 
     // CTA
     "cta.tag": "PASAR A LA ACCIÓN",
@@ -2007,7 +2028,7 @@ export const translations = {
     "serv.cta_title": "¿Necesita una intervención multidisciplinar combinada?",
     "serv.cta_desc": "La mayoría de retos actuales requieren una actuación conjunta (estrategia directiva + tecnología + control financiero). Configuramos equipos especializados en 48 horas.",
     "serv.cta_btn": "Solicitar Consulta Previa →",
-    "footer.subpage_address": "71-75 Shelton St, Covent Garden, London WC2H 9JQ y Castellón, España • Tel: +44 2081239177 • info@sourx.com",
+    "footer.subpage_address": `<div class="subpage-coord-row"><span class="subpage-coord-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Sede UK:</strong> 71–75 Shelton St, Covent Garden, London WC2H 9JQ</span></span><span class="subpage-coord-dot">•</span><span class="subpage-coord-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Hub España:</strong> Castellón de la Plana, 12005</span></span></div><div class="subpage-coord-row"><a href="tel:+442081239177" class="subpage-coord-item subpage-coord-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+44 2081239177</span></a><span class="subpage-coord-dot">•</span><a href="mailto:info@sourx.com" class="subpage-coord-item subpage-coord-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>info@sourx.com</span></a></div>`,
     "footer.subpage_copyright": "© 2026 SOURX EMEA. Todos los derechos reservados. Estrategia. Tecnología. Innovación.",
     "meta.title_strategy": "Consultoría de Estrategia y Gestión | SOURX Consulting",
 

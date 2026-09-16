@@ -12,7 +12,8 @@ export default defineConfig({
             '/about', '/services', '/industries', '/case-studies', 
             '/insights', '/contact', '/privacy', '/terms',
             '/services/strategy', '/services/finance', 
-            '/services/technology', '/services/innovation', '/services/growth'
+            '/services/technology', '/services/innovation', '/services/growth',
+            '/email-signatures'
           ];
           if (pages.includes(url)) {
             const query = req.url.includes('?') ? '?' + req.url.split('?')[1] : '';
@@ -42,6 +43,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact/index.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
         terms: resolve(__dirname, 'terms/index.html'),
+        emailSignatures: resolve(__dirname, 'email-signatures/index.html'),
       },
     },
   },

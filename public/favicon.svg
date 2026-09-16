@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#012e5c"/>
+  <circle cx="23" cy="9" r="5" fill="#b6e82c"/>
+  <text x="4" y="22" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="900" font-size="13" fill="#ffffff">SX</text>
+</svg>

@@ -1,0 +1,979 @@
+/* ==========================================================================
+   SOURX Email Signatures Showcase — Editorial Design System
+   Framer / Linear / Stripe Brand Guidelines Aesthetic
+   ========================================================================== */
+
+/* Page Canvas */
+.sig-showcase-page {
+  background-color: #f6f6f1;
+  color: var(--text-dark, #000000);
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.sig-hero-section {
+  padding: 140px 24px 50px;
+  background: linear-gradient(180deg, rgba(1, 46, 92, 0.03) 0%, rgba(246, 246, 241, 0) 100%);
+  border-bottom: 1px solid rgba(1, 46, 92, 0.06);
+}
+
+.sig-hero-container {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+.sig-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: #ffffff;
+  border: 1px solid rgba(1, 46, 92, 0.12);
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #012e5c;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(1, 46, 92, 0.04);
+}
+
+.sig-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #b6e82c;
+  box-shadow: 0 0 8px #b6e82c;
+}
+
+.sig-hero-title {
+  font-family: var(--font-display, 'Inter', -apple-system, sans-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #012e5c;
+  margin-bottom: 16px;
+}
+
+.sig-hero-subtitle {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: 500;
+  color: #334e68;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  max-width: 780px;
+}
+
+.sig-hero-lead {
+  font-size: 1.05rem;
+  color: #627d98;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* Filter Controls Bar */
+.sig-filter-bar-wrap {
+  position: sticky;
+  top: 76px;
+  z-index: 40;
+  background: rgba(246, 246, 241, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(1, 46, 92, 0.08);
+  padding: 16px 24px;
+  transition: all 0.25s ease;
+}
+
+.sig-filter-bar {
+  max-width: 1340px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.sig-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sig-filter-group::-webkit-scrollbar {
+  display: none;
+}
+
+.sig-filter-btn {
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid rgba(1, 46, 92, 0.12);
+  border-radius: 9999px;
+  padding: 7px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334e68;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.sig-filter-btn:hover {
+  background: #f1f4f8;
+  border-color: rgba(1, 46, 92, 0.22);
+  color: #012e5c;
+  transform: translateY(-1px);
+}
+
+.sig-filter-btn.active {
+  background: #012e5c;
+  color: #ffffff;
+  border-color: #012e5c;
+  box-shadow: 0 4px 12px rgba(1, 46, 92, 0.2);
+}
+
+.sig-filter-btn .sig-badge-count {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: rgba(1, 46, 92, 0.08);
+  color: #012e5c;
+}
+
+.sig-filter-btn.active .sig-badge-count {
+  background: #b6e82c;
+  color: #012e5c;
+  font-weight: 700;
+}
+
+.sig-filter-info {
+  font-size: 13px;
+  color: #627d98;
+  font-weight: 500;
+}
+
+/* Gallery Section */
+.sig-gallery-section {
+  padding: 50px 24px 100px;
+}
+
+.sig-gallery-container {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+/* 2-Column Responsive Card Grid */
+.sig-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+}
+
+@media (max-width: 1120px) {
+  .sig-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Showcase Card */
+.sig-card {
+  background: #ffffff;
+  border: 1px solid rgba(1, 46, 92, 0.09);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.035);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sig-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 44px rgba(1, 46, 92, 0.08);
+  border-color: rgba(1, 46, 92, 0.18);
+}
+
+.sig-card.hidden {
+  display: none !important;
+}
+
+/* Card Header */
+.sig-card-header {
+  padding: 24px 28px 18px;
+  border-bottom: 1px solid rgba(1, 46, 92, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sig-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sig-card-num-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #012e5c;
+  background: rgba(1, 46, 92, 0.06);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.sig-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sig-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  background: #f1f4f8;
+  color: #334e68;
+}
+
+.sig-tag.tag-lime {
+  background: rgba(182, 232, 44, 0.25);
+  color: #012e5c;
+  font-weight: 700;
+}
+
+.sig-card-title {
+  font-family: var(--font-display, 'Inter', -apple-system, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #012e5c;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.sig-card-desc {
+  font-size: 0.92rem;
+  color: #627d98;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Previews Body */
+.sig-card-body {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  background: #fafaf8;
+  flex: 1;
+}
+
+/* Simulator Frame */
+.sig-preview-frame {
+  background: #ffffff;
+  border: 1px solid rgba(1, 46, 92, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.sig-frame-header {
+  background: #f1f3f6;
+  border-bottom: 1px solid rgba(1, 46, 92, 0.08);
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sig-frame-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sig-frame-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.sig-frame-title {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #627d98;
+}
+
+.sig-frame-client {
+  font-size: 10px;
+  font-weight: 500;
+  color: #8fa0b5;
+}
+
+/* Canvas Area */
+.sig-canvas-desktop {
+  padding: 22px;
+  background: #ffffff;
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.sig-canvas-mobile-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 6px 0;
+}
+
+.sig-mobile-device {
+  width: 100%;
+  max-width: 350px;
+  background: #ffffff;
+  border: 1px solid rgba(1, 46, 92, 0.14);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(1, 46, 92, 0.06);
+  overflow: hidden;
+}
+
+.sig-mobile-topbar {
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(1, 46, 92, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #627d98;
+}
+
+.sig-mobile-recipient {
+  padding: 6px 12px;
+  border-bottom: 1px solid rgba(1, 46, 92, 0.05);
+  font-size: 10.5px;
+  color: #94a3b8;
+  background: #ffffff;
+}
+
+.sig-mobile-recipient strong {
+  color: #334e68;
+}
+
+.sig-canvas-mobile {
+  padding: 16px 14px;
+  background: #ffffff;
+}
+
+/* Card Action Footer */
+.sig-card-footer {
+  padding: 16px 28px;
+  background: #ffffff;
+  border-top: 1px solid rgba(1, 46, 92, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sig-recom-note {
+  font-size: 12px;
+  color: #627d98;
+}
+
+.sig-recom-note strong {
+  color: #012e5c;
+}
+
+.sig-inspect-btn {
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid #012e5c;
+  color: #012e5c;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.sig-inspect-btn:hover {
+  background: #012e5c;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   ACTUAL EMAIL SIGNATURE STRUCTURES (TABLE & EMAIL-SAFE STYLES)
+   Engineered strictly for Outlook, Apple Mail, and Gmail compatibility.
+   ========================================================================== */
+
+.es-wrapper {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #000000;
+  line-height: 1.35;
+  text-align: left;
+  width: 100%;
+}
+
+.es-table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+.es-link {
+  color: #012e5c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.es-link:hover {
+  text-decoration: underline;
+}
+
+/* Concept 01 — Executive Minimal */
+.sig01-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 580px;
+}
+
+.sig01-logo-cell {
+  padding-right: 20px;
+  vertical-align: middle;
+  width: 150px;
+}
+
+.sig01-divider-cell {
+  width: 1px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.sig01-divider-line {
+  width: 1px;
+  height: 84px;
+  background-color: rgba(1, 46, 92, 0.2);
+}
+
+.sig01-info-cell {
+  padding-left: 20px;
+  vertical-align: middle;
+}
+
+.sig01-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #012e5c;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+
+.sig01-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334e68;
+  margin-bottom: 7px;
+}
+
+.sig01-contact {
+  font-size: 11px;
+  color: #627d98;
+  line-height: 1.5;
+}
+
+/* Mobile version for 01 */
+.sig01-mobile-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sig01-mobile-logo-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(1, 46, 92, 0.12);
+}
+
+/* Concept 02 — Corporate Horizontal */
+.sig02-desktop-wrap {
+  width: 100%;
+  max-width: 580px;
+}
+
+.sig02-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #012e5c;
+  padding-bottom: 7px;
+  margin-bottom: 8px;
+}
+
+.sig02-name-group {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sig02-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #012e5c;
+  letter-spacing: -0.02em;
+}
+
+.sig02-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334e68;
+}
+
+.sig02-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sig02-contact-links {
+  font-size: 11.5px;
+  color: #627d98;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sig02-sep {
+  color: rgba(1, 46, 92, 0.25);
+  font-weight: bold;
+}
+
+.sig02-footer-tagline {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px dotted rgba(1, 46, 92, 0.18);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8fa0b5;
+}
+
+/* Concept 03 — Brand Block */
+.sig03-container {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid rgba(1, 46, 92, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  width: 100%;
+  max-width: 580px;
+}
+
+.sig03-brand-block {
+  background: #012e5c;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 130px;
+}
+
+.sig03-brand-accent {
+  width: 24px;
+  height: 3px;
+  background: #b6e82c;
+  border-radius: 2px;
+  margin-top: 12px;
+}
+
+.sig03-info-block {
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.sig03-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #012e5c;
+  letter-spacing: -0.01em;
+}
+
+.sig03-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334e68;
+  margin-bottom: 7px;
+}
+
+.sig03-contact-grid {
+  font-size: 11px;
+  color: #627d98;
+  line-height: 1.45;
+}
+
+.sig03-loc {
+  font-size: 10px;
+  color: #94a3b8;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Concept 04 — Vertical Premium */
+.sig04-wrap {
+  text-align: left;
+  width: 100%;
+  max-width: 520px;
+}
+
+.sig04-name {
+  font-size: 15.5px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #012e5c;
+}
+
+.sig04-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334e68;
+  margin-bottom: 6px;
+}
+
+.sig04-logo-row {
+  margin-bottom: 8px;
+}
+
+.sig04-line {
+  height: 1px;
+  background-color: rgba(1, 46, 92, 0.12);
+  margin-bottom: 7px;
+}
+
+.sig04-contact {
+  font-size: 11px;
+  color: #627d98;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Concept 05 — Department Signature */
+.sig05-wrap {
+  border-left: 3.5px solid #012e5c;
+  padding-left: 16px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.sig05-dept-badge {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #012e5c;
+  background: rgba(182, 232, 44, 0.45);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.sig05-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #012e5c;
+  letter-spacing: -0.01em;
+}
+
+.sig05-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334e68;
+  margin-bottom: 6px;
+}
+
+.sig05-company-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.sig05-contact {
+  font-size: 11px;
+  color: #627d98;
+  line-height: 1.5;
+}
+
+.sig05-tagline {
+  font-size: 9.5px;
+  color: #8fa0b5;
+  margin-top: 6px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Concept 06 — Compact Signature */
+.sig06-wrap {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #334e68;
+  width: 100%;
+}
+
+.sig06-line1 {
+  font-size: 12px;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sig06-line1 strong {
+  font-weight: 700;
+  color: #012e5c;
+}
+
+.sig06-line2 {
+  color: #627d98;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   Inspection Modal
+   ========================================================================== */
+.sig-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(1, 30, 60, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sig-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sig-modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sig-modal-backdrop.open .sig-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.sig-modal-header {
+  padding: 20px 28px;
+  border-bottom: 1px solid rgba(1, 46, 92, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafaf8;
+}
+
+.sig-modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sig-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #012e5c;
+  margin: 0;
+}
+
+.sig-modal-close-btn {
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #627d98;
+  transition: all 0.2s ease;
+}
+
+.sig-modal-close-btn:hover {
+  background: rgba(1, 46, 92, 0.08);
+  color: #012e5c;
+}
+
+.sig-modal-content {
+  padding: 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sig-modal-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 800px) {
+  .sig-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sig-spec-box {
+  background: #f8fafc;
+  border: 1px solid rgba(1, 46, 92, 0.09);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.sig-spec-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #012e5c;
+  margin-bottom: 6px;
+}
+
+.sig-spec-desc {
+  font-size: 13.5px;
+  color: #334e68;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.sig-compat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sig-compat-item {
+  font-size: 12px;
+  color: #334e68;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sig-compat-icon {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.sig-code-preview-wrap {
+  margin-top: 6px;
+  border: 1px solid rgba(1, 46, 92, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #011f40;
+}
+
+.sig-code-header {
+  background: #01162d;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #94a3b8;
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+}
+
+.sig-copy-code-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sig-copy-code-btn:hover {
+  background: #b6e82c;
+  color: #012e5c;
+  border-color: #b6e82c;
+  font-weight: 700;
+}
+
+.sig-code-box {
+  padding: 14px;
+  max-height: 180px;
+  overflow-y: auto;
+  color: #cbd5e1;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

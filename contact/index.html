@@ -6,7 +6,9 @@
   <title data-i18n="meta.title_contact">Get in Touch | SOURX Consulting</title>
   <meta name="description" content="Engagez une consultation stratégique avec les associés de SOURX à Londres et en Espagne.">
   <link rel="stylesheet" href="/src/css/main.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23002e5c'/><circle cx='16' cy='16' r='8' fill='%23b6e800'/></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23012e5c'/><circle cx='23' cy='9' r='5' fill='%23b6e82c'/><text x='4' y='22' font-family='sans-serif' font-weight='900' font-size='13' fill='%23ffffff'>SX</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico"><rect width='32' height='32' rx='8' fill='%23002e5c'/><circle cx='16' cy='16' r='8' fill='%23b6e800'/></svg>">
 </head>
 <body>
 
@@ -180,27 +182,105 @@
 
           <!-- Info & Coordonnées -->
           <div class="contact-info-side">
-            <div class="contact-photo-box">
-              <img src="/images/consultant-portrait.jpg" alt="Consultant SOURX">
-            </div>
+            <div class="advisano-contact-card-sidebar" style="padding: 24px; box-shadow: 0 12px 32px rgba(1,46,92,0.06);">
+              <div class="advisano-contact-photo-box">
+                <img src="/images/consultant-portrait.jpg" alt="Associé SOURX">
+                <div class="advisano-contact-photo-scrim"></div>
+                <div class="advisano-contact-advisor-badge">
+                  <span class="advisano-live-indicator"></span>
+                  <div class="advisano-advisor-badge-info">
+                    <span class="advisano-advisor-title" data-i18n="contact.advisor_title">Conseil Associé Senior</span>
+                    <span class="advisano-advisor-status" data-i18n="contact.advisor_status">Ligne ouverte • Réponse sous 24h</span>
+                  </div>
+                </div>
+              </div>
 
-            <div class="contact-callout-pill">
-              <div style="font-size: 1.05rem; margin-bottom: 0.25rem;" data-i18n="contact.pill_phone">📞 Direct Line: <a href="tel:+442081239177" style="color: inherit; text-decoration: none;"><strong>+44 2081239177</strong></a></div>
-              <div style="font-size: 0.85rem; color: #083a6f; margin-bottom: 0.25rem;" data-i18n="contact.pill_hours">🕒 Hours: Mon - Fri: 8:00am - 6:00pm (UK Time)</div>
-              <div style="font-size: 0.85rem; color: #083a6f;" data-i18n="contact.pill_email">Email: <strong>info@sourx.com</strong>. Our partners respond within 24 business hours.</div>
-            </div>
+              <div class="advisano-contact-details">
+                <!-- Direct Phone -->
+                <div class="advisano-contact-card-row">
+                  <div class="advisano-contact-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-card-icon">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div class="advisano-contact-item-body">
+                    <span class="advisano-contact-item-label" data-i18n="contact.direct_phone">LIGNE DIRECTE</span>
+                    <a href="tel:+442081239177" class="advisano-contact-phone-link">
+                      <span class="phone-number">+44 2081239177</span>
+                      <span class="phone-badge" data-i18n="contact.call_badge">Prioritaire</span>
+                    </a>
+                  </div>
+                </div>
 
-            <div style="background: #F4F5F7; border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid var(--border-light);">
-              <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #002e5c;" data-i18n="contact.offices_title">SOURX Global Hubs:</h4>
-              <p style="font-size: 0.85rem; color: var(--text-dark-secondary); margin-bottom: 0.75rem;" data-i18n="contact.uk_office_detail">
-                <strong>London (UK Headquarters):</strong><br>
-                71-75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom
-              </p>
-              <p style="font-size: 0.85rem; color: var(--text-dark-secondary);" data-i18n="contact.es_office_detail">
-                <strong>Spain (EMEA Advisory &amp; Tech Hub):</strong><br>
-                Castellón de la Plana, 12005 Spain<br>
-                Office / Fax: +44 771 831 8040 • Email: info@sourx.es
-              </p>
+                <!-- Office Hours -->
+                <div class="advisano-contact-card-row">
+                  <div class="advisano-contact-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-card-icon">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="advisano-contact-item-body">
+                    <span class="advisano-contact-item-label" data-i18n="contact.hours_label">HORAIRES D'OUVERTURE</span>
+                    <div class="advisano-hours-block">
+                      <span data-i18n="contact.hours_val">Lundi – Vendredi : 8h00 – 18h00 (Heure UK)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Confidential Inquiries -->
+                <div class="advisano-contact-card-row">
+                  <div class="advisano-contact-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-card-icon">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="advisano-contact-item-body">
+                    <span class="advisano-contact-item-label" data-i18n="contact.confidential_email">CONTACT CONFIDENTIEL</span>
+                    <div class="advisano-emails-list">
+                      <a href="mailto:info@sourx.com" class="advisano-email-chip">
+                        <span class="email-name">info@sourx.com</span>
+                        <span class="email-role-tag" data-i18n="contact.hq_tag">Siège Global</span>
+                      </a>
+                      <a href="mailto:info@sourx.es" class="advisano-email-chip">
+                        <span class="email-name">info@sourx.es</span>
+                        <span class="email-role-tag" data-i18n="contact.es_tag">Espagne &amp; EMEA</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- International Offices -->
+                <div class="advisano-contact-card-row">
+                  <div class="advisano-contact-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-card-icon">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="advisano-contact-item-body">
+                    <span class="advisano-contact-item-label" data-i18n="contact.offices">BUREAUX INTERNATIONAUX</span>
+                    <div class="advisano-offices-cards">
+                      <div class="advisano-office-card">
+                        <div class="advisano-office-badge">UK</div>
+                        <div class="advisano-office-text">
+                          <span class="advisano-office-name" data-i18n="contact.uk_office_name">Siège Londres (UK)</span>
+                          <span class="advisano-office-addr">71–75 Shelton Street, Covent Garden, London WC2H 9JQ</span>
+                        </div>
+                      </div>
+                      <div class="advisano-office-card">
+                        <div class="advisano-office-badge">ES</div>
+                        <div class="advisano-office-text">
+                          <span class="advisano-office-name" data-i18n="contact.es_office_name">Hub Espagne (EMEA)</span>
+                          <span class="advisano-office-addr">Castellón de la Plana, 12005 Espagne</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
@@ -210,10 +290,33 @@
 
   <footer class="site-footer" style="background-color: #012e5c; color: #ffffff; padding: 60px 24px 30px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1);">
     <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-      <div>
-        <img src="/images/sourx-logo-white.svg" alt="SOURX EMEA" style="height: 26px; width: auto; margin-bottom: 8px;">
-        <div style="font-size: 13px; color: rgba(255,255,255,0.65);" data-i18n="footer.subpage_address">
-          71–75 Shelton St, Covent Garden, London WC2H 9JQ &amp; Castellón, Spain • Tel: +44 2081239177 • info@sourx.com
+      <div class="subpage-footer-brand">
+        <a href="/" aria-label="SOURX EMEA Home">
+          <img src="/images/sourx-logo-white-tagline.svg" alt="SOURX EMEA - Universal knowledge delivered locally" class="subpage-footer-logo">
+        </a>
+        <div class="subpage-footer-coords" data-i18n="footer.subpage_address">
+          <div class="subpage-coord-row">
+            <span class="subpage-coord-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><strong>UK HQ:</strong> 71–75 Shelton St, Covent Garden, London WC2H 9JQ</span>
+            </span>
+            <span class="subpage-coord-dot">•</span>
+            <span class="subpage-coord-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><strong>Spain Hub:</strong> Castellón de la Plana, 12005</span>
+            </span>
+          </div>
+          <div class="subpage-coord-row">
+            <a href="tel:+442081239177" class="subpage-coord-item subpage-coord-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+44 2081239177</span>
+            </a>
+            <span class="subpage-coord-dot">•</span>
+            <a href="mailto:info@sourx.com" class="subpage-coord-item subpage-coord-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>info@sourx.com</span>
+            </a>
+          </div>
         </div>
       </div>
       <div style="display: flex; gap: 20px; font-size: 13.5px; flex-wrap: wrap;">
