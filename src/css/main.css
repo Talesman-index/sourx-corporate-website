@@ -26,6 +26,14 @@
   --color-forest: #012e5c;
   --color-forest-light: #0d3e75;
 
+  /* Sky Blue – 3rd brand colour */
+  --color-sky: #009ddb;
+  --color-sky-dark: #007db3;
+  --color-sky-light: #33b5e5;
+  --bg-sky-subtle: rgba(0, 157, 219, 0.12);
+  --border-sky: rgba(0, 157, 219, 0.35);
+  --shadow-sky: 0 0 28px rgba(0, 157, 219, 0.28);
+
   /* Text */
   --text-dark: #000000;
   --text-dark-secondary: #334e68;
@@ -373,7 +381,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   z-index: 2;
   background: 
-    linear-gradient(180deg, rgba(1, 46, 92, 0.65) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(1, 46, 92, 0.65) 65%, rgba(1, 36, 71, 0.96) 100%);
+    linear-gradient(180deg,
+      rgba(1, 46, 92, 0.72) 0%,
+      rgba(0, 157, 219, 0.08) 28%,
+      rgba(0, 0, 0, 0.12) 42%,
+      rgba(0, 157, 219, 0.06) 60%,
+      rgba(1, 46, 92, 0.70) 75%,
+      rgba(1, 28, 60, 0.97) 100%);
   pointer-events: none;
 }
 
@@ -386,7 +400,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   z-index: 30;
   padding: clamp(18px, 2.5vw, 24px) 0;
-  background: linear-gradient(180deg, rgba(1, 26, 52, 0.85) 0%, rgba(1, 26, 52, 0.45) 60%, rgba(1, 26, 52, 0) 100%);
+  background: linear-gradient(180deg,
+    rgba(1, 22, 50, 0.92) 0%,
+    rgba(0, 100, 170, 0.18) 55%,
+    rgba(1, 26, 52, 0) 100%);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -795,10 +812,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .advisano-drawer-footer .advisano-lang-switcher .advisano-lang-btn.active {
-  background: #b6e82c;
-  color: #012e5c;
+  background: linear-gradient(135deg, #009ddb 0%, #0078b0 100%);
+  color: #ffffff;
   font-weight: 800;
-  box-shadow: 0 4px 14px rgba(182, 232, 44, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 157, 219, 0.40);
 }
 
 .advisano-drawer-cta-btn {
@@ -932,9 +949,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-highlight, 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif);
   font-style: italic;
   font-weight: 500;
-  color: #b6e82c;
+  background: linear-gradient(105deg, #b6e82c 0%, #d4f05a 45%, #009ddb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: -0.04em;
   padding-left: 0.06em;
+  filter: drop-shadow(0 0 18px rgba(0, 157, 219, 0.22));
 }
 
 /* Right Column */
@@ -1276,7 +1297,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .advisano-stat-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 157, 219, 0.18);
+  border-left: 2px solid rgba(0, 157, 219, 0.5);
 }
 
 .advisano-stat-title {
@@ -1302,7 +1324,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   letter-spacing: -2px;
   line-height: 1.05;
-  color: #000000;
+  color: #012e5c;
+  background: linear-gradient(135deg, #012e5c 0%, #009ddb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
 }
 
@@ -2774,15 +2800,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .advisano-sectors-radar-card {
-  background: linear-gradient(145deg, #012e5c 0%, #001f40 100%);
-  border: 1px solid rgba(182, 232, 44, 0.2);
+  background: linear-gradient(145deg, #012e5c 0%, #00305e 45%, #001a38 100%);
+  border: 1px solid rgba(0, 157, 219, 0.25);
   border-radius: clamp(24px, 3vw, 32px);
   padding: clamp(36px, 4vw, 54px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 20px 50px rgba(1, 46, 92, 0.25);
+  box-shadow: 0 20px 50px rgba(1, 46, 92, 0.25), 0 0 60px rgba(0, 157, 219, 0.07) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+.advisano-sectors-radar-card::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 157, 219, 0.12) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .advisano-radar-svg {
@@ -3002,8 +3042,8 @@ h1, h2, h3, h4, h5, h6 {
 .advisano-cta-bento {
   max-width: 1400px;
   margin: 0 auto;
-  background: linear-gradient(145deg, #012e5c 0%, #001b38 100%);
-  border: 1px solid rgba(182, 232, 44, 0.25);
+  background: linear-gradient(145deg, #012e5c 0%, #003a7a 40%, #001a38 100%);
+  border: 1px solid rgba(0, 157, 219, 0.28);
   border-radius: clamp(24px, 3.5vw, 36px);
   padding: clamp(50px, 7vw, 90px) clamp(32px, 5vw, 72px);
   display: flex;
@@ -3012,7 +3052,17 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(1, 46, 92, 0.35);
+  box-shadow: 0 25px 60px rgba(1, 46, 92, 0.35), 0 0 80px rgba(0, 157, 219, 0.08) inset;
+}
+
+.advisano-cta-bento::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(0, 157, 219, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(182, 232, 44, 0.07) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .advisano-cta-title {
@@ -4536,18 +4586,21 @@ a.advisano-footer-card-val:hover {
    Forest Container – dark callout band (used in about/index.html)
    ========================================================================== */
 .forest-container {
-  background: linear-gradient(135deg, #012e5c 0%, #01234a 60%, #0a3d6b 100%);
+  background: linear-gradient(135deg, #012e5c 0%, #003870 40%, #00274d 80%, #001830 100%);
   border-radius: clamp(20px, 2.5vw, 32px);
   padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 24px 64px rgba(1, 46, 92, 0.35);
+  box-shadow: 0 24px 64px rgba(1, 46, 92, 0.35), 0 0 100px rgba(0, 157, 219, 0.06) inset;
+  border: 1px solid rgba(0, 157, 219, 0.12);
 }
 .forest-container::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(182, 232, 44, 0.08) 0%, transparent 60%);
+  background:
+    radial-gradient(ellipse at 75% 50%, rgba(182, 232, 44, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 30%, rgba(0, 157, 219, 0.10) 0%, transparent 50%);
   pointer-events: none;
 }
 
