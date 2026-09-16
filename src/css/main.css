@@ -5278,3 +5278,114 @@ select.contact-input {
   }
 }
 
+/* ==========================================================================
+   Responsive Rules for Team Grid & Subpage Sections
+   ========================================================================== */
+
+#team {
+  scroll-margin-top: 100px;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.about-team-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg, 16px);
+  overflow: hidden;
+  border: 1px solid var(--border-light, rgba(1, 46, 92, 0.08));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(1, 46, 92, 0.1);
+}
+
+.about-team-photo {
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.about-team-card:hover .about-team-photo img {
+  transform: scale(1.04);
+}
+
+.about-team-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.about-team-role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #012e5c;
+  line-height: 1.3;
+}
+
+.about-team-spec {
+  color: #0d5bb5;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.about-team-bio {
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+@media (max-width: 992px) {
+  .about-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-team-photo {
+    height: 300px;
+  }
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+
