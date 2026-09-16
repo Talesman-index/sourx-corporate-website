@@ -756,9 +756,49 @@ h1, h2, h3, h4, h5, h6 {
 .advisano-drawer-footer {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.advisano-drawer-footer .advisano-lang-switcher {
+  display: flex !important;
+  width: 100% !important;
+  box-sizing: border-box;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.advisano-drawer-footer .advisano-lang-switcher .advisano-lang-btn {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: 9999px;
+  text-align: center;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.advisano-drawer-footer .advisano-lang-switcher .advisano-lang-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.advisano-drawer-footer .advisano-lang-switcher .advisano-lang-btn.active {
+  background: #b6e82c;
+  color: #012e5c;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(182, 232, 44, 0.35);
 }
 
 .advisano-drawer-cta-btn {
