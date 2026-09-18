@@ -1,7 +1,7 @@
 /* ==========================================================================
    SOURX Interactive Global Widgets:
    1. Back to Top Button
-   2. Live Discussion & Advisory Concierge Widget
+   2. Executive Advisory Live Discussion Widget (Chat Concierge)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -350,7 +350,7 @@
 .sourx-chat-msg.user .sourx-chat-msg-bubble {
   background: #b6e82c;
   color: #012e5c;
-  font-weight: 500;
+  font-weight: 600;
   border-bottom-right-radius: 4px;
 }
 
@@ -364,40 +364,74 @@
   align-self: flex-end;
 }
 
-/* Quick Suggestion Chips */
+/* Quick Suggestion Chips with Professional Vector Icons */
 .sourx-chat-suggestions {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  margin-top: 4px;
+  gap: 8px;
+  margin-top: 6px;
 }
 
 .sourx-chat-chip-btn {
-  background: rgba(1, 46, 92, 0.85);
-  border: 1px solid rgba(182, 232, 44, 0.35);
+  background: rgba(1, 46, 92, 0.9);
+  border: 1px solid rgba(182, 232, 44, 0.3);
   color: #f1f5f9;
-  padding: 8px 12px;
-  border-radius: 10px;
+  padding: 9px 13px;
+  border-radius: 11px;
   font-size: 12.5px;
   text-align: left;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.22s ease;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
+  width: 100%;
 }
 
 .sourx-chat-chip-btn:hover {
-  background: rgba(182, 232, 44, 0.15);
+  background: rgba(1, 46, 92, 1);
   border-color: #b6e82c;
   color: #ffffff;
   transform: translateX(3px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.sourx-chat-chip-icon-box {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: rgba(182, 232, 44, 0.12);
+  border: 1px solid rgba(182, 232, 44, 0.25);
+  color: #b6e82c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.sourx-chat-chip-btn:hover .sourx-chat-chip-icon-box {
+  background: #b6e82c;
+  color: #012e5c;
+  border-color: #b6e82c;
+}
+
+.sourx-chat-chip-svg {
+  width: 14px;
+  height: 14px;
+}
+
+.sourx-chat-chip-text {
+  flex: 1;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .sourx-chat-chip-arrow {
   color: #b6e82c;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 13px;
+  opacity: 0.85;
 }
 
 /* Quick Contact Form inside chat */
@@ -531,25 +565,34 @@
 
 /* Direct Contacts Footer Bar inside chat */
 .sourx-chat-direct-bar {
-  padding: 8px 14px;
+  padding: 10px 16px;
   background: #001f40;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
+  align-items: center;
+  font-size: 12px;
 }
 
 .sourx-chat-direct-link {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .sourx-chat-direct-link:hover {
   color: #b6e82c;
+}
+
+.sourx-chat-direct-svg {
+  width: 14px;
+  height: 14px;
+  color: #b6e82c;
+  flex-shrink: 0;
 }
 
 /* --------------------------------------------------------------------------

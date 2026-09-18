@@ -71,20 +71,20 @@ function initChatWidget() {
       header_title: "Conseil & Direction SOURX",
       header_status: "En ligne • Réponse rapide",
       welcome_msg: "Bonjour et bienvenue chez SOURX EMEA. Comment pouvons-nous vous orienter aujourd'hui ? Nos associés répondent à vos questions stratégiques, comptables et techniques.",
-      chip_consult: "💼 Planifier une consultation avec un associé",
-      chip_accounting: "📊 Expertise comptable, audit & bilans",
-      chip_call: "📞 Contacter la permanence (+44 2081239177)",
-      chip_leave_msg: "✉️ Poser une question spécifique",
+      chip_consult: "Planifier une consultation avec un associé",
+      chip_accounting: "Expertise comptable, audit & bilans",
+      chip_call: "Contacter la permanence (+44 2081239177)",
+      chip_leave_msg: "Poser une question spécifique",
       input_ph: "Écrivez votre message ici...",
-      direct_call: "📞 +44 2081239177",
-      direct_email: "✉️ info@sourx.com",
+      direct_call: "+44 2081239177",
+      direct_email: "info@sourx.com",
       ans_consult: "Avec plaisir ! Vous pouvez réserver votre créneau directement sur notre <a href='/contact/'>page de consultation</a> ou nous appeler au <a href='tel:+442081239177'>+44 2081239177</a>.",
       ans_accounting: "Notre <strong>Pôle 01 (Cœur de métier)</strong> assure la tenue de vos comptes, la certification de bilans, le commissariat aux comptes et l'audit légal international. <a href='/services/finance/'>Découvrir nos services d'audit &amp; finance →</a>",
       ans_call: "Notre permanence conseil est joignable du lundi au vendredi de 8h à 18h (UK Time) au <a href='tel:+442081239177'><strong>+44 2081239177</strong></a> ou par email à <a href='mailto:info@sourx.com'>info@sourx.com</a>.",
       ans_form_prompt: "Veuillez renseigner votre email ou téléphone pour qu'un associé vous réponde directement sous 24h ouvrées :",
       form_email_ph: "Votre email professionnel...",
       form_btn: "Envoyer ma demande",
-      form_success: "✓ Votre message a bien été transmis. Un associé senior SOURX prendra contact sous 24h.",
+      form_success: "Demande bien reçue. Un associé senior SOURX prendra contact sous 24h.",
       default_response: "Merci pour votre message. Nos associés examinent toutes les demandes confidentiellement sous 24h ouvrées. Vous pouvez également nous joindre directement au <a href='tel:+442081239177'>+44 2081239177</a> ou à <a href='mailto:info@sourx.com'>info@sourx.com</a>."
     },
     en: {
@@ -93,20 +93,20 @@ function initChatWidget() {
       header_title: "SOURX Advisory Desk",
       header_status: "Online • Quick response",
       welcome_msg: "Hello and welcome to SOURX EMEA. How may we assist you today? Our partners are here to address your strategic, accounting, or technology requirements.",
-      chip_consult: "💼 Schedule a partner consultation",
-      chip_accounting: "📊 Chartered accountancy & statutory audit",
-      chip_call: "📞 Direct phone desk (+44 2081239177)",
-      chip_leave_msg: "✉️ Ask a specific inquiry",
+      chip_consult: "Schedule a partner consultation",
+      chip_accounting: "Chartered accountancy & statutory audit",
+      chip_call: "Direct phone desk (+44 2081239177)",
+      chip_leave_msg: "Ask a specific inquiry",
       input_ph: "Type your inquiry here...",
-      direct_call: "📞 +44 2081239177",
-      direct_email: "✉️ info@sourx.com",
+      direct_call: "+44 2081239177",
+      direct_email: "info@sourx.com",
       ans_consult: "We would be delighted to connect. You can book an appointment on our <a href='/contact/'>consultation page</a> or reach our desk directly at <a href='tel:+442081239177'>+44 2081239177</a>.",
       ans_accounting: "Our <strong>Core Practice #01</strong> delivers statutory audit, annual financial statements, tax compliance, and financial engineering across the UK, Spain, and Africa. <a href='/services/finance/'>Explore Chartered Accountancy →</a>",
       ans_call: "Our advisory desk is available Monday–Friday, 8am–6pm (UK Time) at <a href='tel:+442081239177'><strong>+44 2081239177</strong></a> or via <a href='mailto:info@sourx.com'>info@sourx.com</a>.",
       ans_form_prompt: "Please leave your corporate email or telephone number so a partner can follow up directly:",
       form_email_ph: "Your corporate email...",
       form_btn: "Submit inquiry",
-      form_success: "✓ Request received. A SOURX partner will connect with you within 24 business hours.",
+      form_success: "Request received. A SOURX partner will connect with you within 24 business hours.",
       default_response: "Thank you for reaching out. A SOURX partner will review your inquiry under strict confidentiality. You can also call directly at <a href='tel:+442081239177'>+44 2081239177</a>."
     },
     es: {
@@ -115,22 +115,65 @@ function initChatWidget() {
       header_title: "Despacho SOURX Advisory",
       header_status: "En línea • Respuesta rápida",
       welcome_msg: "Hola y bienvenido a SOURX EMEA. ¿Cómo podemos orientarle hoy? Nuestros socios están a su disposición para resolver sus dudas estratégicas, contables o técnicas.",
-      chip_consult: "💼 Solicitar una consulta con un socio",
-      chip_accounting: "📊 Contabilidad de empresas y auditoría",
-      chip_call: "📞 Llamar al despacho (+44 2081239177)",
-      chip_leave_msg: "✉️ Hacer una consulta específica",
+      chip_consult: "Solicitar una consulta con un socio",
+      chip_accounting: "Contabilidad de empresas y auditoría",
+      chip_call: "Llamar al despacho (+44 2081239177)",
+      chip_leave_msg: "Hacer una consulta específica",
       input_ph: "Escriba su mensaje aquí...",
-      direct_call: "📞 +44 2081239177",
-      direct_email: "✉️ info@sourx.com",
+      direct_call: "+44 2081239177",
+      direct_email: "info@sourx.com",
       ans_consult: "Con mucho gusto. Puede programar una reunión en nuestra <a href='/contact/'>página de contacto</a> o llamarnos al <a href='tel:+442081239177'>+44 2081239177</a>.",
       ans_accounting: "Nuestra <strong>División 01 (Actividad Principal)</strong> gestiona la contabilidad completa, auditoría de cuentas legal y formulación de balances. <a href='/services/finance/'>Ver Contabilidad y Finanzas →</a>",
       ans_call: "Nuestra línea directa atiende de lunes a viernes de 8:00 a 18:00 (hora de Londres) en el <a href='tel:+442081239177'><strong>+44 2081239177</strong></a> o en <a href='mailto:info@sourx.com'>info@sourx.com</a>.",
       ans_form_prompt: "Por favor indique su email corporativo o teléfono para que un socio se ponga en contacto en 24 horas:",
       form_email_ph: "Su email corporativo...",
       form_btn: "Enviar consulta",
-      form_success: "✓ Solicitud recibida. Un socio senior de SOURX se pondrá en contacto en 24 horas laborables.",
+      form_success: "Solicitud recibida. Un socio senior de SOURX se pondrá en contacto en 24 horas laborables.",
       default_response: "Gracias por su mensaje. Un socio de SOURX revisará su solicitud confidencialmente. También puede llamarnos al <a href='tel:+442081239177'>+44 2081239177</a>."
     }
+  };
+
+  // Professional Vector SVG Icons (No Emojis)
+  const icons = {
+    calendar: `
+      <svg class="sourx-chat-chip-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+    `,
+    accounting: `
+      <svg class="sourx-chat-chip-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+        <polyline points="10 9 9 9 8 9"></polyline>
+      </svg>
+    `,
+    phone: `
+      <svg class="sourx-chat-chip-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    `,
+    mail: `
+      <svg class="sourx-chat-chip-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+    `,
+    directPhone: `
+      <svg class="sourx-chat-direct-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    `,
+    directMail: `
+      <svg class="sourx-chat-direct-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+    `
   };
 
   const getT = () => strings[getLang()] || strings.fr;
@@ -189,22 +232,26 @@ function initChatWidget() {
           <span class="sourx-chat-msg-time">À l'instant</span>
         </div>
 
-        <!-- Suggestions Pills -->
+        <!-- Suggestions Pills with Professional Vector Icons -->
         <div class="sourx-chat-suggestions" id="sourx-chat-suggestions">
           <button type="button" class="sourx-chat-chip-btn" data-action="consult">
-            <span>${t.chip_consult}</span>
+            <span class="sourx-chat-chip-icon-box">${icons.calendar}</span>
+            <span class="sourx-chat-chip-text">${t.chip_consult}</span>
             <span class="sourx-chat-chip-arrow">→</span>
           </button>
           <button type="button" class="sourx-chat-chip-btn" data-action="accounting">
-            <span>${t.chip_accounting}</span>
+            <span class="sourx-chat-chip-icon-box">${icons.accounting}</span>
+            <span class="sourx-chat-chip-text">${t.chip_accounting}</span>
             <span class="sourx-chat-chip-arrow">→</span>
           </button>
           <button type="button" class="sourx-chat-chip-btn" data-action="call">
-            <span>${t.chip_call}</span>
+            <span class="sourx-chat-chip-icon-box">${icons.phone}</span>
+            <span class="sourx-chat-chip-text">${t.chip_call}</span>
             <span class="sourx-chat-chip-arrow">→</span>
           </button>
           <button type="button" class="sourx-chat-chip-btn" data-action="msg">
-            <span>${t.chip_leave_msg}</span>
+            <span class="sourx-chat-chip-icon-box">${icons.mail}</span>
+            <span class="sourx-chat-chip-text">${t.chip_leave_msg}</span>
             <span class="sourx-chat-chip-arrow">→</span>
           </button>
         </div>
@@ -221,12 +268,14 @@ function initChatWidget() {
         </button>
       </form>
 
-      <!-- Direct Contact Footer Bar -->
+      <!-- Direct Contact Footer Bar with Clean Vector Icons -->
       <div class="sourx-chat-direct-bar">
         <a href="tel:+442081239177" class="sourx-chat-direct-link">
+          ${icons.directPhone}
           <span id="sourx-chat-direct-tel">${t.direct_call}</span>
         </a>
         <a href="mailto:info@sourx.com" class="sourx-chat-direct-link">
+          ${icons.directMail}
           <span id="sourx-chat-direct-mail">${t.direct_email}</span>
         </a>
       </div>
@@ -310,7 +359,7 @@ function initChatWidget() {
 
     const action = chip.dataset.action;
     const currentT = getT();
-    const chipText = chip.querySelector('span')?.textContent || '';
+    const chipText = chip.querySelector('.sourx-chat-chip-text')?.textContent || '';
 
     // Append user's action
     appendMessage(chipText, 'user');
