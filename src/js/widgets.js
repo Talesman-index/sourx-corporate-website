@@ -2,6 +2,7 @@
  * SOURX Global Interactive Widgets
  * 1. Back to Top Smooth Scroller
  * 2. Executive Advisory Live Discussion Widget (Chat Concierge)
+ * Fully synchronized with active site language (FR, EN, ES)
  */
 
 export function initGlobalWidgets() {
@@ -57,12 +58,17 @@ function initBackToTop() {
 }
 
 /* ==========================================================================
-   2. Executive Advisory Live Discussion Widget
+   2. Executive Advisory Live Discussion Widget (Language Synchronized)
    ========================================================================== */
 function initChatWidget() {
   if (document.getElementById('sourx-chat-widget')) return;
 
-  const getLang = () => localStorage.getItem('sourx_lang') || document.documentElement.lang || 'fr';
+  const getCurrentLang = () => {
+    if (typeof window !== 'undefined' && typeof window.sourxGetLanguage === 'function') {
+      return window.sourxGetLanguage();
+    }
+    return localStorage.getItem('sourx_lang') || document.documentElement.lang || 'fr';
+  };
 
   const strings = {
     fr: {
@@ -70,6 +76,7 @@ function initChatWidget() {
       launcher_sub: "Assistance SOURX",
       header_title: "Conseil & Direction SOURX",
       header_status: "En ligne • Réponse rapide",
+      just_now: "À l'instant",
       welcome_msg: "Bonjour et bienvenue chez SOURX EMEA. Comment pouvons-nous vous orienter aujourd'hui ? Nos associés répondent à vos questions stratégiques, comptables et techniques.",
       chip_consult: "Planifier une consultation avec un associé",
       chip_accounting: "Expertise comptable, audit & bilans",
@@ -78,6 +85,7 @@ function initChatWidget() {
       input_ph: "Écrivez votre message ici...",
       direct_call: "+44 2081239177",
       direct_email: "info@sourx.com",
+      back_to_top: "Remonter en haut de page",
       ans_consult: "Avec plaisir ! Vous pouvez réserver votre créneau directement sur notre <a href='/contact/'>page de consultation</a> ou nous appeler au <a href='tel:+442081239177'>+44 2081239177</a>.",
       ans_accounting: "Notre <strong>Pôle 01 (Cœur de métier)</strong> assure la tenue de vos comptes, la certification de bilans, le commissariat aux comptes et l'audit légal international. <a href='/services/finance/'>Découvrir nos services d'audit &amp; finance →</a>",
       ans_call: "Notre permanence conseil est joignable du lundi au vendredi de 8h à 18h (UK Time) au <a href='tel:+442081239177'><strong>+44 2081239177</strong></a> ou par email à <a href='mailto:info@sourx.com'>info@sourx.com</a>.",
@@ -92,6 +100,7 @@ function initChatWidget() {
       launcher_sub: "SOURX Advisory",
       header_title: "SOURX Advisory Desk",
       header_status: "Online • Quick response",
+      just_now: "Just now",
       welcome_msg: "Hello and welcome to SOURX EMEA. How may we assist you today? Our partners are here to address your strategic, accounting, or technology requirements.",
       chip_consult: "Schedule a partner consultation",
       chip_accounting: "Chartered accountancy & statutory audit",
@@ -100,6 +109,7 @@ function initChatWidget() {
       input_ph: "Type your inquiry here...",
       direct_call: "+44 2081239177",
       direct_email: "info@sourx.com",
+      back_to_top: "Back to top",
       ans_consult: "We would be delighted to connect. You can book an appointment on our <a href='/contact/'>consultation page</a> or reach our desk directly at <a href='tel:+442081239177'>+44 2081239177</a>.",
       ans_accounting: "Our <strong>Core Practice #01</strong> delivers statutory audit, annual financial statements, tax compliance, and financial engineering across the UK, Spain, and Africa. <a href='/services/finance/'>Explore Chartered Accountancy →</a>",
       ans_call: "Our advisory desk is available Monday–Friday, 8am–6pm (UK Time) at <a href='tel:+442081239177'><strong>+44 2081239177</strong></a> or via <a href='mailto:info@sourx.com'>info@sourx.com</a>.",
@@ -114,6 +124,7 @@ function initChatWidget() {
       launcher_sub: "Atención SOURX",
       header_title: "Despacho SOURX Advisory",
       header_status: "En línea • Respuesta rápida",
+      just_now: "Ahora",
       welcome_msg: "Hola y bienvenido a SOURX EMEA. ¿Cómo podemos orientarle hoy? Nuestros socios están a su disposición para resolver sus dudas estratégicas, contables o técnicas.",
       chip_consult: "Solicitar una consulta con un socio",
       chip_accounting: "Contabilidad de empresas y auditoría",
@@ -122,6 +133,7 @@ function initChatWidget() {
       input_ph: "Escriba su mensaje aquí...",
       direct_call: "+44 2081239177",
       direct_email: "info@sourx.com",
+      back_to_top: "Volver arriba",
       ans_consult: "Con mucho gusto. Puede programar una reunión en nuestra <a href='/contact/'>página de contacto</a> o llamarnos al <a href='tel:+442081239177'>+44 2081239177</a>.",
       ans_accounting: "Nuestra <strong>División 01 (Actividad Principal)</strong> gestiona la contabilidad completa, auditoría de cuentas legal y formulación de balances. <a href='/services/finance/'>Ver Contabilidad y Finanzas →</a>",
       ans_call: "Nuestra línea directa atiende de lunes a viernes de 8:00 a 18:00 (hora de Londres) en el <a href='tel:+442081239177'><strong>+44 2081239177</strong></a> o en <a href='mailto:info@sourx.com'>info@sourx.com</a>.",
@@ -176,7 +188,7 @@ function initChatWidget() {
     `
   };
 
-  const getT = () => strings[getLang()] || strings.fr;
+  const getT = () => strings[getCurrentLang()] || strings.fr;
 
   const widget = document.createElement('div');
   widget.id = 'sourx-chat-widget';
@@ -225,33 +237,33 @@ function initChatWidget() {
       <!-- Messages Stream -->
       <div class="sourx-chat-messages" id="sourx-chat-messages">
         <!-- Bot Welcome Message -->
-        <div class="sourx-chat-msg bot">
+        <div class="sourx-chat-msg bot" id="sourx-chat-welcome-msg">
           <div class="sourx-chat-msg-bubble" id="sourx-chat-welcome-bubble">
             ${t.welcome_msg}
           </div>
-          <span class="sourx-chat-msg-time">À l'instant</span>
+          <span class="sourx-chat-msg-time" id="sourx-chat-welcome-time">${t.just_now}</span>
         </div>
 
         <!-- Suggestions Pills with Professional Vector Icons -->
         <div class="sourx-chat-suggestions" id="sourx-chat-suggestions">
           <button type="button" class="sourx-chat-chip-btn" data-action="consult">
             <span class="sourx-chat-chip-icon-box">${icons.calendar}</span>
-            <span class="sourx-chat-chip-text">${t.chip_consult}</span>
+            <span class="sourx-chat-chip-text" id="sourx-chat-chip-consult-text">${t.chip_consult}</span>
             <span class="sourx-chat-chip-arrow">→</span>
           </button>
           <button type="button" class="sourx-chat-chip-btn" data-action="accounting">
             <span class="sourx-chat-chip-icon-box">${icons.accounting}</span>
-            <span class="sourx-chat-chip-text">${t.chip_accounting}</span>
+            <span class="sourx-chat-chip-text" id="sourx-chat-chip-accounting-text">${t.chip_accounting}</span>
             <span class="sourx-chat-chip-arrow">→</span>
           </button>
           <button type="button" class="sourx-chat-chip-btn" data-action="call">
             <span class="sourx-chat-chip-icon-box">${icons.phone}</span>
-            <span class="sourx-chat-chip-text">${t.chip_call}</span>
+            <span class="sourx-chat-chip-text" id="sourx-chat-chip-call-text">${t.chip_call}</span>
             <span class="sourx-chat-chip-arrow">→</span>
           </button>
           <button type="button" class="sourx-chat-chip-btn" data-action="msg">
             <span class="sourx-chat-chip-icon-box">${icons.mail}</span>
-            <span class="sourx-chat-chip-text">${t.chip_leave_msg}</span>
+            <span class="sourx-chat-chip-text" id="sourx-chat-chip-msg-text">${t.chip_leave_msg}</span>
             <span class="sourx-chat-chip-arrow">→</span>
           </button>
         </div>
@@ -283,6 +295,59 @@ function initChatWidget() {
   `;
 
   document.body.appendChild(widget);
+
+  // Dynamic Language Synchronization Function
+  function applyLanguage(lang) {
+    const curT = strings[lang] || strings.fr;
+
+    const labelTop = widget.querySelector('#sourx-chat-label-top');
+    const labelSub = widget.querySelector('#sourx-chat-label-sub');
+    if (labelTop) labelTop.textContent = curT.launcher_title;
+    if (labelSub) labelSub.textContent = curT.launcher_sub;
+
+    const headerTitle = widget.querySelector('#sourx-chat-header-title');
+    const headerStatus = widget.querySelector('#sourx-chat-header-status');
+    if (headerTitle) headerTitle.textContent = curT.header_title;
+    if (headerStatus) headerStatus.textContent = curT.header_status;
+
+    const welcomeBubble = widget.querySelector('#sourx-chat-welcome-bubble');
+    const welcomeTime = widget.querySelector('#sourx-chat-welcome-time');
+    if (welcomeBubble) welcomeBubble.innerHTML = curT.welcome_msg;
+    if (welcomeTime) welcomeTime.textContent = curT.just_now;
+
+    const chipConsult = widget.querySelector('#sourx-chat-chip-consult-text');
+    const chipAccounting = widget.querySelector('#sourx-chat-chip-accounting-text');
+    const chipCall = widget.querySelector('#sourx-chat-chip-call-text');
+    const chipMsg = widget.querySelector('#sourx-chat-chip-msg-text');
+    if (chipConsult) chipConsult.textContent = curT.chip_consult;
+    if (chipAccounting) chipAccounting.textContent = curT.chip_accounting;
+    if (chipCall) chipCall.textContent = curT.chip_call;
+    if (chipMsg) chipMsg.textContent = curT.chip_leave_msg;
+
+    const chatInputEl = widget.querySelector('#sourx-chat-input');
+    if (chatInputEl) chatInputEl.placeholder = curT.input_ph;
+
+    const directTel = widget.querySelector('#sourx-chat-direct-tel');
+    const directMail = widget.querySelector('#sourx-chat-direct-mail');
+    if (directTel) directTel.textContent = curT.direct_call;
+    if (directMail) directMail.textContent = curT.direct_email;
+
+    // Also update Back-to-top title/aria-label
+    const backBtn = document.getElementById('sourx-back-to-top');
+    if (backBtn) {
+      backBtn.setAttribute('title', curT.back_to_top);
+      backBtn.setAttribute('aria-label', curT.back_to_top);
+    }
+  }
+
+  // Listen to language switch events dispatched by i18n system
+  window.addEventListener('sourx:langChange', (e) => {
+    const nextLang = e.detail?.lang || getCurrentLang();
+    applyLanguage(nextLang);
+  });
+
+  // Apply initially in case language was set prior to widget mount
+  applyLanguage(getCurrentLang());
 
   // Event handlers
   const launcher = widget.querySelector('#sourx-chat-launcher-btn');
