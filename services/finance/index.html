@@ -3,62 +3,543 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="meta.title_finance">SOURX Consulting</title>
-  <meta name="description" content="Audit légal, modélisation financière de pointe, gestion des risques et conseil en transactions (M&A) par SOURX.">
+  <title data-i18n="meta.title_finance">Expert-Comptable, Audit Légal & Assurance | SOURX</title>
+  <meta name="description" content="SOURX est avant tout un cabinet d'expertise comptable et d'audit légal. Commissariat aux comptes, certification des états financiers, due diligence M&A et conformité réglementaire.">
   <link rel="stylesheet" href="/src/css/main.css">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate icon" href="/favicon.ico">
+  <style>
+    /* =====================================================
+       Page Finance — Expert-Comptable & Audit
+    ===================================================== */
+
+    /* Hero dark banner */
+    .fin-hero {
+      background: #011f40;
+      color: #fff;
+      padding: clamp(5rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+      position: relative;
+      overflow: hidden;
+    }
+    .fin-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(182,232,44,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .fin-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #b6e82c;
+      margin-bottom: 1.5rem;
+    }
+    .fin-hero-eyebrow-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #b6e82c;
+      animation: pulse-lime 2s ease-in-out infinite;
+    }
+    @keyframes pulse-lime {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.3); }
+    }
+    .fin-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      color: #fff;
+      max-width: 860px;
+      margin-bottom: 1.5rem;
+    }
+    .fin-hero h1 em {
+      font-style: normal;
+      color: #b6e82c;
+    }
+    .fin-hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: rgba(255,255,255,0.72);
+      max-width: 640px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .fin-hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .fin-hero-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.85rem 2rem;
+      background: #b6e82c;
+      color: #011f40;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .fin-hero-cta-primary:hover { background: #cff23c; transform: translateY(-1px); }
+    .fin-hero-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.85rem 1.5rem;
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .fin-hero-cta-secondary:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+
+    /* KPI strip */
+    .fin-kpi-strip {
+      background: #fff;
+      border-bottom: 1px solid #e8edf2;
+      padding: 1.75rem 0;
+    }
+    .fin-kpi-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .fin-kpi-item {
+      text-align: center;
+    }
+    .fin-kpi-val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #002e5c;
+      line-height: 1;
+    }
+    .fin-kpi-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-top: 0.3rem;
+    }
+
+    /* Core identity section */
+    .fin-identity {
+      padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+      background: #f8fafd;
+    }
+    .fin-identity-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+    }
+    @media (max-width: 768px) { .fin-identity-inner { grid-template-columns: 1fr; } }
+    .fin-identity-text .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #002e5c;
+      margin-bottom: 1rem;
+    }
+    .fin-identity-text h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      color: #002e5c;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .fin-identity-text p {
+      font-size: 1.05rem;
+      color: #4a5568;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .fin-identity-credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+    .fin-credential-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #002e5c;
+    }
+    .fin-credential-row svg { flex-shrink: 0; }
+    .fin-identity-visual {
+      background: #011f40;
+      border-radius: 16px;
+      padding: 2.5rem;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .fin-identity-visual::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(182,232,44,0.08);
+    }
+    .fin-vis-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #b6e82c;
+      margin-bottom: 1.25rem;
+    }
+    .fin-vis-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.9rem;
+    }
+    .fin-vis-item:last-child { border-bottom: none; }
+    .fin-vis-item-label { color: rgba(255,255,255,0.7); }
+    .fin-vis-item-val { font-weight: 700; color: #fff; }
+    .fin-vis-item-val.lime { color: #b6e82c; }
+
+    /* Service pillars (AXEs) */
+    .fin-pillars {
+      padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+    }
+    .fin-pillars-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+    }
+    .fin-pillars-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .fin-pillars-header .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #002e5c;
+      margin-bottom: 0.75rem;
+    }
+    .fin-pillars-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      color: #002e5c;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.2;
+    }
+    .fin-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .fin-pillar-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 2rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .fin-pillar-card:hover {
+      box-shadow: 0 12px 36px rgba(0,46,92,0.12);
+      transform: translateY(-3px);
+    }
+    .fin-pillar-card.featured {
+      background: #011f40;
+      border-color: #011f40;
+      color: #fff;
+    }
+    .fin-pillar-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #b6e82c;
+      margin-bottom: 0.75rem;
+    }
+    .fin-pillar-card:not(.featured) .fin-pillar-num { color: #002e5c; }
+    .fin-pillar-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(182,232,44,0.12);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .fin-pillar-card.featured .fin-pillar-icon { background: rgba(182,232,44,0.15); }
+    .fin-pillar-card:not(.featured) .fin-pillar-icon { background: rgba(0,46,92,0.07); }
+    .fin-pillar-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #002e5c;
+      margin-bottom: 0.6rem;
+    }
+    .fin-pillar-card.featured .fin-pillar-title { color: #fff; }
+    .fin-pillar-desc {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.65;
+    }
+    .fin-pillar-card.featured .fin-pillar-desc { color: rgba(255,255,255,0.7); }
+    .fin-pillar-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 1.25rem;
+    }
+    .fin-pillar-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(0,46,92,0.06);
+      color: #002e5c;
+    }
+    .fin-pillar-card.featured .fin-pillar-tag {
+      background: rgba(182,232,44,0.15);
+      color: #b6e82c;
+    }
+
+    /* Process section */
+    .fin-process {
+      padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+      background: #f8fafd;
+    }
+    .fin-process-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+    }
+    .fin-process-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .fin-process-header .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #002e5c;
+      margin-bottom: 0.75rem;
+    }
+    .fin-process-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: #002e5c;
+    }
+    .fin-process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+      position: relative;
+    }
+    .fin-process-step {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .fin-process-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -10px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: #b6e82c;
+      font-weight: 700;
+    }
+    @media (max-width: 640px) { .fin-process-step:not(:last-child)::after { display: none; } }
+    .fin-step-num {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: #011f40;
+      color: #b6e82c;
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .fin-step-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #002e5c;
+      margin-bottom: 0.4rem;
+    }
+    .fin-step-desc {
+      font-size: 0.82rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* Testimonial / trust block */
+    .fin-trust {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .fin-trust-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+    }
+    .fin-trust-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) { .fin-trust-grid { grid-template-columns: 1fr; } }
+    .fin-testi-card {
+      background: #f8fafd;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 2rem;
+    }
+    .fin-testi-stars { color: #b6e82c; font-size: 1rem; margin-bottom: 1rem; }
+    .fin-testi-quote {
+      font-size: 0.95rem;
+      color: #374151;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 1.25rem;
+    }
+    .fin-testi-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .fin-testi-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: #011f40;
+      color: #b6e82c;
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .fin-testi-name { font-weight: 700; font-size: 0.88rem; color: #002e5c; }
+    .fin-testi-role { font-size: 0.78rem; color: #64748b; }
+
+    /* CTA dark block */
+    .fin-cta {
+      background: #011f40;
+      padding: clamp(3.5rem, 6vw, 5rem) 0;
+    }
+    .fin-cta-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+      text-align: center;
+    }
+    .fin-cta h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .fin-cta p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+    .fin-cta-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .fin-cta-btn-lime {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 1rem 2.25rem;
+      background: #b6e82c;
+      color: #011f40;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .fin-cta-btn-lime:hover { background: #cff23c; transform: translateY(-1px); }
+    .fin-cta-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 1rem 1.75rem;
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .fin-cta-btn-ghost:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+  </style>
 </head>
 <body>
 
   <!-- Top Navigation Header -->
   <header class="advisano-navbar subpage-navbar">
     <div class="advisano-nav-inner">
-      <!-- Brand Logo -->
       <a href="/" class="advisano-brand" aria-label="SOURX EMEA">
         <img src="/images/sourx-logo-white.svg" alt="SOURX" class="advisano-logo-img">
       </a>
-
-      <!-- Menu Navigation (Desktop) -->
       <nav class="advisano-nav-menu" aria-label="Navigation principale">
         <a href="/" class="advisano-nav-link" data-i18n="nav.home">Home</a>
-        
         <a href="/about/" class="advisano-nav-link" data-i18n="nav.about">About</a>
-        <!-- Dropdown Services -->
         <div class="advisano-dropdown">
           <a href="/services/" class="advisano-nav-link dropdown-toggle active" data-i18n="nav.services">
             Services <svg width="9" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"/></svg>
           </a>
           <div class="advisano-dropdown-menu">
             <a href="/services/" data-i18n="nav.services_all">All Services</a>
+            <a href="/services/finance/" data-i18n="nav.s_finance">Finance &amp; Audit</a>
             <a href="/services/strategy/" data-i18n="nav.s_strategy">Strategy &amp; Management</a>
             <a href="/services/technology/" data-i18n="nav.s_tech">Développement Web, Mobile &amp; Logiciels</a>
             <a href="/services/innovation/" data-i18n="nav.s_ia">Innovation &amp; Automatisation</a>
-            <a href="/services/finance/" data-i18n="nav.s_finance">Finance &amp; Audit</a>
             <a href="/services/growth/" data-i18n="nav.s_growth">Growth &amp; Leads</a>
           </div>
         </div>
-
         <a href="/industries/" class="advisano-nav-link" data-i18n="nav.industries">Sectors</a>
         <a href="/case-studies/" class="advisano-nav-link" data-i18n="nav.case_studies">Case Studies</a>
         <a href="/insights/" class="advisano-nav-link" data-i18n="nav.innovation">Insights</a>
       </nav>
-
-      <!-- Right Action Button & Language Switcher -->
       <div class="advisano-nav-action">
-        <!-- Language Switcher (FR / EN / ES) -->
         <div class="advisano-lang-switcher" role="group" aria-label="Language selection">
           <button type="button" class="advisano-lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
           <button type="button" class="advisano-lang-btn" data-lang="en" aria-pressed="false">EN</button>
           <button type="button" class="advisano-lang-btn" data-lang="es" aria-pressed="false">ES</button>
         </div>
-
         <a href="/contact/" class="advisano-contact-btn desktop-only">
           <span data-i18n="nav.contact">Contact</span>
           <span class="btn-arrow">→</span>
         </a>
-
-        <!-- Mobile Hamburger Toggle Button -->
         <button type="button" class="advisano-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="advisano-mobile-menu">
           <span class="hamburger-bar bar-top"></span>
           <span class="hamburger-bar bar-mid"></span>
@@ -68,7 +549,7 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer Overlay -->
+  <!-- Mobile Navigation Drawer -->
   <div class="advisano-mobile-drawer" id="advisano-mobile-menu" aria-hidden="true">
     <div class="advisano-drawer-inner">
       <div class="advisano-drawer-header">
@@ -79,7 +560,6 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
-
       <nav class="advisano-drawer-nav" aria-label="Navigation mobile">
         <a href="/" class="advisano-drawer-link" data-i18n="nav.home">Home <span>→</span></a>
         <a href="/about/" class="advisano-drawer-link" data-i18n="nav.about">About <span>→</span></a>
@@ -87,7 +567,6 @@
         <a href="/industries/" class="advisano-drawer-link" data-i18n="nav.industries">Sectors <span>→</span></a>
         <a href="/case-studies/" class="advisano-drawer-link" data-i18n="nav.case_studies">Case Studies <span>→</span></a>
         <a href="/insights/" class="advisano-drawer-link" data-i18n="nav.innovation">Insights <span>→</span></a>
-
         <div style="margin-top: 10px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 4px;">
           <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #b6e82c; padding-left: 14px; margin-bottom: 4px;">Legal</span>
           <a href="/privacy/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Privacy Policy <span>→</span></a>
@@ -95,8 +574,7 @@
           <a href="/contact/" class="advisano-drawer-link" style="font-size: 1.15rem; padding: 10px 14px;">Contact <span>→</span></a>
         </div>
       </nav>
-
-            <div class="advisano-drawer-footer">
+      <div class="advisano-drawer-footer">
         <div class="advisano-lang-switcher" role="group" aria-label="Choix de la langue">
           <button type="button" class="advisano-lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
           <button type="button" class="advisano-lang-btn" data-lang="en" aria-pressed="false">EN</button>
@@ -108,91 +586,348 @@
         </a>
         <div class="advisano-drawer-meta">
           <span class="advisano-drawer-hub">
-            <span class="pulse-dot-lime"></span> Londres &amp; Castellón
+            <span class="pulse-dot-lime"></span> Londres, Castellón &amp; Cotonou
           </span>
-          <span class="advisano-drawer-note">Multidisciplinary EMEA Advisory</span>
+          <span class="advisano-drawer-note">Multidisciplinary EMEA &amp; Africa Advisory</span>
         </div>
       </div>
     </div>
   </div>
 
   <main>
-    <!-- Hero Service -->
-    <section class="section" style="padding-top: 3.5rem; padding-bottom: 2rem;">
-      <div class="container">
-        <div style="font-size: 0.85rem; margin-bottom: 1.5rem; color: var(--text-dark-secondary);">
-          <a href="/" data-i18n="nav.home">Home</a> / <a href="/services/" data-i18n="nav.services">Services</a> / <span style="color: #002e5c; font-weight: 700;" data-i18n="nav.s_finance">Service</span>
-        </div>
-        <span class="badge-tag lime" data-i18n="serv_fin.badge">PÔLE D'EXPERTISE 02</span>
-        <h1 class="heading-hero" style="margin-top: 1rem; max-width: 920px;" data-i18n="serv_fin.title">Finance, Audit &amp; Advisory.</h1>
-        <p class="body-lead" style="max-width: 720px; margin-top: 1.25rem;" data-i18n="serv_fin.lead">Sécuriser la valorisation, fiabiliser les états financiers et orchestrer des transactions de capital avec une précision mathématique.</p>
 
-        <div style="margin-top: 3rem; border-radius: var(--radius-xl); overflow: hidden; height: clamp(280px, 40vw, 440px); box-shadow: var(--shadow-card);">
-          <img src="/images/services/service-finance.webp" alt="Analyse financière et audit SOURX" style="width: 100%; height: 100%; object-fit: cover;">
+    <!-- ====================================================
+         HERO — Expert-Comptable & Audit Légal
+    ==================================================== -->
+    <section class="fin-hero">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div style="font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem;">
+          <a href="/" style="color: rgba(255,255,255,0.6); text-decoration: none;">Accueil</a>
+          <span style="margin: 0 6px;">/</span>
+          <a href="/services/" style="color: rgba(255,255,255,0.6); text-decoration: none;" data-i18n="nav.services">Services</a>
+          <span style="margin: 0 6px;">/</span>
+          <span style="color: #b6e82c; font-weight: 700;" data-i18n="nav.s_finance">Finance &amp; Audit</span>
+        </div>
+
+        <div class="fin-hero-eyebrow">
+          <span class="fin-hero-eyebrow-dot"></span>
+          <span data-i18n="serv_fin.badge">CŒUR DE MÉTIER • PÔLE 01 • EXPERTISE COMPTABLE</span>
+        </div>
+
+        <h1 data-i18n="serv_fin.title">
+          Expert-Comptable,<br>
+          <em>Audit Légal</em> &amp; Assurance.
+        </h1>
+
+        <p class="fin-hero-lead" data-i18n="serv_fin.lead">
+          SOURX est avant tout un cabinet d'<strong style="color:#fff;">expertise comptable et d'audit légal</strong>. Commissariat aux comptes, certification des états financiers, contrôle interne rigoureux et conseil financier de haut niveau — c'est notre ADN depuis la création du cabinet.
+        </p>
+
+        <div class="fin-hero-ctas">
+          <a href="/contact/" class="fin-hero-cta-primary" data-i18n="serv_fin.cta_btn">
+            Demander un Audit <span>→</span>
+          </a>
+          <a href="/services/" class="fin-hero-cta-secondary">
+            Tous nos Services
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Detailed Pillars -->
-    <section class="section" style="padding-top: 2rem; padding-bottom: 4rem;">
-      <div class="container">
-        <div class="service-detail-grid">
-          <div>
-            <span class="badge-tag" data-i18n="serv_fin.meth_badge">SÉCURITÉ &amp; PERFORMANCE</span>
-            <h2 class="heading-section" style="margin-top: 0.75rem;" data-i18n="serv_fin.meth_title">La rigueur du chiffre au service de la décision stratégique.</h2>
-            <p class="body-regular" style="margin-top: 1rem;" data-i18n="serv_fin.meth_desc">Nos experts en ingénierie financière accompagnent les directions générales et financières dans la structuration de leur bilan, l'anticipation des risques prudentiels et l'évaluation fine de leurs actifs.</p>
-            <div style="margin-top: 2rem; padding: 1.5rem; background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-              <div style="font-size: 2rem; font-weight: 800; color: #002e5c; line-height: 1;" data-i18n="serv_fin.stat_val">100%</div>
-              <div style="font-weight: 700; margin-top: 0.35rem;" data-i18n="serv_fin.stat_lbl">Conformité &amp; Indépendance</div>
-              <p class="body-regular" style="font-size: 0.875rem; margin-top: 0.25rem;" data-i18n="serv_fin.stat_desc">Rapports d'assurance et audits conformes aux normes internationales les plus exigeantes.</p>
+    <!-- ====================================================
+         KPI Strip
+    ==================================================== -->
+    <div class="fin-kpi-strip">
+      <div class="fin-kpi-inner">
+        <div class="fin-kpi-item">
+          <div class="fin-kpi-val">100%</div>
+          <div class="fin-kpi-label">Comptes Certifiés</div>
+        </div>
+        <div class="fin-kpi-item">
+          <div class="fin-kpi-val">150+</div>
+          <div class="fin-kpi-label">Missions d'Audit</div>
+        </div>
+        <div class="fin-kpi-item">
+          <div class="fin-kpi-val">IFRS</div>
+          <div class="fin-kpi-label">Conformité Internationale</div>
+        </div>
+        <div class="fin-kpi-item">
+          <div class="fin-kpi-val">UK &amp; EU</div>
+          <div class="fin-kpi-label">Juridictions Couvertes</div>
+        </div>
+        <div class="fin-kpi-item">
+          <div class="fin-kpi-val">M&amp;A</div>
+          <div class="fin-kpi-label">Due Diligence Financière</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================
+         IDENTITÉ — Cabinet d'Expert-Comptable
+    ==================================================== -->
+    <section class="fin-identity">
+      <div class="fin-identity-inner">
+        <div class="fin-identity-text">
+          <div class="eyebrow" data-i18n="serv_fin.meth_badge">NOTRE IDENTITÉ FONDAMENTALE</div>
+          <h2 data-i18n="serv_fin.meth_title">Le chiffre est au cœur de tout ce que nous faisons.</h2>
+          <p data-i18n="serv_fin.meth_desc">
+            Avant d'être un cabinet de conseil multidisciplinaire, SOURX est un <strong>cabinet d'expertise comptable</strong>. La maîtrise des états financiers, la rigueur de l'audit légal et l'indépendance des commissaires aux comptes constituent le socle inébranlable sur lequel repose l'ensemble de notre offre.
+          </p>
+          <p>
+            Nos missions de conseil en stratégie, transformation digitale et croissance sont toutes ancrées dans une lecture financière précise — parce qu'une décision d'entreprise sans fondation comptable solide reste une prise de risque non maîtrisée.
+          </p>
+          <div class="fin-identity-credentials">
+            <div class="fin-credential-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b6e82c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Commissariat aux comptes (CAC) — certification légale indépendante
+            </div>
+            <div class="fin-credential-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b6e82c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Normes IFRS / UK GAAP / French GAAP — couverture plurijuridictionnelle
+            </div>
+            <div class="fin-credential-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b6e82c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Indépendance totale — rapports d'assurance objectifs et non biaisés
+            </div>
+            <div class="fin-credential-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b6e82c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Équipes bilingues FR/EN — interventions Londres &amp; marchés EMEA
+            </div>
+          </div>
+        </div>
+
+        <div class="fin-identity-visual">
+          <div class="fin-vis-title">INDICATEURS DE CONFORMITÉ</div>
+          <div class="fin-vis-item">
+            <span class="fin-vis-item-label">Audit légal &amp; assurance</span>
+            <span class="fin-vis-item-val lime">✓ Cœur de métier</span>
+          </div>
+          <div class="fin-vis-item">
+            <span class="fin-vis-item-label">Certification comptes annuels</span>
+            <span class="fin-vis-item-val">100%</span>
+          </div>
+          <div class="fin-vis-item">
+            <span class="fin-vis-item-label">Contrôle interne renforcé</span>
+            <span class="fin-vis-item-val lime">✓ Inclus</span>
+          </div>
+          <div class="fin-vis-item">
+            <span class="fin-vis-item-label">Due diligence M&amp;A</span>
+            <span class="fin-vis-item-val">150+ opérations</span>
+          </div>
+          <div class="fin-vis-item">
+            <span class="fin-vis-item-label">Conformité réglementaire EMEA</span>
+            <span class="fin-vis-item-val lime">✓ UK &amp; EU</span>
+          </div>
+          <div class="fin-vis-item">
+            <span class="fin-vis-item-label">Normes internationales</span>
+            <span class="fin-vis-item-val">IFRS • UK GAAP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         AXES DE SERVICE
+    ==================================================== -->
+    <section class="fin-pillars">
+      <div class="fin-pillars-inner">
+        <div class="fin-pillars-header">
+          <div class="eyebrow" data-i18n="serv_fin.meth_badge">PÔLES D'INTERVENTION</div>
+          <h2>Quatre axes d'expertise au service de la rigueur financière.</h2>
+        </div>
+
+        <div class="fin-pillars-grid">
+
+          <!-- AXE 01 — Audit Légal & Assurance (FEATURED) -->
+          <div class="fin-pillar-card featured">
+            <div class="fin-pillar-num">AXE 01 — CŒUR DE MÉTIER</div>
+            <div class="fin-pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b6e82c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div class="fin-pillar-title" data-i18n="serv_fin.ax1_t">Audit Légal &amp; Assurance Financière</div>
+            <p class="fin-pillar-desc" data-i18n="serv_fin.ax1_d">Commissariat aux comptes, certification indépendante des états financiers annuels, vérification de la sincérité et de la régularité des comptes selon les normes IFRS et UK GAAP. Rapports d'assurance conformes aux exigences légales les plus strictes.</p>
+            <div class="fin-pillar-tags">
+              <span class="fin-pillar-tag">CAC &amp; Commissariat</span>
+              <span class="fin-pillar-tag">Certification IFRS</span>
+              <span class="fin-pillar-tag">UK GAAP</span>
+              <span class="fin-pillar-tag">Rapports d'Assurance</span>
             </div>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-            <div style="background: #FFFFFF; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-soft);">
-              <span class="badge-tag">AXE 01</span>
-              <h3 style="font-size: 1.3rem; margin: 0.5rem 0 0.4rem; color: #002e5c;" data-i18n="serv_fin.ax1_t">Audit Légal &amp; Assurance</h3>
-              <p class="body-regular" data-i18n="serv_fin.ax1_d">Examen approfondi des comptes, certification de la régularité et fiabilisation des processus de contrôle interne.</p>
+          <!-- AXE 02 — Modélisation Financière -->
+          <div class="fin-pillar-card">
+            <div class="fin-pillar-num">AXE 02</div>
+            <div class="fin-pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#002e5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
-
-            <div style="background: #FFFFFF; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-soft);">
-              <span class="badge-tag">AXE 02</span>
-              <h3 style="font-size: 1.3rem; margin: 0.5rem 0 0.4rem; color: #002e5c;" data-i18n="serv_fin.ax2_t">Modélisation Financière &amp; Valorisation</h3>
-              <p class="body-regular" data-i18n="serv_fin.ax2_d">Construction de modèles de prévision de trésorerie dynamiques, valorisation d'actifs incorporels et analyses de sensibilité.</p>
+            <div class="fin-pillar-title" data-i18n="serv_fin.ax2_t">Modélisation Financière &amp; Valorisation</div>
+            <p class="fin-pillar-desc" data-i18n="serv_fin.ax2_d">Construction de modèles de prévision de trésorerie dynamiques, valorisation d'actifs incorporels, analyses de sensibilité et business plans financiers pour les dirigeants et investisseurs.</p>
+            <div class="fin-pillar-tags">
+              <span class="fin-pillar-tag">Cash-Flow Modeling</span>
+              <span class="fin-pillar-tag">Valorisation DCF</span>
+              <span class="fin-pillar-tag">Business Plan</span>
             </div>
+          </div>
 
-            <div style="background: #FFFFFF; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-soft);">
-              <span class="badge-tag">AXE 03</span>
-              <h3 style="font-size: 1.3rem; margin: 0.5rem 0 0.4rem; color: #002e5c;" data-i18n="serv_fin.ax3_t">Gestion des Risques &amp; Conformité</h3>
-              <p class="body-regular" data-i18n="serv_fin.ax3_d">Cartographie des risques de contrepartie, de liquidité et de conformité réglementaire dans un cadre macro-économique sous tension.</p>
+          <!-- AXE 03 — Gestion des Risques -->
+          <div class="fin-pillar-card">
+            <div class="fin-pillar-num">AXE 03</div>
+            <div class="fin-pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#002e5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
+            <div class="fin-pillar-title" data-i18n="serv_fin.ax3_t">Gestion des Risques &amp; Conformité</div>
+            <p class="fin-pillar-desc" data-i18n="serv_fin.ax3_d">Cartographie des risques de contrepartie, de liquidité et de conformité réglementaire. Contrôle interne, procédures de gouvernance et conformité aux référentiels UK, EU et internationaux.</p>
+            <div class="fin-pillar-tags">
+              <span class="fin-pillar-tag">Contrôle Interne</span>
+              <span class="fin-pillar-tag">Risk Mapping</span>
+              <span class="fin-pillar-tag">Conformité EU/UK</span>
+            </div>
+          </div>
 
-            <div style="background: #FFFFFF; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-soft);">
-              <span class="badge-tag">AXE 04</span>
-              <h3 style="font-size: 1.3rem; margin: 0.5rem 0 0.4rem; color: #002e5c;" data-i18n="serv_fin.ax4_t">Transaction Services &amp; M&amp;A</h3>
-              <p class="body-regular" data-i18n="serv_fin.ax4_d">Due diligence financière à l'achat et à la vente, structuration d'opérations de haut de bilan et intégration post-fusion.</p>
+          <!-- AXE 04 — Transaction Services & M&A -->
+          <div class="fin-pillar-card">
+            <div class="fin-pillar-num">AXE 04</div>
+            <div class="fin-pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#002e5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="fin-pillar-title" data-i18n="serv_fin.ax4_t">Transaction Services &amp; M&amp;A</div>
+            <p class="fin-pillar-desc" data-i18n="serv_fin.ax4_d">Due diligence financière complète à l'achat et à la vente, structuration d'opérations de haut de bilan, évaluation d'actifs et accompagnement dans les phases d'intégration post-fusion.</p>
+            <div class="fin-pillar-tags">
+              <span class="fin-pillar-tag">Due Diligence</span>
+              <span class="fin-pillar-tag">M&amp;A Advisory</span>
+              <span class="fin-pillar-tag">Post-Merger Integration</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         PROCESSUS D'INTERVENTION
+    ==================================================== -->
+    <section class="fin-process">
+      <div class="fin-process-inner">
+        <div class="fin-process-header">
+          <div class="eyebrow">NOTRE MÉTHODE</div>
+          <h2>Un processus d'audit structuré en 5 étapes.</h2>
+        </div>
+
+        <div class="fin-process-steps">
+          <div class="fin-process-step">
+            <div class="fin-step-num">01</div>
+            <div class="fin-step-title">Diagnostic Initial</div>
+            <p class="fin-step-desc">Compréhension du contexte, des risques spécifiques et du cadre réglementaire applicable.</p>
+          </div>
+          <div class="fin-process-step">
+            <div class="fin-step-num">02</div>
+            <div class="fin-step-title">Planification</div>
+            <p class="fin-step-desc">Définition du programme de travail, des seuils de signification et des zones d'attention prioritaires.</p>
+          </div>
+          <div class="fin-process-step">
+            <div class="fin-step-num">03</div>
+            <div class="fin-step-title">Examen Approfondi</div>
+            <p class="fin-step-desc">Vérification des comptes, contrôle interne, tests de procédures et collecte des éléments probants.</p>
+          </div>
+          <div class="fin-process-step">
+            <div class="fin-step-num">04</div>
+            <div class="fin-step-title">Rapport d'Assurance</div>
+            <p class="fin-step-desc">Rédaction du rapport de certification conforme aux normes légales et internationales en vigueur.</p>
+          </div>
+          <div class="fin-process-step">
+            <div class="fin-step-num">05</div>
+            <div class="fin-step-title">Recommandations</div>
+            <p class="fin-step-desc">Lettre de direction avec recommandations opérationnelles pour améliorer les processus de contrôle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         TÉMOIGNAGES
+    ==================================================== -->
+    <section class="fin-trust">
+      <div class="fin-trust-inner">
+        <div style="text-align:center; margin-bottom: 2.5rem;">
+          <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #002e5c; margin-bottom: 0.75rem;">CE QUE DISENT NOS CLIENTS</div>
+          <h2 style="font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #002e5c;">La confiance des dirigeants financiers.</h2>
+        </div>
+
+        <div class="fin-trust-grid">
+          <div class="fin-testi-card">
+            <div class="fin-testi-stars">★★★★★</div>
+            <p class="fin-testi-quote">"L'équipe finance de SOURX a identifié £200K d'économies cachées dès le premier cycle d'audit. Leur rigueur comptable et leur indépendance d'analyse ont transformé notre gouvernance financière."</p>
+            <div class="fin-testi-author">
+              <div class="fin-testi-avatar">CL</div>
+              <div>
+                <div class="fin-testi-name">Clearbridge Advisory</div>
+                <div class="fin-testi-role">CFO, Professional Services</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fin-testi-card">
+            <div class="fin-testi-stars">★★★★★</div>
+            <p class="fin-testi-quote">"La due diligence financière réalisée par SOURX avant notre acquisition a été déterminante. Des commissaires aux comptes d'une précision remarquable, avec une vraie vision stratégique."</p>
+            <div class="fin-testi-author">
+              <div class="fin-testi-avatar">MT</div>
+              <div>
+                <div class="fin-testi-name">Meridian Group EMEA</div>
+                <div class="fin-testi-role">Directeur Général, Private Equity</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fin-testi-card">
+            <div class="fin-testi-stars">★★★★★</div>
+            <p class="fin-testi-quote">"Nous faisons confiance à SOURX pour la certification de nos comptes annuels depuis 3 ans. Leur rapport d'assurance est reconnu par nos partenaires bancaires et investisseurs comme une référence."</p>
+            <div class="fin-testi-author">
+              <div class="fin-testi-avatar">RB</div>
+              <div>
+                <div class="fin-testi-name">Renova Iberia</div>
+                <div class="fin-testi-role">CFO, Real Estate Group</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fin-testi-card">
+            <div class="fin-testi-stars">★★★★★</div>
+            <p class="fin-testi-quote">"Au-delà de l'audit légal, SOURX nous accompagne dans notre contrôle de gestion et notre conformité EMEA. Une vision 360° du chiffre que peu de cabinets savent offrir à ce niveau d'exigence."</p>
+            <div class="fin-testi-author">
+              <div class="fin-testi-avatar">AP</div>
+              <div>
+                <div class="fin-testi-name">Altea Partners</div>
+                <div class="fin-testi-role">Associate Partner, Financial Advisory</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to action -->
-    <section class="section" style="padding-top: 2rem; padding-bottom: 5rem;">
-      <div class="container">
-        <div style="background: var(--bg-dark); border-radius: var(--radius-xl); padding: clamp(2.5rem, 5vw, 4rem); color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-          <div style="max-width: 600px;">
-            <h2 style="color: #FFFFFF; font-size: clamp(1.6rem, 2.5vw, 2.3rem); margin-bottom: 0.75rem;" data-i18n="serv_fin.cta_title">Sécurisez vos états financiers et vos opérations de capital</h2>
-            <p style="color: var(--text-light-secondary); font-size: 1rem;" data-i18n="serv_fin.cta_desc">Consultez nos associés auditeurs pour une évaluation indépendante de votre situation financière.</p>
-          </div>
-          <a href="/contact/" class="btn btn-lime" style="padding: 0.9rem 2rem; font-size: 1rem;" data-i18n="serv_fin.cta_btn"><span>Prendre Contact avec nos Experts Finance →</span></a>
+    <!-- ====================================================
+         CTA FINAL
+    ==================================================== -->
+    <section class="fin-cta">
+      <div class="fin-cta-inner">
+        <h2 data-i18n="serv_fin.cta_title">Faites certifier vos comptes par des experts indépendants.</h2>
+        <p data-i18n="serv_fin.cta_desc">Nos associés auditeurs sont disponibles pour une évaluation initiale de votre situation financière. Premier échange confidentiel et sans engagement.</p>
+        <div class="fin-cta-btns">
+          <a href="/contact/" class="fin-cta-btn-lime" data-i18n="serv_fin.cta_btn">
+            Prendre Contact avec nos Experts Finance →
+          </a>
+          <a href="/services/" class="fin-cta-btn-ghost">
+            Voir tous nos Services
+          </a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" style="background-color: #012e5c; color: #ffffff; padding: 60px 24px 30px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1);">
+  <footer class="site-footer" style="background-color: #012e5c; color: #ffffff; padding: 60px 24px 30px; margin-top: 0; border-top: 1px solid rgba(255,255,255,0.1);">
     <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
       <div class="subpage-footer-brand">
         <a href="/" aria-label="SOURX EMEA Home">
@@ -208,6 +943,16 @@
             <span class="subpage-coord-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               <span><strong>Spain Hub:</strong> Castellón de la Plana, 12005</span>
+            </span>
+            <span class="subpage-coord-dot">•</span>
+            <span class="subpage-coord-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><strong>Africa Hub:</strong> Cotonou, Bénin</span>
+            </span>
+            <span class="subpage-coord-dot">•</span>
+            <span class="subpage-coord-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="subpage-coord-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><strong>Africa Annexe:</strong> Cotonou, Bénin</span>
             </span>
           </div>
           <div class="subpage-coord-row">
@@ -234,7 +979,7 @@
         <a href="/contact/" style="color: rgba(255,255,255,0.8); text-decoration: none;" data-i18n="footer.contact">Contact</a>
       </div>
     </div>
-    <div style="max-width: 1400px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12.5px; color: rgba(255,255,255,0.5); text-align: center;" data-i18n="footer.subpage_copyright">© 2026 SOURX EMEA. Tous droits réservés. Stratégie. Technologie. Innovation.</div>
+    <div style="max-width: 1400px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12.5px; color: rgba(255,255,255,0.5); text-align: center;" data-i18n="footer.subpage_copyright">© 2026 SOURX EMEA. Tous droits réservés. Expertise Comptable. Audit. Stratégie. Technologie.</div>
   </footer>
 
   <script type="module" src="/src/js/main.js"></script>

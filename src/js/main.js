@@ -19,6 +19,7 @@ function initApp() {
   try { initPresenceMap(); } catch (err) { console.warn('[SOURX] initPresenceMap:', err); }
   try { initAboutScrollTextReveal(); } catch (err) { console.warn('[SOURX] initAboutScrollTextReveal:', err); }
   try { initProcessCardsScrollAlignment(); } catch (err) { console.warn('[SOURX] initProcessCardsScrollAlignment:', err); }
+  try { initContactForms(); } catch (err) { console.warn('[SOURX] initContactForms:', err); }
 }
 
 if (document.readyState === 'loading') {
@@ -435,6 +436,13 @@ function initAdvisanoServicesTabs() {
 
   const metadataByLang = {
     fr: {
+      finance: {
+        badge: 'CŒUR DE MÉTIER • EXPERTISE COMPTABLE',
+        tag: 'RIGUEUR COMPTABLE & AUDIT LÉGAL',
+        headline: 'Expertise Comptable, Audit & Finance',
+        metric: '100%',
+        sub: 'Comptes Certifiés'
+      },
       strategy: {
         badge: 'PÔLE STRATÉGIQUE',
         tag: 'ALIGNEMENT C-LEVEL & TERRAIN',
@@ -456,13 +464,6 @@ function initAdvisanoServicesTabs() {
         metric: '40%',
         sub: 'Gain Vélocité'
       },
-      finance: {
-        badge: 'PÔLE FINANCE & AUDIT',
-        tag: 'RIGUEUR FINANCIÈRE & RISQUES',
-        headline: 'Restructuration & Conformité',
-        metric: '100%',
-        sub: 'Audit & Contrôle'
-      },
       growth: {
         badge: 'PÔLE ACQUISITION & CROISSANCE',
         tag: 'PIPELINES CLIENTS QUALIFIÉS',
@@ -472,6 +473,13 @@ function initAdvisanoServicesTabs() {
       }
     },
     en: {
+      finance: {
+        badge: 'CORE PRACTICE • CHARTERED ACCOUNTANCY',
+        tag: 'ACCOUNTING RIGOR & STATUTORY AUDIT',
+        headline: 'Chartered Accountancy & Audit',
+        metric: '100%',
+        sub: 'Certified Compliance'
+      },
       strategy: {
         badge: 'STRATEGY PRACTICE',
         tag: 'BOARDROOM RIGOR & EXECUTION',
@@ -493,13 +501,6 @@ function initAdvisanoServicesTabs() {
         metric: '40%',
         sub: 'Velocity Gain'
       },
-      finance: {
-        badge: 'FINANCE & AUDIT PRACTICE',
-        tag: 'CAPITAL & RISK GOVERNANCE',
-        headline: 'Turnaround Consulting & Assurance',
-        metric: '100%',
-        sub: 'Audit Compliance'
-      },
       growth: {
         badge: 'GROWTH & ACQUISITION PRACTICE',
         tag: 'QUALIFIED LEAD PIPELINES',
@@ -509,6 +510,13 @@ function initAdvisanoServicesTabs() {
       }
     },
     es: {
+      finance: {
+        badge: 'ACTIVIDAD PRINCIPAL • CONTABILIDAD Y AUDITORÍA',
+        tag: 'RIGOR CONTABLE Y AUDITORÍA LEGAL',
+        headline: 'Contabilidad de Empresas y Auditoría',
+        metric: '100%',
+        sub: 'Cuentas Certificadas'
+      },
       strategy: {
         badge: 'PRÁCTICA ESTRATÉGICA',
         tag: 'RIGOR DIRECTIVO Y EJECUCIÓN',
@@ -530,13 +538,6 @@ function initAdvisanoServicesTabs() {
         metric: '40%',
         sub: 'Más Rapidez'
       },
-      finance: {
-        badge: 'FINANZAS Y AUDITORÍA',
-        tag: 'RIGOR FINANCIERO Y GOBERNANZA',
-        headline: 'Reestructuración y Cumplimiento',
-        metric: '100%',
-        sub: 'Auditoría Legal'
-      },
       growth: {
         badge: 'CAPTACIÓN Y CRECIMIENTO',
         tag: 'EMBUDOS DE PROSPECCIÓN CUALIFICADOS',
@@ -547,7 +548,7 @@ function initAdvisanoServicesTabs() {
     }
   };
 
-  let currentTarget = 'strategy';
+  let currentTarget = 'finance';
 
   function updateVisuals(target, indexStr) {
     currentTarget = target;
@@ -802,3 +803,121 @@ function initProcessCardsScrollAlignment() {
   window.addEventListener('resize', onScroll, { passive: true });
   updateCardAlignment();
 }
+
+/* ==========================================================================
+   Contact Form API Integration
+   ========================================================================== */
+function initContactForms() {
+  const API_ENDPOINT = 'https://citerne-contact-api-d5d4137c58fc.herokuapp.com/api/sourx-finance';
+
+  const formConfigs = [
+    {
+      form: document.getElementById('contact-form') || document.querySelector('.contact-form-side form'),
+      confirmId: 'contact-confirm',
+      errorId: 'contact-error',
+      fields: {
+        name: '#name',
+        email: '#email',
+        phone: '#phone',
+        message: '#message'
+      }
+    },
+    {
+      form: document.querySelector('.advisano-contact-form-card form'),
+      confirmId: 'advisano-contact-confirm',
+      errorId: 'advisano-contact-error',
+      fields: {
+        name: '#contact-name',
+        email: '#contact-email',
+        phone: '#contact-phone',
+        message: '#contact-message'
+      }
+    }
+  ];
+
+  formConfigs.forEach(({ form, confirmId, errorId, fields }) => {
+    if (!form) return;
+
+    form.removeAttribute('onsubmit');
+
+    let errorEl = document.getElementById(errorId);
+    if (!errorEl) {
+      errorEl = document.createElement('div');
+      errorEl.id = errorId;
+      errorEl.style.cssText = 'display: none; margin-top: 14px; padding: 12px 16px; border-radius: 8px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.25); color: #dc2626; font-size: 0.9rem; font-weight: 500; text-align: center; line-height: 1.4;';
+      form.appendChild(errorEl);
+    }
+
+    const confirmEl = document.getElementById(confirmId);
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (confirmEl) confirmEl.style.display = 'none';
+      if (errorEl) errorEl.style.display = 'none';
+
+      const payload = {
+        name: form.querySelector(fields.name)?.value?.trim() || '',
+        email: form.querySelector(fields.email)?.value?.trim() || '',
+        phone: form.querySelector(fields.phone)?.value?.trim() || '',
+        message: form.querySelector(fields.message)?.value?.trim() || ''
+      };
+
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+      const currentLang = localStorage.getItem('sourx_lang') || document.documentElement.lang || 'fr';
+      const sendingText = currentLang === 'es' ? 'Enviando...' : (currentLang === 'en' ? 'Sending...' : 'Envoi en cours...');
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        submitBtn.style.pointerEvents = 'none';
+        submitBtn.innerHTML = `<span>${sendingText}</span>`;
+      }
+
+      try {
+        const response = await fetch(API_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status} (${response.statusText || 'Erreur serveur'})`);
+        }
+
+        const data = await response.json().catch(() => ({}));
+        console.log('[SOURX Contact API Success]:', data);
+
+        if (confirmEl) {
+          confirmEl.style.display = 'block';
+        }
+        form.reset();
+      } catch (err) {
+        console.error('[SOURX Contact API Error]:', err);
+        if (errorEl) {
+          const errIntro = currentLang === 'es' 
+            ? 'Error al enviar el mensaje'
+            : (currentLang === 'en' ? 'Error sending message' : 'Erreur lors de l\'envoi');
+          const errContact = currentLang === 'es'
+            ? 'Por favor contáctenos directamente a info@sourx.com.'
+            : (currentLang === 'en' ? 'Please contact us directly at info@sourx.com.' : 'Veuillez nous contacter directement à info@sourx.com.');
+          
+          errorEl.textContent = `${errIntro} (${err.message || 'Serveur injoignable'}). ${errContact}`;
+          errorEl.style.display = 'block';
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+          submitBtn.style.pointerEvents = 'auto';
+          submitBtn.innerHTML = originalBtnHTML;
+        }
+      }
+    });
+  });
+}
+

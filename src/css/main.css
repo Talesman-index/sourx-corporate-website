@@ -531,6 +531,35 @@ h1, h2, h3, h4, h5, h6 {
   color: #b6e82c;
 }
 
+.advisano-dropdown-menu a.dropdown-item-highlight {
+  background: rgba(182, 232, 44, 0.1);
+  border: 1px solid rgba(182, 232, 44, 0.3);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.advisano-dropdown-menu a.dropdown-item-highlight:hover {
+  background: rgba(182, 232, 44, 0.18);
+  border-color: rgba(182, 232, 44, 0.55);
+  color: #b6e82c;
+}
+
+.dropdown-core-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: #b6e82c;
+  color: #011f40;
+  white-space: nowrap;
+}
+
 /* Right Nav Action & Language Switcher */
 .advisano-nav-action {
   display: flex;
@@ -1796,6 +1825,41 @@ h1, h2, h3, h4, h5, h6 {
   color: #b6e82c;
   border: 1px solid rgba(182, 232, 44, 0.24);
   letter-spacing: 0.02em;
+}
+
+.advisano-service-item.core-pillar {
+  border-left: 3px solid rgba(182, 232, 44, 0.5);
+  background: rgba(182, 232, 44, 0.02);
+}
+
+.advisano-service-item.core-pillar.active {
+  background: linear-gradient(135deg, rgba(182, 232, 44, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: rgba(182, 232, 44, 0.45);
+  border-left: 3px solid #b6e82c;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(182, 232, 44, 0.2);
+}
+
+.advisano-core-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(182, 232, 44, 0.18);
+  border: 1px solid rgba(182, 232, 44, 0.4);
+  color: #b6e82c;
+}
+
+.advisano-core-pill-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #b6e82c;
+  box-shadow: 0 0 6px #b6e82c;
 }
 
 /* Responsive */
@@ -3675,15 +3739,15 @@ a.advisano-contact-item-val:hover {
 /* Yellow Contact Banner */
 .advisano-footer-yellow-card {
   background-color: #b6e82c;
-  border-radius: clamp(12px, 1.8vw, 20px);
-  padding: clamp(28px, 3.5vw, 42px) clamp(28px, 4vw, 54px);
+  border-radius: clamp(14px, 1.8vw, 22px);
+  padding: clamp(26px, 3vw, 36px) clamp(28px, 3.5vw, 48px);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: clamp(24px, 3vw, 48px);
+  justify-content: space-between;
+  gap: clamp(28px, 3.5vw, 52px);
   width: 100%;
-  color: #000000;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  color: #012e5c;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.32);
   margin-bottom: clamp(32px, 4vw, 48px);
 }
 
@@ -3694,39 +3758,48 @@ a.advisano-contact-item-val:hover {
 }
 
 .advisano-footer-card-logo {
-  height: clamp(40px, 4.5vw, 54px);
+  height: clamp(38px, 4vw, 48px);
   width: auto;
   object-fit: contain;
+}
+
+.advisano-footer-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 36px);
+  align-items: flex-start;
+  flex: 1;
 }
 
 .advisano-footer-card-col {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .advisano-footer-card-label {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.6);
-  margin-bottom: 6px;
+  color: rgba(1, 46, 92, 0.62);
+  margin-bottom: 3px;
   display: block;
+  white-space: nowrap;
 }
 
 .advisano-footer-card-val {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 14.5px;
+  font-size: 13.5px;
   font-weight: 500;
-  color: #000000;
-  line-height: 1.45;
+  color: #012e5c;
+  line-height: 1.48;
   text-decoration: none;
 }
 
 .advisano-footer-card-val.bold {
-  font-weight: 600;
+  font-weight: 650;
 }
 
 a.advisano-footer-card-val:hover {
@@ -3805,12 +3878,21 @@ a.advisano-footer-card-val:hover {
     gap: 28px;
     padding: 32px 24px;
   }
+  .advisano-footer-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 24px;
+  }
 }
 
 @media (max-width: 600px) {
   .advisano-footer-columns {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+  .advisano-footer-card-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .advisano-footer-bottom {
     flex-direction: column;
@@ -4264,10 +4346,37 @@ a.advisano-footer-card-val:hover {
   align-items: center;
 }
 
+.service-showcase-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(800px circle at top left, rgba(182, 232, 44, 0.08) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
 .service-showcase-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(1, 46, 92, 0.1);
-  border-color: rgba(182, 232, 44, 0.6);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(1, 46, 92, 0.12), 0 0 32px rgba(182, 232, 44, 0.25);
+  border-color: #b6e82c;
+}
+
+.service-showcase-card:hover::before {
+  opacity: 1;
+}
+
+.service-showcase-card:not(.featured-dark):hover .service-pole-badge {
+  background: rgba(182, 232, 44, 0.18);
+  border-color: rgba(182, 232, 44, 0.5);
+  color: #012e5c;
+}
+
+.service-showcase-card:not(.featured-dark):hover .service-cta-btn {
+  background: #b6e82c;
+  color: #012e5c;
+  box-shadow: 0 6px 20px rgba(182, 232, 44, 0.45);
 }
 
 .service-showcase-card.reverse {
@@ -4918,34 +5027,36 @@ a.advisano-footer-card-val:hover {
 }
 
 .contact-input-group label {
-  font-size: 13px;
-  font-weight: 600;
-  color: #012e5c;
-  letter-spacing: 0.01em;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .contact-input {
   width: 100%;
-  padding: 12px 16px;
-  border: 1.5px solid rgba(1, 46, 92, 0.14);
-  border-radius: 10px;
-  background: #ffffff;
-  color: #012e5c;
+  padding: 13px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #0f172a;
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: 0.95rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   outline: none;
   -webkit-appearance: none;
   appearance: none;
   box-sizing: border-box;
 }
 .contact-input:focus {
-  border-color: #b6e82c;
-  box-shadow: 0 0 0 3px rgba(182, 232, 44, 0.18);
+  background: #ffffff;
+  border-color: #012e5c;
+  box-shadow: 0 0 0 3px rgba(1, 46, 92, 0.1);
 }
 .contact-input::placeholder {
   color: #94a3b8;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 textarea.contact-input {
   resize: vertical;
