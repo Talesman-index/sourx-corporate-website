@@ -977,3 +977,194 @@
   white-space: pre-wrap;
   word-break: break-all;
 }
+
+/* ==========================================================================
+   Single Unified Workbench Layout
+   ========================================================================== */
+.sig-single-workbench {
+  display: grid;
+  grid-template-columns: minmax(320px, 390px) 1fr;
+  gap: 36px;
+  align-items: flex-start;
+}
+
+@media (max-width: 1040px) {
+  .sig-single-workbench {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.sig-customizer-card {
+  background: #ffffff;
+  border: 1px solid rgba(1, 46, 92, 0.1);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 36px rgba(1, 46, 92, 0.06);
+  position: sticky;
+  top: 100px;
+}
+
+.sig-customizer-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(1, 46, 92, 0.07);
+}
+
+.sig-customizer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sig-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sig-form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #012e5c;
+}
+
+.sig-form-input {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: #012e5c;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.sig-form-input:focus {
+  background: #ffffff;
+  border-color: #012e5c;
+  box-shadow: 0 0 0 3px rgba(1, 46, 92, 0.08);
+}
+
+.sig-actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sig-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  border: none;
+}
+
+.sig-action-btn.primary {
+  background: #b6e82c;
+  color: #012e5c;
+  box-shadow: 0 4px 16px rgba(182, 232, 44, 0.35);
+}
+
+.sig-action-btn.primary:hover {
+  background: #a4d622;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(182, 232, 44, 0.45);
+}
+
+.sig-action-btn.secondary {
+  background: #012e5c;
+  color: #ffffff;
+}
+
+.sig-action-btn.secondary:hover {
+  background: #001f40;
+  transform: translateY(-1px);
+}
+
+.sig-action-btn.tertiary {
+  background: transparent;
+  color: #64748b;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.sig-action-btn.tertiary:hover {
+  color: #012e5c;
+  text-decoration: underline;
+}
+
+.sig-copy-feedback {
+  background: rgba(182, 232, 44, 0.18);
+  border: 1px solid rgba(182, 232, 44, 0.5);
+  color: #012e5c;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: center;
+  margin-top: 6px;
+  animation: sigFeedbackIn 0.3s ease;
+}
+
+@keyframes sigFeedbackIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sig-install-box {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(1, 46, 92, 0.07);
+}
+
+.sig-install-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #012e5c;
+  margin-bottom: 8px;
+}
+
+.sig-install-steps {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 11.5px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.sig-install-steps li {
+  margin-bottom: 6px;
+}
+
+.sig-install-steps kbd {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 10.5px;
+  font-family: monospace;
+  color: #012e5c;
+}
+
+.sig-previews-column {
+  display: flex;
+  flex-direction: column;
+}
+

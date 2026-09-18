@@ -1,14 +1,13 @@
 /**
- * SOURX Email Signatures Showcase — Interactive Controller
- * Handles filter selection, responsive modals, and HTML snippet inspector.
+ * SOURX Official Email Signature — Interactive Generator & Copy Controller
+ * Allows real-time customization and one-click rich-text / HTML clipboard export.
  */
 
 import '../css/main.css';
 import '../css/email-signatures.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initFilterPills();
-  initSignatureModals();
+  initSignatureGenerator();
   initMobileDrawer();
 });
 
@@ -43,133 +42,176 @@ function initMobileDrawer() {
 }
 
 /**
- * Filter Cards by Category
+ * Live Signature Generator & Clipboard Controller
  */
-function initFilterPills() {
-  const filterBtns = document.querySelectorAll('.sig-filter-btn');
-  const cards = document.querySelectorAll('.sig-card');
-  const countDisplay = document.querySelector('.sig-showing-count');
+function initSignatureGenerator() {
+  const inputName = document.getElementById('inputName');
+  const inputRole = document.getElementById('inputRole');
+  const inputEmail = document.getElementById('inputEmail');
+  const inputPhone = document.getElementById('inputPhone');
 
-  if (!filterBtns.length || !cards.length) return;
+  const dispName = document.getElementById('dispName');
+  const dispRole = document.getElementById('dispRole');
+  const dispEmail = document.getElementById('dispEmail');
+  const dispPhone = document.getElementById('dispPhone');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const category = btn.getAttribute('data-filter');
+  const dispMobileName = document.getElementById('dispMobileName');
+  const dispMobileRole = document.getElementById('dispMobileRole');
+  const dispMobileEmail = document.getElementById('dispMobileEmail');
+  const dispMobilePhone = document.getElementById('dispMobilePhone');
+  const dispMobileRecipient = document.getElementById('dispMobileRecipient');
 
-      // Update active state on buttons
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  const btnCopyVisual = document.getElementById('btnCopyVisual');
+  const btnCopyHtml = document.getElementById('btnCopyHtml');
+  const btnReset = document.getElementById('btnReset');
+  const copyFeedback = document.getElementById('copyFeedback');
+  const signatureWrap = document.getElementById('sourxOfficialSignature');
 
-      let visibleCount = 0;
+  if (!signatureWrap) return;
 
-      cards.forEach(card => {
-        const categories = card.getAttribute('data-categories') || '';
-        const categoryList = categories.split(',').map(c => c.trim().toLowerCase());
-
-        if (category === 'all' || categoryList.includes(category.toLowerCase())) {
-          card.classList.remove('hidden');
-          visibleCount++;
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-
-      if (countDisplay) {
-        countDisplay.textContent = visibleCount;
-      }
-    });
-  });
-}
-
-/**
- * Inspection Modal Controller
- */
-function initSignatureModals() {
-  const backdrop = document.getElementById('sigInspectModal');
-  if (!backdrop) return;
-
-  const closeBtn = backdrop.querySelector('.sig-modal-close-btn');
-  const modalTitle = backdrop.querySelector('#modalConceptTitle');
-  const modalNum = backdrop.querySelector('#modalConceptNum');
-  const modalCanvasDesktop = backdrop.querySelector('#modalDesktopCanvas');
-  const modalCanvasMobile = backdrop.querySelector('#modalMobileCanvas');
-  const modalRationale = backdrop.querySelector('#modalRationale');
-  const modalAudience = backdrop.querySelector('#modalAudience');
-  const modalCodeBox = backdrop.querySelector('#modalCodeSnippet');
-  const copyBtn = backdrop.querySelector('#modalCopyBtn');
-
-  // Trigger buttons
-  const inspectBtns = document.querySelectorAll('.sig-inspect-btn, .sig-card-preview-clickable');
-
-  inspectBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const card = btn.closest('.sig-card');
-      if (!card) return;
-
-      const num = card.getAttribute('data-num') || '';
-      const name = card.getAttribute('data-name') || '';
-      const rationale = card.getAttribute('data-rationale') || '';
-      const audience = card.getAttribute('data-audience') || '';
-      const desktopHtml = card.querySelector('.sig-canvas-desktop .es-wrapper')?.outerHTML || '';
-      const mobileHtml = card.querySelector('.sig-canvas-mobile .es-wrapper')?.outerHTML || '';
-      const emailRawSnippet = card.querySelector('.sig-raw-html-template')?.innerHTML.trim() || desktopHtml;
-
-      if (modalNum) modalNum.textContent = num;
-      if (modalTitle) modalTitle.textContent = name;
-      if (modalRationale) modalRationale.textContent = rationale;
-      if (modalAudience) modalAudience.textContent = audience;
-      if (modalCanvasDesktop) modalCanvasDesktop.innerHTML = desktopHtml;
-      if (modalCanvasMobile) modalCanvasMobile.innerHTML = mobileHtml;
-      if (modalCodeBox) modalCodeBox.textContent = cleanEmailHtmlForDisplay(emailRawSnippet);
-
-      backdrop.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  const closeModal = () => {
-    backdrop.classList.remove('open');
-    document.body.style.overflow = '';
+  const defaultValues = {
+    name: 'Marc Dupont',
+    role: 'Consultant Stratégique & Associé',
+    email: 'marc.dupont@sourx.com',
+    phone: '+44 2081239177'
   };
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  backdrop.addEventListener('click', (e) => {
-    if (e.target === backdrop) closeModal();
-  });
+  function updateDisplay() {
+    const nameVal = inputName?.value.trim() || defaultValues.name;
+    const roleVal = inputRole?.value.trim() || defaultValues.role;
+    const emailVal = inputEmail?.value.trim() || defaultValues.email;
+    const phoneVal = inputPhone?.value.trim() || defaultValues.phone;
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && backdrop.classList.contains('open')) {
-      closeModal();
+    // Desktop
+    if (dispName) dispName.textContent = nameVal;
+    if (dispRole) dispRole.innerHTML = `${escapeHtml(roleVal)} &bull; <strong style="color:#012e5c;">SOURX EMEA</strong>`;
+    if (dispEmail) {
+      dispEmail.textContent = emailVal;
+      dispEmail.href = `mailto:${emailVal}`;
+    }
+    if (dispPhone) {
+      dispPhone.textContent = phoneVal;
+      dispPhone.href = `tel:${phoneVal.replace(/\s+/g, '')}`;
+    }
+
+    // Mobile
+    if (dispMobileName) dispMobileName.textContent = nameVal;
+    if (dispMobileRole) dispMobileRole.textContent = roleVal;
+    if (dispMobileEmail) {
+      dispMobileEmail.textContent = emailVal;
+      dispMobileEmail.href = `mailto:${emailVal}`;
+    }
+    if (dispMobilePhone) {
+      dispMobilePhone.textContent = phoneVal;
+      dispMobilePhone.href = `tel:${phoneVal.replace(/\s+/g, '')}`;
+    }
+    if (dispMobileRecipient) {
+      dispMobileRecipient.textContent = emailVal;
+    }
+  }
+
+  // Live input synchronization
+  [inputName, inputRole, inputEmail, inputPhone].forEach(input => {
+    if (input) {
+      input.addEventListener('input', updateDisplay);
     }
   });
 
-  // Copy HTML snippet button
-  if (copyBtn && modalCodeBox) {
-    copyBtn.addEventListener('click', async () => {
+  // Reset button
+  if (btnReset) {
+    btnReset.addEventListener('click', () => {
+      if (inputName) inputName.value = defaultValues.name;
+      if (inputRole) inputRole.value = defaultValues.role;
+      if (inputEmail) inputEmail.value = defaultValues.email;
+      if (inputPhone) inputPhone.value = defaultValues.phone;
+      updateDisplay();
+    });
+  }
+
+  function showFeedback(msg) {
+    if (!copyFeedback) return;
+    copyFeedback.innerHTML = msg;
+    copyFeedback.style.display = 'block';
+    setTimeout(() => {
+      copyFeedback.style.display = 'none';
+    }, 5000);
+  }
+
+  // 1. Copy Rich Text / Formatted Signature to Clipboard
+  if (btnCopyVisual) {
+    btnCopyVisual.addEventListener('click', async () => {
+      const originalText = btnCopyVisual.innerHTML;
       try {
-        await navigator.clipboard.writeText(modalCodeBox.textContent);
-        const originalText = copyBtn.textContent;
-        copyBtn.textContent = 'Copied!';
-        copyBtn.style.backgroundColor = '#b6e82c';
-        copyBtn.style.color = '#012e5c';
+        const html = signatureWrap.innerHTML;
+        const text = signatureWrap.innerText;
+
+        if (navigator.clipboard && window.ClipboardItem) {
+          const blobHtml = new Blob([html], { type: 'text/html' });
+          const blobText = new Blob([text], { type: 'text/plain' });
+          const item = new ClipboardItem({
+            'text/html': blobHtml,
+            'text/plain': blobText
+          });
+          await navigator.clipboard.write([item]);
+        } else {
+          // Fallback selection copy
+          const range = document.createRange();
+          range.selectNode(signatureWrap);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          document.execCommand('copy');
+          selection.removeAllRanges();
+        }
+
+        btnCopyVisual.innerHTML = '<span>✓ Signature Copiée !</span>';
+        btnCopyVisual.style.backgroundColor = '#a4d622';
+        showFeedback('✓ Signature copiée avec succès ! Ouvrez vos paramètres d\'email (Gmail, Outlook, Apple Mail) et collez (<kbd>Cmd+V</kbd> ou <kbd>Ctrl+V</kbd>).');
+
         setTimeout(() => {
-          copyBtn.textContent = originalText;
-          copyBtn.style.backgroundColor = '';
-          copyBtn.style.color = '';
-        }, 2000);
+          btnCopyVisual.innerHTML = originalText;
+          btnCopyVisual.style.backgroundColor = '';
+        }, 2500);
       } catch (err) {
-        console.warn('Clipboard write failed:', err);
+        console.warn('Rich text copy fallback:', err);
+        // Fallback text copy
+        try {
+          await navigator.clipboard.writeText(signatureWrap.innerHTML);
+          showFeedback('✓ Code de signature copié dans le presse-papiers.');
+        } catch (e) {
+          alert('Veuillez copier manuellement la signature sélectionnée.');
+        }
       }
     });
   }
-}
 
-/**
- * Format HTML string cleanly
- */
-function cleanEmailHtmlForDisplay(html) {
-  return html
-    .replace(/<!--[\s\S]*?-->/g, '')
-    .trim();
+  // 2. Copy Raw HTML Code to Clipboard
+  if (btnCopyHtml) {
+    btnCopyHtml.addEventListener('click', async () => {
+      const originalText = btnCopyHtml.innerHTML;
+      try {
+        const rawHtml = signatureWrap.innerHTML.trim();
+        await navigator.clipboard.writeText(rawHtml);
+
+        btnCopyHtml.innerHTML = '<span>✓ Code HTML Copié !</span>';
+        btnCopyHtml.style.backgroundColor = '#b6e82c';
+        btnCopyHtml.style.color = '#012e5c';
+        showFeedback('✓ Code source HTML copié dans le presse-papiers.');
+
+        setTimeout(() => {
+          btnCopyHtml.innerHTML = originalText;
+          btnCopyHtml.style.backgroundColor = '';
+          btnCopyHtml.style.color = '';
+        }, 2500);
+      } catch (err) {
+        console.error('Copy HTML failed:', err);
+      }
+    });
+  }
+
+  function escapeHtml(str) {
+    const p = document.createElement('p');
+    p.textContent = str;
+    return p.innerHTML;
+  }
 }
