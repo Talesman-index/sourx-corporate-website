@@ -811,7 +811,7 @@ function initProcessCardsScrollAlignment() {
    Contact Form API Integration
    ========================================================================== */
 function initContactForms() {
-  const API_ENDPOINT = 'https://citerne-contact-api-d5d4137c58fc.herokuapp.com/api/sourx-finance';
+  const API_ENDPOINT = 'https://intranet.sourx.com/api/sourx-finance';
 
   const formConfigs = [
     {

@@ -328,6 +328,28 @@
   color: #8fa0b5;
 }
 
+.sig-frame-quick-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ffffff;
+  color: #012e5c;
+  border: 1px solid rgba(1, 46, 92, 0.18);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sig-frame-quick-copy:hover {
+  background: #b6e82c;
+  border-color: #a4d622;
+  color: #012e5c;
+  box-shadow: 0 2px 8px rgba(182, 232, 44, 0.3);
+}
+
 /* Canvas Area */
 .sig-canvas-desktop {
   padding: 22px;
@@ -1050,6 +1072,88 @@
   box-shadow: 0 0 0 3px rgba(1, 46, 92, 0.08);
 }
 
+/* Logo Declinations Pills */
+.sig-select-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sig-pill-btn {
+  appearance: none;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9px;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #334e68;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sig-pill-btn:hover {
+  background: #edf2f7;
+  border-color: #cbd5e1;
+  color: #012e5c;
+}
+
+.sig-pill-btn.active {
+  background: #012e5c;
+  border-color: #012e5c;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(1, 46, 92, 0.18);
+}
+
+/* Brand Color Swatches */
+.sig-color-swatches {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.sig-swatch {
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1.5px #cbd5e1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.sig-swatch:hover {
+  transform: scale(1.1);
+}
+
+.sig-swatch.active {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 2px #012e5c, 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.sig-swatch .swatch-check {
+  display: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.sig-swatch.active .swatch-check {
+  display: inline-block;
+}
+
 .sig-actions-group {
   display: flex;
   flex-direction: column;
@@ -1083,6 +1187,37 @@
   background: #a4d622;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(182, 232, 44, 0.45);
+}
+
+.sig-download-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sig-action-btn.download-png {
+  background: #012e5c;
+  color: #ffffff;
+  border: 1.5px solid #012e5c;
+}
+
+.sig-action-btn.download-png:hover {
+  background: #001f40;
+  border-color: #001f40;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(1, 46, 92, 0.2);
+}
+
+.sig-action-btn.download-svg {
+  background: #ffffff;
+  color: #012e5c;
+  border: 1.5px solid rgba(1, 46, 92, 0.2);
+}
+
+.sig-action-btn.download-svg:hover {
+  background: #f1f4f8;
+  border-color: #012e5c;
+  transform: translateY(-1px);
 }
 
 .sig-action-btn.secondary {

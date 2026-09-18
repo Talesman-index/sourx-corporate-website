@@ -1,0 +1,8 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="18" cy="18" r="17" fill="#FFFFFF"/>
+  <!-- LinkedIn "in" logo -->
+  <rect x="11" y="11" width="14" height="14" rx="2" fill="#012e5c"/>
+  <rect x="13" y="17" width="2" height="5.5" fill="white"/>
+  <circle cx="14" cy="14.8" r="1.1" fill="white"/>
+  <path d="M17 17h1.8v0.8c0.3-0.6 1-1 1.9-1 1.7 0 2.3 1.1 2.3 2.7v3h-1.9v-2.7c0-0.65-0.25-1.05-0.85-1.05s-1 0.4-1 1.05v2.7H17V17z" fill="white"/>
+</svg>
