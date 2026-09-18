@@ -4,7 +4,9 @@
  */
 
 import '../css/main.css';
+import '../css/widgets.css';
 import { initI18n } from './i18n.js';
+import { initGlobalWidgets } from './widgets.js';
 
 function initApp() {
   try { initI18n(); } catch (err) { console.warn('[SOURX] initI18n:', err); }
@@ -20,6 +22,7 @@ function initApp() {
   try { initAboutScrollTextReveal(); } catch (err) { console.warn('[SOURX] initAboutScrollTextReveal:', err); }
   try { initProcessCardsScrollAlignment(); } catch (err) { console.warn('[SOURX] initProcessCardsScrollAlignment:', err); }
   try { initContactForms(); } catch (err) { console.warn('[SOURX] initContactForms:', err); }
+  try { initGlobalWidgets(); } catch (err) { console.warn('[SOURX] initGlobalWidgets:', err); }
 }
 
 if (document.readyState === 'loading') {

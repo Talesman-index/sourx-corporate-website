@@ -1,0 +1,590 @@
+/* ==========================================================================
+   SOURX Interactive Global Widgets:
+   1. Back to Top Button
+   2. Live Discussion & Advisory Concierge Widget
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Back to Top Button
+   -------------------------------------------------------------------------- */
+.sourx-back-to-top {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(1, 46, 92, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(182, 232, 44, 0.4);
+  color: #b6e82c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(182, 232, 44, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 998;
+  outline: none;
+  padding: 0;
+}
+
+.sourx-back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.sourx-back-to-top:hover {
+  background: #b6e82c;
+  border-color: #b6e82c;
+  color: #012e5c;
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 12px 28px rgba(182, 232, 44, 0.4);
+}
+
+.sourx-back-to-top:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.sourx-back-to-top svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.sourx-back-to-top:hover svg {
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   2. Discussion / Advisory Concierge Widget
+   -------------------------------------------------------------------------- */
+.sourx-chat-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Launcher Button */
+.sourx-chat-launcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #012e5c;
+  color: #ffffff;
+  border: 2px solid #b6e82c;
+  border-radius: 999px;
+  padding: 10px 18px 10px 14px;
+  box-shadow: 0 10px 32px rgba(1, 46, 92, 0.4), 0 2px 10px rgba(182, 232, 44, 0.25);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.sourx-chat-launcher:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 38px rgba(1, 46, 92, 0.5), 0 4px 14px rgba(182, 232, 44, 0.35);
+  border-color: #c9f538;
+}
+
+.sourx-chat-launcher:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.sourx-chat-launcher-icon-wrap {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b6e82c;
+}
+
+.sourx-chat-launcher-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.sourx-chat-icon-close {
+  display: none;
+}
+
+.sourx-chat-widget.is-open .sourx-chat-icon-msg {
+  display: none;
+}
+
+.sourx-chat-widget.is-open .sourx-chat-icon-close {
+  display: block;
+}
+
+.sourx-chat-pulse-dot {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 9px;
+  height: 9px;
+  background: #10b981;
+  border: 1.5px solid #012e5c;
+  border-radius: 50%;
+}
+
+.sourx-chat-pulse-dot::after {
+  content: '';
+  position: absolute;
+  top: -1.5px;
+  left: -1.5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.5);
+  animation: sourxChatPulse 2s infinite;
+}
+
+@keyframes sourxChatPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  70% { transform: scale(2.4); opacity: 0; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+.sourx-chat-launcher-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.sourx-chat-launcher-sub {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: #b6e82c;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Chat Popup Window */
+.sourx-chat-panel {
+  position: absolute;
+  bottom: 68px;
+  right: 0;
+  width: min(390px, calc(100vw - 32px));
+  height: 560px;
+  max-height: calc(100vh - 120px);
+  background: #012447;
+  border: 1px solid rgba(182, 232, 44, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(1, 46, 92, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.94);
+  transform-origin: bottom right;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.sourx-chat-widget.is-open .sourx-chat-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Chat Header */
+.sourx-chat-header {
+  padding: 16px 18px;
+  background: #012e5c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sourx-chat-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sourx-chat-avatar-box {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid #b6e82c;
+  flex-shrink: 0;
+}
+
+.sourx-chat-avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sourx-chat-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sourx-chat-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.sourx-chat-status {
+  font-size: 11px;
+  color: #b6e82c;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.sourx-chat-status-dot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sourx-chat-close-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+
+.sourx-chat-close-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+/* Chat Messages Feed */
+.sourx-chat-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #011d38;
+}
+
+.sourx-chat-messages::-webkit-scrollbar {
+  width: 5px;
+}
+.sourx-chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+/* Message Bubbles */
+.sourx-chat-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 88%;
+  gap: 4px;
+  animation: sourxMsgIn 0.25s ease forwards;
+}
+
+@keyframes sourxMsgIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sourx-chat-msg.bot {
+  align-self: flex-start;
+}
+
+.sourx-chat-msg.user {
+  align-self: flex-end;
+}
+
+.sourx-chat-msg-bubble {
+  padding: 11px 14px;
+  border-radius: 14px;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.sourx-chat-msg.bot .sourx-chat-msg-bubble {
+  background: #012e5c;
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom-left-radius: 4px;
+}
+
+.sourx-chat-msg.bot .sourx-chat-msg-bubble a {
+  color: #b6e82c;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.sourx-chat-msg.user .sourx-chat-msg-bubble {
+  background: #b6e82c;
+  color: #012e5c;
+  font-weight: 500;
+  border-bottom-right-radius: 4px;
+}
+
+.sourx-chat-msg-time {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 4px;
+}
+
+.sourx-chat-msg.user .sourx-chat-msg-time {
+  align-self: flex-end;
+}
+
+/* Quick Suggestion Chips */
+.sourx-chat-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 4px;
+}
+
+.sourx-chat-chip-btn {
+  background: rgba(1, 46, 92, 0.85);
+  border: 1px solid rgba(182, 232, 44, 0.35);
+  color: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sourx-chat-chip-btn:hover {
+  background: rgba(182, 232, 44, 0.15);
+  border-color: #b6e82c;
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.sourx-chat-chip-arrow {
+  color: #b6e82c;
+  font-weight: bold;
+}
+
+/* Quick Contact Form inside chat */
+.sourx-chat-mini-form {
+  background: #012447;
+  border: 1px solid rgba(182, 232, 44, 0.3);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.sourx-chat-mini-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: #ffffff;
+  font-size: 12.5px;
+  outline: none;
+}
+
+.sourx-chat-mini-input:focus {
+  border-color: #b6e82c;
+}
+
+.sourx-chat-mini-submit {
+  background: #b6e82c;
+  color: #012e5c;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sourx-chat-mini-submit:hover {
+  background: #c9f538;
+}
+
+/* Typing indicator */
+.sourx-chat-typing {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background: #012e5c;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.sourx-chat-typing-dot {
+  width: 6px;
+  height: 6px;
+  background: #b6e82c;
+  border-radius: 50%;
+  animation: sourxTyping 1.4s infinite ease-in-out;
+}
+
+.sourx-chat-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.sourx-chat-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes sourxTyping {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* Chat Input Bar */
+.sourx-chat-input-bar {
+  padding: 12px 14px;
+  background: #012e5c;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.sourx-chat-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.sourx-chat-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.sourx-chat-input:focus {
+  border-color: #b6e82c;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.sourx-chat-send-btn {
+  background: #b6e82c;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  color: #012e5c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sourx-chat-send-btn:hover {
+  background: #c9f538;
+  transform: scale(1.05);
+}
+
+.sourx-chat-send-btn:active {
+  transform: scale(0.95);
+}
+
+.sourx-chat-send-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Direct Contacts Footer Bar inside chat */
+.sourx-chat-direct-bar {
+  padding: 8px 14px;
+  background: #001f40;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.sourx-chat-direct-link {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.sourx-chat-direct-link:hover {
+  color: #b6e82c;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Rules
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .sourx-back-to-top {
+    bottom: 84px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .sourx-chat-widget {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .sourx-chat-launcher {
+    padding: 8px 14px 8px 10px;
+  }
+
+  .sourx-chat-launcher-label span:first-child {
+    display: none;
+  }
+
+  .sourx-chat-panel {
+    position: fixed;
+    top: 16px;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    height: auto;
+    max-height: none;
+    border-radius: 16px;
+  }
+}
